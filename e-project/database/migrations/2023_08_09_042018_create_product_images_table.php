@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('product_images', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreignId('product_id')->constrained('products');
-            $table->string('image_path');
+            $table->unsignedInteger('product_id');
+            $table->string('file_name');
             $table->timestamps();
+
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 
