@@ -72,7 +72,7 @@
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="service-promo-single-item" data-aos="fade-up" data-aos-delay="0">
                             <div class="image">
-                                <img src="assets/images/icons/service-promo-1.png" alt="">
+                                <img src="{{ asset('frontend/assets/images/icons/service-promo-1.png')}}" alt="">
                             </div>
                             <div class="content">
                                 <h6 class="title">FREE SHIPPING</h6>
@@ -85,7 +85,7 @@
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="service-promo-single-item" data-aos="fade-up" data-aos-delay="200">
                             <div class="image">
-                                <img src="assets/images/icons/service-promo-2.png" alt="">
+                                <img src="{{ asset('frontend/assets/images/icons/service-promo-2.png')}}" alt="">
                             </div>
                             <div class="content">
                                 <h6 class="title">30 DAYS MONEY BACK</h6>
@@ -98,7 +98,7 @@
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="service-promo-single-item" data-aos="fade-up" data-aos-delay="400">
                             <div class="image">
-                                <img src="assets/images/icons/service-promo-3.png" alt="">
+                                <img src="{{ asset('frontend/assets/images/icons/service-promo-3.png')}}" alt="">
                             </div>
                             <div class="content">
                                 <h6 class="title">SAFE PAYMENT</h6>
@@ -111,7 +111,7 @@
                     <div class="col-lg-3 col-sm-6 col-12">
                         <div class="service-promo-single-item" data-aos="fade-up" data-aos-delay="600">
                             <div class="image">
-                                <img src="assets/images/icons/service-promo-4.png" alt="">
+                                <img src="{{ asset('frontend/assets/images/icons/service-promo-4.png')}}" alt="">
                             </div>
                             <div class="content">
                                 <h6 class="title">LOYALTY CUSTOMER</h6>
@@ -137,7 +137,7 @@
                         <div class="banner-single-item banner-style-1 banner-animation img-responsive"
                             data-aos="fade-up" data-aos-delay="0">
                             <div class="image">
-                                <img src="assets/images/banner/banner-style-1-img-1.jpg" alt="">
+                                <img src="{{asset('frontend/assets/images/banner/banner-style-1-img-1.jpg')}}" alt="">
                             </div>
                             <div class="content">
                                 <h4 class="title">Mini rechargeable
@@ -159,7 +159,7 @@
                                 <div class="banner-single-item banner-style-2 banner-animation img-responsive"
                                     data-aos="fade-up" data-aos-delay="0">
                                     <div class="image">
-                                        <img src="assets/images/banner/banner-style-2-img-1.jpg" alt="">
+                                        <img src="{{asset('frontend/assets/images/banner/banner-style-2-img-1.jpg')}}" alt="">
                                     </div>
                                     <div class="content">
                                         <h4 class="title">Kitchen <br>
@@ -175,7 +175,7 @@
                                 <div class="banner-single-item banner-style-2 banner-animation img-responsive"
                                     data-aos="fade-up" data-aos-delay="200">
                                     <div class="image">
-                                        <img src="assets/images/banner/banner-style-2-img-2.jpg" alt="">
+                                        <img src="{{asset('frontend/assets/images/banner/banner-style-2-img-2.jpg')}}" alt="">
                                     </div>
                                     <div class="content">
                                         <h4 class="title">Sofas and <br>
@@ -191,7 +191,7 @@
                                 <div class="banner-single-item banner-style-2 banner-animation img-responsive"
                                     data-aos="fade-up" data-aos-delay="0">
                                     <div class="image">
-                                        <img src="assets/images/banner/banner-style-2-img-3.jpg" alt="">
+                                        <img src="{{asset('frontend/assets/images/banner/banner-style-2-img-3.jpg')}}" alt="">
                                     </div>
                                     <div class="content">
                                         <h4 class="title">Chair & Bar<br>
@@ -207,7 +207,7 @@
                                 <div class="banner-single-item banner-style-2 banner-animation img-responsive"
                                     data-aos="fade-up" data-aos-delay="200">
                                     <div class="image">
-                                        <img src="assets/images/banner/banner-style-2-img-4.jpg" alt="">
+                                        <img src="{{asset('frontend/assets/images/banner/banner-style-2-img-4.jpg')}}" alt="">
                                     </div>
                                     <div class="content">
                                         <h4>Interior <br>
@@ -257,8 +257,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-1.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-2.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                             </a>
                                             <div class="tag">
                                                 <span>sale</span>
@@ -300,8 +300,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-3.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-4.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
                                             </a>
                                             <div class="tag">
                                                 <span>sale</span>
@@ -343,8 +343,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-5.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-6.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                             </a>
                                             <div class="tag">
                                                 <span>sale</span>
@@ -386,8 +386,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-7.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-8.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-8.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -426,8 +426,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-9.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-10.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-10.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -466,8 +466,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-11.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-3.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-11.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -506,8 +506,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-5.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-7.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -546,8 +546,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-6.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-9.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -586,8 +586,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-3.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-5.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -626,8 +626,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-4.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-7.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
                                             </a>
                                             <div class="tag">
                                                 <span>sale</span>
@@ -669,8 +669,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-5.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-8.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-8.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -709,8 +709,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-10.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-6.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-10.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -767,7 +767,7 @@
                     <div class="banner-single-item banner-style-3 banner-animation img-responsive" data-aos="fade-up"
                         data-aos-delay="0">
                         <div class="image">
-                            <img class="img-fluid" src="assets/images/banner/banner-style-3-img-1.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-3-img-1.jpg')}}" alt="">
                         </div>
                         <div class="content">
                             <h3 class="title">Modern Furniture
@@ -818,8 +818,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-9.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-10.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-10.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -858,8 +858,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-11.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-3.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-11.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -898,8 +898,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-5.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-7.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -938,8 +938,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-6.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-9.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -978,8 +978,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-1.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-2.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                             </a>
                                             <div class="tag">
                                                 <span>sale</span>
@@ -1021,8 +1021,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-3.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-4.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
                                             </a>
                                             <div class="tag">
                                                 <span>sale</span>
@@ -1064,8 +1064,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-5.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-6.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                             </a>
                                             <div class="tag">
                                                 <span>sale</span>
@@ -1107,8 +1107,8 @@
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
                                             <a href="product-details-default.html" class="image-link">
-                                                <img src="assets/images/product/default/home-1/default-7.jpg" alt="">
-                                                <img src="assets/images/product/default/home-1/default-8.jpg" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
+                                                <img src="{{asset('frontend/assets/images/product/default/home-1/default-8.jpg')}}" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
@@ -1162,7 +1162,7 @@
             <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive"
                 data-aos="fade-up" data-aos-delay="0">
                 <div class="image">
-                    <img class="img-fluid" src="assets/images/banner/banner-style-4-img-1.jpg" alt="">
+                    <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-4-img-1.jpg')}}" alt="">
                 </div>
                 <a href="product-details-default.html" class="content">
                     <div class="inner">
@@ -1177,7 +1177,7 @@
             <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive"
                 data-aos="fade-up" data-aos-delay="200">
                 <div class="image">
-                    <img class="img-fluid" src="assets/images/banner/banner-style-4-img-2.jpg" alt="">
+                    <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-4-img-2.jpg')}}" alt="">
                 </div>
                 <a href="product-details-default.html" class="content">
                     <div class="inner">
@@ -1192,7 +1192,7 @@
             <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive"
                 data-aos="fade-up" data-aos-delay="400">
                 <div class="image">
-                    <img class="img-fluid" src="assets/images/banner/banner-style-4-img-3.jpg" alt="">
+                    <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-4-img-3.jpg')}}" alt="">
                 </div>
                 <a href="product-details-default.html" class="content">
                     <div class="inner">
@@ -1207,7 +1207,7 @@
             <div class="banner-single-item banner-style-4 banner-animation banner-color--golden float-left img-responsive"
                 data-aos="fade-up" data-aos-delay="600">
                 <div class="image">
-                    <img class="img-fluid" src="assets/images/banner/banner-style-4-img-4.jpg" alt="">
+                    <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-4-img-4.jpg')}}" alt="">
                 </div>
                 <a href="product-details-default.html" class="content">
                     <div class="inner">
@@ -1254,7 +1254,7 @@
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
                                                 <img class="img-fluid"
-                                                    src="assets/images/blog/blog-grid-home-1-img-1.jpg" alt="">
+                                                    src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-1.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1278,7 +1278,7 @@
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
                                                 <img class="img-fluid"
-                                                    src="assets/images/blog/blog-grid-home-1-img-2.jpg" alt="">
+                                                    src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-2.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1301,7 +1301,7 @@
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
                                                 <img class="img-fluid"
-                                                    src="assets/images/blog/blog-grid-home-1-img-3.jpg" alt="">
+                                                    src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-3.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1325,7 +1325,7 @@
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
                                                 <img class="img-fluid"
-                                                    src="assets/images/blog/blog-grid-home-1-img-4.jpg" alt="">
+                                                    src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-4.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1349,7 +1349,7 @@
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
                                                 <img class="img-fluid"
-                                                    src="assets/images/blog/blog-grid-home-1-img-5.jpg" alt="">
+                                                    src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-5.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1373,7 +1373,7 @@
                                         <div class="image-box">
                                             <a href="blog-single-sidebar-left.html" class="image-link">
                                                 <img class="img-fluid"
-                                                    src="assets/images/blog/blog-grid-home-1-img-6.jpg" alt="">
+                                                    src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-6.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
@@ -1415,22 +1415,22 @@
                             <div id="instagramFeed" class="instagram-grid clearfix">
                                 <a href="https://www.instagram.com/p/CCFOZKDDS6S/" target="_blank"
                                     class="instagram-image-link float-left banner-animation"><img
-                                        src="assets/images/instagram/instagram-1.jpg" alt=""></a>
+                                        src="{{asset('frontend/assets/images/instagram/instagram-1.jpg')}}" alt=""></a>
                                 <a href="https://www.instagram.com/p/CCFOYDNjWF5/" target="_blank"
                                     class="instagram-image-link float-left banner-animation"><img
-                                        src="assets/images/instagram/instagram-2.jpg" alt=""></a>
+                                        src="{{asset('frontend/assets/images/instagram/instagram-2.jpg')}}" alt=""></a>
                                 <a href="https://www.instagram.com/p/CCFOXH6D-zQ/" target="_blank"
                                     class="instagram-image-link float-left banner-animation"><img
-                                        src="assets/images/instagram/instagram-3.jpg" alt=""></a>
+                                        src="{{asset('frontend/assets/images/instagram/instagram-3.jpg')}}" alt=""></a>
                                 <a href="https://www.instagram.com/p/CCFOVcrDDOo/" target="_blank"
                                     class="instagram-image-link float-left banner-animation"><img
-                                        src="assets/images/instagram/instagram-4.jpg" alt=""></a>
+                                        src="{{asset('frontend/assets/images/instagram/instagram-4.jpg')}}" alt=""></a>
                                 <a href="https://www.instagram.com/p/CCFOUajjABP/" target="_blank"
                                     class="instagram-image-link float-left banner-animation"><img
-                                        src="assets/images/instagram/instagram-5.jpg" alt=""></a>
+                                        src="{{asset('frontend/assets/images/instagram/instagram-5.jpg')}}" alt=""></a>
                                 <a href="https://www.instagram.com/p/CCFOS2MDmjj/" target="_blank"
                                     class="instagram-image-link float-left banner-animation"><img
-                                        src="assets/images/instagram/instagram-6.jpg" alt=""></a>
+                                        src="{{asset('frontend/assets/images/instagram/instagram-6.jpg')}}" alt=""></a>
                             </div>
                             <div class="instagram-link">
                                 <h5><a href="https://www.instagram.com/myfurniturecom/" target="_blank"
