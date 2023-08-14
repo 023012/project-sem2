@@ -10,7 +10,7 @@
                             <!-- Start Header Logo -->
                             <div class="header-logo">
                                 <div class="logo">
-                                    <a href="index.html"><img src="{{ asset('frontend/assets/images/logo/logo_black.png') }}" alt=""></a>
+                                    <a href="{{ route('site.home') }}"><img src="{{ asset('frontend/assets/images/logo/logo_black.png') }}" alt=""></a>
                                 </div>
                             </div>
                             <!-- End Header Logo -->
@@ -20,9 +20,9 @@
                                 <nav>
                                     <ul>
                                         <li class="has-dropdown">
-                                            <a class="active main-menu-link" href="index.html">Home</a>
+                                            <a class="active main-menu-link" href="{{ route('site.home') }}">Home</a>
                                         </li>
-                                        <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                        <li><a href="{{ route('site.shop') }}">Shop</a></li>
                                         <li>
                                             <a href="blog-single-sidebar-left.html">Blog </a>
                                         </li>
