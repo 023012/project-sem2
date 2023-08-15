@@ -3,7 +3,6 @@
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -76,8 +75,20 @@ Route::get('/admin', function () {
 });
 
 
+
 // Admin
 Route::group(['prefix' => 'admin'], function () {
+
+    //admin
+    Route::prefix('/admin-manage')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin.admin-manage.index');
+        Route::get('/create', [\App\Http\Controllers\Admin\AdminController::class, 'create'])->name('admin.admin-manage.create');
+        Route::post('/store', [\App\Http\Controllers\Admin\AdminController::class, 'store'])->name('admin.admin-manage.store');
+        Route::get('/{admin}/edit', [\App\Http\Controllers\Admin\AdminController::class, 'edit'])->name('admin.admin-manage.edit');
+        Route::put('/{admin}/edit', [\App\Http\Controllers\Admin\AdminController::class, 'update'])->name('admin.admin-manage.update');
+        Route::delete('/{admin}', [\App\Http\Controllers\Admin\AdminController::class, 'destroy'])->name('admin-manage.destroy');
+    });
+
 
     // category
     Route::group(['prefix' => 'category'], function () {
@@ -90,6 +101,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::delete('/{category}/delete', [\App\Http\Controllers\Admin\CategoryController::class, 'destroy'])->name('admin.category.destroy');
     });
 
+
     //product-comments
     Route::group(['prefix' => 'product-comments'], function () {
         Route::get('/', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'index'])
@@ -99,5 +111,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/{category}/edit', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'edit'])->name('admin.product-comments.edit');
         Route::put('/{category}/update', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'update'])->name('admin.product-comments.update');
         Route::delete('/{category}/delete', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
+    });
+      //product
+    Route::prefix('/products')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Admin\ProductController::class, 'index'])->name('admin.products.index');
     });
 });

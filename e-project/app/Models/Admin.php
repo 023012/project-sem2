@@ -34,8 +34,8 @@ class Admin extends Model
             'name' => $this->name,
             'email' => $this->email,
             'address' => $this->address,
-            'password' => $this->password,
             'phone' => $this->phone,
+            'password' => $this->password,
         ]);
     }
 
