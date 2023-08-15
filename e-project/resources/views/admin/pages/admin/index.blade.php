@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{ asset('backend/css/dataTables.bootstrap4.css') }}">
 @endpush
 @push('title')
-    Danh mục sản phẩm
+    Quản lí tài khoản
 @endpush
 
 @section('content')
@@ -11,8 +11,8 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h2 class="mb-2 page-title">Danh mục sản phẩm</h2>
-                    <a href="{{ route('admin.category.create') }}" class="btn mb-2 btn-outline-secondary"><span
+                    <h2 class="mb-2 page-title">Tài khoản </h2>
+                    <a href="{{ route('admin.admin-manage.create') }}" class="btn mb-2 btn-outline-secondary"><span
                             class="fa-solid fa-plus fe-16 mr-2"></span>Thêm mới</a>
                     <div class="row my-4">
                         <!-- Small table -->
@@ -24,21 +24,24 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Tên danh mục</th>
+                                                <th>Tên thành viên</th>
+                                                <th>Email</th>
                                                 <th>Thao tác</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($categories as $category)
+                                            @foreach ($admins as $admin)
                                                 <tr>
-                                                    <td>{{ $category->id }}</td>
-                                                    <td>{{ $category->name }}</td>
+                                                    <td>{{ $admin->id }}</td>
+                                                    <td>{{ $admin->name }}</td>
+                                                    <td>{{ $admin->email }}</td>
                                                     <td>
-                                                        <form method="POST" action="{{ route('admin.category.destroy', $category->id) }}">
+                                                        <form method="POST" action="{{ route('admin-manage.destroy', $admin->id) }}">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <a href="{{ route('admin.category.edit', $category->id) }}" class="btn" onclick="handleEdit()"><span
-                                                                    class="fa-solid fa-pen-to-square"></span></a>
+                                                            <a href="{{ route('admin.admin-manage.edit', $admin->id) }}" class="btn" onclick="handleEdit()" >
+                                                                <span class="fa-solid fa-pen-to-square"></span>
+                                                            </a>
                                                             <button type="submit" class="btn"><span
                                                                     class="fa-solid fa-trash"></span></button>
                                                         </form>
@@ -49,8 +52,8 @@
                                         <tfoot>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Tên danh mục</th>
-                                                <th>Thao tác</th>
+                                                <th>Tên thành viên</th>
+                                                <th>Email</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -79,5 +82,7 @@
                 [16, 32, 64, "All"]
             ]
         });
+
     </script>
+
 @endpush

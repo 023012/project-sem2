@@ -1,6 +1,6 @@
 @extends('admin.app')
 @push('title')
-    Sửa danh mục 
+    Sửa danh mục
 @endpush
 @section('content')
 <main role="main" class="main-content">
@@ -22,11 +22,9 @@
                         @method('PUT')
                         <label class="my-1 mr-2" >Tên danh mục</label>
                         <input name="name" type="text" class="form-control mb-2 mr-sm-2" placeholder="Tên danh mục" value="{{ $category->name }}">
-                        <span>
-                            @if ($errors->has("name"))
-                                {{ $error->first('name') }}
-                            @endif
-                        </span>
+                          @error('name')
+                          <div class="text-danger">{{ $message }}</div>
+                          @enderror
                         <button type="submit" class="btn btn-primary mb-2">Submit</button>
                       </form>
                     </div>

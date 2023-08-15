@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace app\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Nette\Utils\Paginator;
 
 class ProductController extends Controller
 {
@@ -12,7 +13,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+//        $data=Paginator::$last
+        return view('admin.pages.product.index');
     }
 
     /**
