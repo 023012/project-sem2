@@ -1,6 +1,6 @@
 @extends('admin.app')
 @push('title')
-Thêm khách hàng
+Thêm thông tin liên lạc
 @endpush
 @section('content')
 <main role="main" class="main-content">
@@ -9,16 +9,16 @@ Thêm khách hàng
       <div class="col-12">
         <div class="row">
           <div class="col-md-12">
-            <h1 class="page-title">Thêm khách hàng mới</h1>
+            <h1 class="page-title">Thêm liên lạc mới</h1>
           </div>
           <div class="col-md-12">
             <div class="card-deck">
               <div class="card shadow mb-4">
                 <div class="card-header">
-                  <strong class="card-title">Thêm khách hàng</strong>
+                  <strong class="card-title">Thêm thông tin liên lạc</strong>
                 </div>
                 <div class="card-body">
-                  <form method="POST" action="{{ route('admin.user.store') }}">
+                  <form method="POST" action="{{ route('admin.contact.store') }}">
                     @csrf
                     <div class="form-row">
                       <div class="form-group col-md-6">
@@ -36,15 +36,6 @@ Thêm khách hàng
                         <span>
                           @if ($errors->has("email"))
                           {{ $error->first('email') }}
-                          @endif
-                        </span>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input name="password" type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                        <span>
-                          @if ($errors->has("password"))
-                          {{ $error->first('password') }}
                           @endif
                         </span>
                       </div>
@@ -67,6 +58,15 @@ Thêm khách hàng
                         @endif
                       </span>
                     </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Content</label>
+                        <input name="content" type="text" class="form-control" id="inputAdress" placeholder="content">
+                        <span>
+                          @if ($errors->has("content"))
+                          {{ $error->first('content') }}
+                          @endif
+                        </span>
+                      </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
                 </div>

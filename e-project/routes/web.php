@@ -116,7 +116,27 @@ Route::group(['prefix' => 'admin'], function () {
     Route::prefix('/products')->group(function () {
         Route::get('/', [\App\Http\Controllers\Admin\ProductController::class, 'index'])->name('admin.products.index');
     });
-
+  
+    //user
+    
+    Route::prefix('/user-manage')->group(function(){
+        Route::get('/user', [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.user.index');
+        Route::get('/user-create', [\App\Http\Controllers\Admin\UserController::class, 'create'])->name('admin.user.create');
+        Route::post('/user-create', [\App\Http\Controllers\Admin\UserController::class, 'store'])->name('admin.user.store');
+        Route::get('/user/{user}/edit', [\App\Http\Controllers\Admin\UserController::class, 'edit'])->name('admin.user.edit');
+        Route::put('/user/{user}/edit', [\App\Http\Controllers\Admin\UserController::class, 'update'])->name('admin.user.update');
+        Route::delete('/user/{user}', [\App\Http\Controllers\Admin\UserController::class, 'destroy'])->name('admin.user.destroy');
+    });
+    //contact
+     
+    Route::prefix('/contact-manage')->group(function(){
+        Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contact.index');
+        Route::get('/contact-create', [\App\Http\Controllers\Admin\ContactController::class, 'create'])->name('admin.contact.create');
+        Route::post('/contact-create', [\App\Http\Controllers\Admin\ContactController::class, 'store'])->name('admin.contact.store');
+        Route::get('/contact/{contact}/edit', [\App\Http\Controllers\Admin\ContactController::class, 'edit'])->name('admin.contact.edit');
+        Route::put('/contact/{contact}/edit', [\App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contact.update');
+        Route::delete('/contact/{contact}', [\App\Http\Controllers\Admin\ContactController::class, 'destroy'])->name('admin.contact.destroy');
+});
 });
 
 // Client
@@ -134,5 +154,5 @@ Route::group(['prefix' => ''], function(){
     Route::get('/produc_details_default',[\App\Http\Controllers\User\ProductDetailsDefaultController::class, 'index'])->name('site.product_details_default');
     Route::get('/compare',[\App\Http\Controllers\User\CompareController::class, 'index'])->name('site.compare');
     Route::get('/my_account',[\App\Http\Controllers\User\MyAccountController::class, 'index'])->name('site.my_account');
-    Route::get('/login',[\App\Http\Controllers\User\LoginController::class, 'index'])->name('auth.login');
+    Route::get('/login',[\App\Http\Controllers\User\LoginController::class, 'index'])->name('auth.login');  
 });
