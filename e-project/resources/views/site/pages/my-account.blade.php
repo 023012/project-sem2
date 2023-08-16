@@ -11,8 +11,8 @@
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                    <li><a href="{{route('site.home')}}">Home</a></li>
+                                    <li><a href="{{route('site.shop')}}">Shop</a></li>
                                     <li class="active" aria-current="page">My Account</li>
                                 </ul>
                             </nav>
@@ -43,7 +43,7 @@
                             <li><a href="#account-details" data-bs-toggle="tab"
                                     class="nav-link btn btn-block btn-md btn-black-default-hover">Account details</a>
                             </li>
-                            <li><a href="login.html"
+                            <li><a href="{{route('auth.login')}}"
                                     class="nav-link btn btn-block btn-md btn-black-default-hover">logout</a></li>
                         </ul>
                     </div>
@@ -76,14 +76,14 @@
                                             <td>May 10, 2018</td>
                                             <td><span class="success">Completed</span></td>
                                             <td>$25.00 for 1 item </td>
-                                            <td><a href="cart.html" class="view">view</a></td>
+                                            <td><a href="{{route('site.cart')}}" class="view">view</a></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>May 10, 2018</td>
                                             <td>Processing</td>
                                             <td>$17.00 for 1 item </td>
-                                            <td><a href="cart.html" class="view">view</a></td>
+                                            <td><a href="{{route('site.cart')}}" class="view">view</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -133,7 +133,7 @@
                                 <div class="login_form_container">
                                     <div class="account_login_form">
                                         <form action="#">
-                                            <p>Already have an account? <a href="#">Log in instead!</a></p>
+                                            <p>Already have an account? <a href="{{route('auth.login')}}">Log in instead!</a></p>
                                             <div class="input-radio">
                                                 <span class="custom-radio"><input type="radio" value="1"
                                                         name="id_gender"> Mr.</span>

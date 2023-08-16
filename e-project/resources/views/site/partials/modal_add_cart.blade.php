@@ -18,15 +18,15 @@
                                 <div class="col-md-4">
                                     <div class="modal-add-cart-product-img">
                                         <img class="img-fluid"
-                                            src="assets/images/product/default/home-1/default-1.jpg" alt="">
+                                            src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="modal-add-cart-info"><i class="fa fa-check-square"></i>Added to cart
                                         successfully!</div>
                                     <div class="modal-add-cart-product-cart-buttons">
-                                        <a href="cart.html">View Cart</a>
-                                        <a href="checkout.html">Checkout</a>
+                                        <a href="{{route('site.cart')}}">View Cart</a>
+                                        <a href="{{route('site.checkout')}}">Checkout</a>
                                     </div>
                                 </div>
                             </div>

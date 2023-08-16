@@ -21,7 +21,7 @@
                                         <div class="hero-slider-content">
                                             <h4 class="subtitle">New collection</h4>
                                             <h2 class="title">Best Of NeoCon <br> Gold Award </h2>
-                                            <a href="product-details-default.html"
+                                            <a href="{{ route('site.product_details_default') }}"
                                                 class="btn btn-lg btn-outline-golden">shop now </a>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@
                                         <div class="hero-slider-content">
                                             <h4 class="subtitle">New collection</h4>
                                             <h2 class="title">Luxy Chairs <br> Design Award </h2>
-                                            <a href="product-details-default.html"
+                                            <a href="{{route('site.product_details_default')}}"
                                                 class="btn btn-lg btn-outline-golden">shop now </a>
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@
                                 <h4 class="title">Mini rechargeable
                                     Table Lamp - E216</h4>
                                 <h5 class="sub-title">We design your home</h5>
-                                <a href="product-details-default.html"
+                                <a href="{{route('site.product_details_default')}}"
                                     class="btn btn-lg btn-outline-golden icon-space-left"><span
                                         class="d-flex align-items-center">discover now <i
                                             class="ion-ios-arrow-thin-right"></i></span></a>
@@ -164,7 +164,7 @@
                                     <div class="content">
                                         <h4 class="title">Kitchen <br>
                                             utensils</h4>
-                                        <a href="product-details-default.html" class="link-text"><span>Shop
+                                        <a href="{{route('site.product_details_default')}}" class="link-text"><span>Shop
                                                 now</span></a>
                                     </div>
                                 </div>
@@ -180,7 +180,7 @@
                                     <div class="content">
                                         <h4 class="title">Sofas and <br>
                                             Armchairs</h4>
-                                        <a href="product-details-default.html" class="link-text"><span>Shop
+                                        <a href="{{route('site.product_details_default')}}" class="link-text"><span>Shop
                                                 now</span></a>
                                     </div>
                                 </div>
@@ -196,7 +196,7 @@
                                     <div class="content">
                                         <h4 class="title">Chair & Bar<br>
                                             stools</h4>
-                                        <a href="product-details-default.html" class="link-text"><span>Shop
+                                        <a href="{{route('site.product_details_default')}}" class="link-text"><span>Shop
                                                 now</span></a>
                                     </div>
                                 </div>
@@ -212,7 +212,7 @@
                                     <div class="content">
                                         <h4>Interior <br>
                                             lighting</h4>
-                                        <a href="product-details-default.html"><span>Shop now</span></a>
+                                        <a href="{{route('site.product_details_default')}}"><span>Shop now</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +256,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                             </a>
@@ -272,14 +272,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Aliquam
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Aliquam
                                                         lobortis</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -299,7 +299,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
                                             </a>
@@ -315,14 +315,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Condimentum
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Condimentum
                                                         posuere</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -342,7 +342,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                             </a>
@@ -358,14 +358,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Cras neque
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Cras neque
                                                         metus</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -385,7 +385,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-8.jpg')}}" alt="">
                                             </a>
@@ -398,14 +398,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Donec eu libero
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Donec eu libero
                                                         ac</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -425,7 +425,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-10.jpg')}}" alt="">
                                             </a>
@@ -438,14 +438,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Epicuri per
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Epicuri per
                                                         lobortis</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -465,7 +465,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-11.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                             </a>
@@ -478,14 +478,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Kaoreet
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Kaoreet
                                                         lobortis sagit</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -505,7 +505,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
                                             </a>
@@ -518,14 +518,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Condimentum
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Condimentum
                                                         posuere</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -545,7 +545,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}" alt="">
                                             </a>
@@ -558,14 +558,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Convallis quam
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Convallis quam
                                                         sit</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -585,7 +585,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                             </a>
@@ -598,14 +598,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Dolorum fuga
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Dolorum fuga
                                                         eget</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -625,7 +625,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
                                             </a>
@@ -641,14 +641,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Duis pulvinar
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Duis pulvinar
                                                         obortis</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -668,7 +668,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-8.jpg')}}" alt="">
                                             </a>
@@ -681,14 +681,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Dolorum fuga
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Dolorum fuga
                                                         eget</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -708,7 +708,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-10.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                             </a>
@@ -721,14 +721,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Duis pulvinar
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Duis pulvinar
                                                         obortis</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -773,7 +773,7 @@
                             <h3 class="title">Modern Furniture
                                 Basic Collection</h3>
                             <h5 class="sub-title">We design your home more beautiful</h5>
-                            <a href="product-details-default.html"
+                            <a href="{{route('site.product_details_default')}}"
                                 class="btn btn-lg btn-outline-golden icon-space-left"><span
                                     class="d-flex align-items-center">discover now <i
                                         class="ion-ios-arrow-thin-right"></i></span></a>
@@ -817,7 +817,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-10.jpg')}}" alt="">
                                             </a>
@@ -830,14 +830,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Epicuri per
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Epicuri per
                                                         lobortis</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -857,7 +857,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-11.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                             </a>
@@ -870,14 +870,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Kaoreet
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Kaoreet
                                                         lobortis sagit</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -897,7 +897,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
                                             </a>
@@ -910,14 +910,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Condimentum
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Condimentum
                                                         posuere</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -937,7 +937,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}" alt="">
                                             </a>
@@ -950,14 +950,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Convallis quam
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Convallis quam
                                                         sit</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -977,7 +977,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                             </a>
@@ -993,14 +993,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Aliquam
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Aliquam
                                                         lobortis</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -1020,7 +1020,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
                                             </a>
@@ -1036,14 +1036,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Condimentum
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Condimentum
                                                         posuere</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -1063,7 +1063,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                             </a>
@@ -1079,14 +1079,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Cras neque
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Cras neque
                                                         metus</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -1106,7 +1106,7 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="{{route('site.product_details_default')}}" class="image-link">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-7.jpg')}}" alt="">
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-8.jpg')}}" alt="">
                                             </a>
@@ -1119,14 +1119,14 @@
                                                     <a href="#" data-bs-toggle="modal"
                                                         data-bs-target="#modalQuickview"><i
                                                             class="icon-magnifier"></i></a>
-                                                    <a href="wishlist.html"><i class="icon-heart"></i></a>
-                                                    <a href="compare.html"><i class="icon-shuffle"></i></a>
+                                                    <a href="{{route('site.wishlist')}}"><i class="icon-heart"></i></a>
+                                                    <a href="{{route('site.compare')}}"><i class="icon-shuffle"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
                                             <div class="content-left">
-                                                <h6 class="title"><a href="product-details-default.html">Donec eu libero
+                                                <h6 class="title"><a href="{{route('site.product_details_default')}}">Donec eu libero
                                                         ac</a></h6>
                                                 <ul class="review-star">
                                                     <li class="fill"><i class="ion-android-star"></i></li>
@@ -1164,7 +1164,7 @@
                 <div class="image">
                     <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-4-img-1.jpg')}}" alt="">
                 </div>
-                <a href="product-details-default.html" class="content">
+                <a href="{{route('site.product_details_default')}}" class="content">
                     <div class="inner">
                         <h4 class="title">Bar Stool</h4>
                         <h6 class="sub-title">20 products</h6>
@@ -1179,7 +1179,7 @@
                 <div class="image">
                     <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-4-img-2.jpg')}}" alt="">
                 </div>
-                <a href="product-details-default.html" class="content">
+                <a href="{{route('site.product_details_default')}}" class="content">
                     <div class="inner">
                         <h4 class="title">Armchairs</h4>
                         <h6 class="sub-title">20 products</h6>
@@ -1194,7 +1194,7 @@
                 <div class="image">
                     <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-4-img-3.jpg')}}" alt="">
                 </div>
-                <a href="product-details-default.html" class="content">
+                <a href="{{route('site.product_details_default')}}" class="content">
                     <div class="inner">
                         <h4 class="title">lighting</h4>
                         <h6 class="sub-title">20 products</h6>
@@ -1209,7 +1209,7 @@
                 <div class="image">
                     <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-4-img-4.jpg')}}" alt="">
                 </div>
-                <a href="product-details-default.html" class="content">
+                <a href="{{route('site.product_details_default')}}" class="content">
                     <div class="inner">
                         <h4 class="title">Easy chairs</h4>
                         <h6 class="sub-title">20 products</h6>
@@ -1252,18 +1252,18 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="blog-single-sidebar-left.html" class="image-link">
+                                            <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                                 <img class="img-fluid"
                                                     src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-1.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
-                                            <h6 class="title"><a href="blog-single-sidebar-left.html">Blog Post One</a>
+                                            <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}">Blog Post One</a>
                                             </h6>
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
+                                                <a href="{{route('site.blog-single-sidebar-left')}}"
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
@@ -1276,21 +1276,21 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="blog-single-sidebar-left.html" class="image-link">
+                                            <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                                 <img class="img-fluid"
                                                     src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-2.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
-                                            <h6 class="title"><a href="blog-single-sidebar-left.html">Blog Post Two</a>
+                                            <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}">Blog Post Two</a>
                                             </h6>
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="#" class="read-more-btn icon-space-left">Read More <span><i
+                                                <a href="{{route('site.blog-single-sidebar-left')}}" class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
-                                                    <a href="blog-single-sidebar-left.html" class="date">24 Apr</a>
+                                                    <a href="#" class="date">24 Apr</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1299,18 +1299,18 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="blog-single-sidebar-left.html" class="image-link">
+                                            <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                                 <img class="img-fluid"
                                                     src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-3.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
-                                            <h6 class="title"><a href="blog-single-sidebar-left.html">Blog Post
+                                            <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}">Blog Post
                                                     Three</a></h6>
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
+                                                <a href="{{route('site.blog-single-sidebar-left')}}"
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
@@ -1323,18 +1323,18 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="blog-single-sidebar-left.html" class="image-link">
+                                            <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                                 <img class="img-fluid"
                                                     src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-4.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
-                                            <h6 class="title"><a href="blog-single-sidebar-left.html">Blog Post Four</a>
+                                            <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}">Blog Post Four</a>
                                             </h6>
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
+                                                <a href="{{route('site.blog-single-sidebar-left')}}"
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
@@ -1347,18 +1347,18 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="blog-single-sidebar-left.html" class="image-link">
+                                            <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                                 <img class="img-fluid"
                                                     src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-5.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
-                                            <h6 class="title"><a href="blog-single-sidebar-left.html">Blog Post Five</a>
+                                            <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}">Blog Post Five</a>
                                             </h6>
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
+                                                <a href="{{route('site.blog-single-sidebar-left')}}"
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
@@ -1371,18 +1371,18 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="blog-default-single-item blog-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="blog-single-sidebar-left.html" class="image-link">
+                                            <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                                 <img class="img-fluid"
                                                     src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-6.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="content">
-                                            <h6 class="title"><a href="blog-single-sidebar-left.html">Blog Post Six</a>
+                                            <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}">Blog Post Six</a>
                                             </h6>
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
                                             <div class="inner">
-                                                <a href="blog-single-sidebar-left.html"
+                                                <a href="{{route('site.blog-single-sidebar-left')}}"
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
@@ -1443,7 +1443,4 @@
         </div>
     </div>
     <!-- End Instagramr Section -->
-
-    @include('site.partials.modal_quickview_cart')
-
 @stop

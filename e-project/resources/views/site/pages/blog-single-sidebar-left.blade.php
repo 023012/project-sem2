@@ -10,8 +10,8 @@
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="blog-grid-sidebar-left.html">Blog</a></li>
+                                    <li><a href="{{route('site.home')}}">Home</a></li>
+                                    <li><a href="{{route('site.blog-grid-sidebar-left')}}">Blog</a></li>
                                     <li class="active" aria-current="page">Blog Single Left Sidebar</li>
                                 </ul>
                             </nav>
@@ -95,7 +95,7 @@
                                             <!-- Start Single Menu Collapse List -->
                                             <li class="sidebar-menu-collapse-list">
                                                 <div class="accordion">
-                                                    <a href="shop-grid-sidebar-left.html"
+                                                    <a href="{{route('site.shop')}}"
                                                         class="accordion-title collapsed" data-bs-toggle="collapse"
                                                         data-bs-target="#men-fashion" aria-expanded="false">Men <i
                                                             class="ion-ios-arrow-right"></i></a>

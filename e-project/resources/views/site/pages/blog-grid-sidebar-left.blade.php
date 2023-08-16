@@ -135,7 +135,7 @@
                                 <div class="blog-list blog-grid-single-item blog-color--golden" data-aos="fade-up"
                                     data-aos-delay="0">
                                     <div class="image-box">
-                                        <a href="blog-single-sidebar-left.html" class="image-link">
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                             <img class="img-fluid" src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-1.jpg')}}"
                                                 alt="">
                                         </a>
@@ -145,11 +145,11 @@
                                             <li>POSTED BY : <a href="#" class="author">Admin</a></li>
                                             <li>ON : <a href="#" class="date">APRIL 24, 2018</a></li>
                                         </ul>
-                                        <h6 class="title"><a href="blog-single-sidebar-left.html"> Blog image post</a>
+                                        <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}"> Blog image post</a>
                                         </h6>
                                         <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                             Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
-                                        <a href="#" class="read-more-btn icon-space-left">Read More <span class="icon"><i
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="read-more-btn icon-space-left">Read More <span class="icon"><i
                                                     class="ion-ios-arrow-thin-right"></i></span></a>
                                     </div>
                                 </div>
@@ -192,11 +192,11 @@
                                             <li>POSTED BY : <a href="#" class="author">Admin</a></li>
                                             <li>ON : <a href="#" class="date">APRIL 24, 2018</a></li>
                                         </ul>
-                                        <h6 class="title"><a href="blog-single-sidebar-left.html"> Blog Slider post</a>
+                                        <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}"> Blog Slider post</a>
                                         </h6>
                                         <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                             Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
-                                        <a href="#" class="read-more-btn icon-space-left">Read More <span class="icon"><i
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="read-more-btn icon-space-left">Read More <span class="icon"><i
                                                     class="ion-ios-arrow-thin-right"></i></span></a>
                                     </div>
                                 </div>
@@ -219,11 +219,11 @@
                                             <li>POSTED BY : <a href="#" class="author">Admin</a></li>
                                             <li>ON : <a href="#" class="date">APRIL 24, 2018</a></li>
                                         </ul>
-                                        <h6 class="title"><a href="blog-single-sidebar-left.html"> Blog video post</a>
+                                        <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}"> Blog video post</a>
                                         </h6>
                                         <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                             Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
-                                        <a href="#" class="read-more-btn icon-space-left">Read More <span class="icon"><i
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="read-more-btn icon-space-left">Read More <span class="icon"><i
                                                     class="ion-ios-arrow-thin-right"></i></span></a>
                                     </div>
                                 </div>
@@ -234,7 +234,7 @@
                                 <div class="blog-list blog-grid-single-item blog-color--golden" data-aos="fade-up"
                                     data-aos-delay="200">
                                     <div class="image-box">
-                                        <a href="blog-single-sidebar-left.html" class="image-link">
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                             <img class="img-fluid" src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-2.jpg')}}"
                                                 alt="">
                                         </a>
@@ -244,11 +244,11 @@
                                             <li>POSTED BY : <a href="#" class="author">Admin</a></li>
                                             <li>ON : <a href="#" class="date">APRIL 24, 2018</a></li>
                                         </ul>
-                                        <h6 class="title"><a href="blog-single-sidebar-left.html"> Blog image post</a>
+                                        <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}"> Blog image post</a>
                                         </h6>
                                         <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                             Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
-                                        <a href="#" class="read-more-btn icon-space-left">Read More <span class="icon"><i
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="read-more-btn icon-space-left">Read More <span class="icon"><i
                                                     class="ion-ios-arrow-thin-right"></i></span></a>
                                     </div>
                                 </div>
@@ -259,7 +259,7 @@
                                 <div class="blog-list blog-grid-single-item blog-color--golden" data-aos="fade-up"
                                     data-aos-delay="0">
                                     <div class="image-box">
-                                        <a href="blog-single-sidebar-left.html" class="image-link">
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="image-link">
                                             <img class="img-fluid" src="{{asset('frontend/assets/images/blog/blog-grid-home-1-img-5.jpg')}}"
                                                 alt="">
                                         </a>
@@ -269,11 +269,11 @@
                                             <li>POSTED BY : <a href="#" class="author">Admin</a></li>
                                             <li>ON : <a href="#" class="date">APRIL 24, 2018</a></li>
                                         </ul>
-                                        <h6 class="title"><a href="blog-single-sidebar-left.html"> Blog image post</a>
+                                        <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}"> Blog image post</a>
                                         </h6>
                                         <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                             Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
-                                        <a href="#" class="read-more-btn icon-space-left">Read More <span class="icon"><i
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="read-more-btn icon-space-left">Read More <span class="icon"><i
                                                     class="ion-ios-arrow-thin-right"></i></span></a>
                                     </div>
                                 </div>
@@ -292,11 +292,11 @@
                                             <li>POSTED BY : <a href="#" class="author">Admin</a></li>
                                             <li>ON : <a href="#" class="date">APRIL 24, 2018</a></li>
                                         </ul>
-                                        <h6 class="title"><a href="blog-single-sidebar-left.html"> Blog Audio post</a>
+                                        <h6 class="title"><a href="{{route('site.blog-single-sidebar-left')}}"> Blog Audio post</a>
                                         </h6>
                                         <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                             Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
-                                        <a href="#" class="read-more-btn icon-space-left">Read More <span class="icon"><i
+                                        <a href="{{route('site.blog-single-sidebar-left')}}" class="read-more-btn icon-space-left">Read More <span class="icon"><i
                                                     class="ion-ios-arrow-thin-right"></i></span></a>
                                     </div>
                                 </div>

@@ -13,7 +13,7 @@
                             <ul class="footer-nav">
                                 <li><a href="#">Delivery Information</a></li>
                                 <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><a href="{{route('site.contact-us')}}">Contact</a></li>
                                 <li><a href="#">Returns</a></li>
                             </ul>
                         </div>
@@ -25,10 +25,10 @@
                             data-aos-delay="200">
                             <h5 class="title">MY ACCOUNT</h5>
                             <ul class="footer-nav">
-                                <li><a href="my-account.html">My account</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="faq.html">Frequently Questions</a></li>
+                                <li><a href="{{route('site.my_account')}}">My account</a></li>
+                                <li><a href="{{route('site.wishlist')}}">Wishlist</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Frequently Questions</a></li>
                                 <li><a href="#">Order History</a></li>
                             </ul>
                         </div>
@@ -111,8 +111,8 @@
                     class="row justify-content-between align-items-center align-items-center flex-column flex-md-row mb-n6">
                     <div class="col-auto mb-6">
                         <div class="footer-copyright">
-                            <p class="copyright-text">&copy; 2021 <a href="index.html">therankme</a>. Made with <i
-                                    class="fa fa-heart text-danger"></i> by <a href="https://therankme.com/"
+                            <p class="copyright-text">&copy; 2021 <a href="{{route('site.home')}}">therankme</a>. Made with <i
+                                    class="fa fa-heart text-danger"></i> by <a href="{{route('site.home')}}"
                                     target="_blank">therankme</a> </p>
 
                         </div>
