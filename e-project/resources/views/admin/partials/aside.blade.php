@@ -35,10 +35,20 @@
 
                   {{-- Quản lý Khách hàng --}}
                   <li class="nav-item dropdown">
-                      <a href="#tables" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                      <a href="#Customer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                           <i class="fe fe-grid fe-16"></i>
                           <span class="ml-3 item-text">Quản lý khách hàng</span>
                       </a>
+                      <ul class="collapse list-unstyled pl-4 w-100" id="Customer">
+                        <li class="nav-item">
+                            <a class="nav-link pl-3"  href="{{ route('admin.user.index') }}"><span class="ml-1 item-text">Danh sách khách hàng</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link pl-3" href="{{ route('admin.user.create') }}"><span class="ml-1 item-text">Thêm mới khách hàng</span>
+                          </a>
+                      </li>
+                    </ul>
                   </li>
 
                   {{-- Quản lý danh mục --}}
@@ -59,6 +69,23 @@
                     </ul>
                   </li>
 
+                  {{-- Quản lý contac --}}
+                  <li class="nav-item dropdown">
+                      <a href="#Contac" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                          <i class="fe fe-grid fe-16"></i>
+                          <span class="ml-3 item-text">Quản lý contac</span>
+                      </a>
+                      <ul class="collapse list-unstyled pl-4 w-100" id="Contac">
+                        <li class="nav-item">
+                            <a class="nav-link pl-3"  href="{{ route('admin.contact.index') }}"><span class="ml-1 item-text">Danh sách contac</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link pl-3" href="{{ route('admin.contact.create') }}"><span class="ml-1 item-text">Thêm mới contac</span>
+                          </a>
+                      </li>
+                    </ul>
+                  </li>
                   {{-- Quản lý sản phẩm --}}
                   <li class="nav-item dropdown">
                       <a href="#tables" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">

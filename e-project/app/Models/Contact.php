@@ -22,14 +22,44 @@ class Contact extends Model
         'content'
     ];
 
-    public function store() {
+    public function index()
+    {
+        $contacts = DB::table('contacts')
+            ->get();
+        return $contacts;
+    }
+
+
+
+    public function store()
+    {
         DB::table('contacts')
-        ->insert([
-            'name' => $this->name,
-            'email' => $this->email,
-            'phone' => $this->phone,
-            'address' => $this->address,
-            'content' => $this->content,
-        ]);
+            ->insert([
+                'name' => $this->name,
+                'email' => $this->email,
+                'phone' => $this->phone,
+                'address' => $this->address,
+                'content' => $this->content,
+            ]);
+    }
+
+    public function edit()
+    {
+        DB::table('contacts')
+            ->where('id', $this->id)
+            ->update([
+                'name' => $this->name,
+                'email' => $this->email,
+                'phone' => $this->phone,
+                'address' => $this->address,
+                'content' => $this->content,
+            ]);
+    }
+
+    public function delete()
+    {
+        DB::table('contacts')
+            ->where('id', $this->id)
+            ->delete();
     }
 }
