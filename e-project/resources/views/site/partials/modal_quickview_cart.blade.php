@@ -19,22 +19,22 @@
                                 <div class="product-large-image modal-product-image-large swiper-container">
                                     <div class="swiper-wrapper">
                                         <div class="product-image-large-image swiper-slide img-responsive">
-                                            <img src="assets/images/product/default/home-1/default-1.jpg" alt="">
+                                            <img src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-large-image swiper-slide img-responsive">
-                                            <img src="assets/images/product/default/home-1/default-2.jpg" alt="">
+                                            <img src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-large-image swiper-slide img-responsive">
-                                            <img src="assets/images/product/default/home-1/default-3.jpg" alt="">
+                                            <img src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-large-image swiper-slide img-responsive">
-                                            <img src="assets/images/product/default/home-1/default-4.jpg" alt="">
+                                            <img src="{{asset('frontend/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-large-image swiper-slide img-responsive">
-                                            <img src="assets/images/product/default/home-1/default-5.jpg" alt="">
+                                            <img src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-large-image swiper-slide img-responsive">
-                                            <img src="assets/images/product/default/home-1/default-6.jpg" alt="">
+                                            <img src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -45,27 +45,27 @@
                                     <div class="swiper-wrapper">
                                         <div class="product-image-thumb-single swiper-slide">
                                             <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-1.jpg" alt="">
+                                                src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-thumb-single swiper-slide">
                                             <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-2.jpg" alt="">
+                                                src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-thumb-single swiper-slide">
                                             <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-3.jpg" alt="">
+                                                src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-thumb-single swiper-slide">
                                             <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-4.jpg" alt="">
+                                                src="{{asset('frontend/assets/images/product/default/home-1/default-4.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-thumb-single swiper-slide">
                                             <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-5.jpg" alt="">
+                                                src="{{asset('frontend/assets/images/product/default/home-1/default-5.jpg')}}" alt="">
                                         </div>
                                         <div class="product-image-thumb-single swiper-slide">
                                             <img class="img-fluid"
-                                                src="assets/images/product/default/home-1/default-6.jpg" alt="">
+                                                src="{{asset('frontend/assets/images/product/default/home-1/default-6.jpg')}}" alt="">
                                         </div>
                                     </div>
                                     <!-- Add Arrows -->

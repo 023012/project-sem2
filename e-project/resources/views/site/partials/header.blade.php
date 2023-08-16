@@ -10,7 +10,7 @@
                             <!-- Start Header Logo -->
                             <div class="header-logo">
                                 <div class="logo">
-                                    <a href="index.html"><img src="{{ asset('frontend/assets/images/logo/logo_black.png') }}" alt=""></a>
+                                    <a href="{{ route('site.home') }}"><img src="{{ asset('frontend/assets/images/logo/logo_black.png') }}" alt=""></a>
                                 </div>
                             </div>
                             <!-- End Header Logo -->
@@ -20,17 +20,17 @@
                                 <nav>
                                     <ul>
                                         <li class="has-dropdown">
-                                            <a class="active main-menu-link" href="index.html">Home</a>
+                                            <a class="active main-menu-link" href="{{ route('site.home') }}">Home</a>
                                         </li>
-                                        <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                        <li><a href="{{ route('site.shop') }}">Shop</a></li>
                                         <li>
-                                            <a href="blog-single-sidebar-left.html">Blog </a>
-                                        </li>
-                                        <li>
-                                            <a href="about-us.html">About Us</a>
+                                            <a href="{{ route('site.blog-grid-sidebar-left') }}">Blog </a>
                                         </li>
                                         <li>
-                                            <a href="contact-us.html">Contact Us</a>
+                                            <a href="{{ route('site.about-us') }}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('site.contact-us') }}">Contact Us</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -80,7 +80,7 @@
                     <div class="mobile-header-left">
                         <ul class="mobile-menu-logo">
                             <li>
-                                <a href="index.html">
+                                <a href="{{route('site.home')}}">
                                     <div class="logo">
                                         <img src="{{ asset('frontend/assets/images/logo/logo_black.png') }}" alt="">
                                     </div>
@@ -138,12 +138,12 @@
                 <div class="offcanvas-menu">
                     <ul>
                         <li>
-                            <a href="#"><span>Home</span></a>
+                            <a href="{{ route('site.home') }}"><span>Home</span></a>
                         </li>
-                        <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
-                        <li><a href="blog-grid-sidebar-left.html">Blogs</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="{{ route('site.shop') }}">Shop</a></li>
+                        <li><a href="{{ route('site.blog-grid-sidebar-left') }}">Blogs</a></li>
+                        <li><a href="{{ route('site.about-us') }}">About Us</a></li>
+                        <li><a href="{{ route('site.contact-us') }}">Contact Us</a></li>
                     </ul>
                 </div> <!-- End Mobile Menu Nav -->
             </div> <!-- End Mobile Menu -->
@@ -151,7 +151,7 @@
             <!-- Start Mobile contact Info -->
             <div class="mobile-contact-info">
                 <div class="logo">
-                    <a href="index.html"><img src="{{ asset('frontend/assets/images/logo/logo_white.png') }}" alt=""></a>
+                    <a href="{{route('site.home')}}"><img src="{{ asset('frontend/assets/images/logo/logo_white.png') }}" alt=""></a>
                 </div>
 
                 <address class="address">
@@ -168,9 +168,9 @@
                 </ul>
 
                 <ul class="user-link">
-                    <li><a href="wishlist.html">Wishlist</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="{{ route('site.wishlist') }}">Wishlist</a></li>
+                    <li><a href="{{route('site.cart')}}">Cart</a></li>
+                    <li><a href="{{route('site.checkout')}}">Checkout</a></li>
                 </ul>
             </div>
             <!-- End Mobile contact Info -->
@@ -188,7 +188,7 @@
         <!-- Start Mobile contact Info -->
         <div class="mobile-contact-info">
             <div class="logo">
-                <a href="index.html"><img src="{{ asset('frontend/assets/images/logo/logo_white.png') }}" alt=""></a>
+                <a href="{{route('site.home')}}"><img src="{{ asset('frontend/assets/images/logo/logo_white.png') }}" alt=""></a>
             </div>
 
             <address class="address">
@@ -205,9 +205,9 @@
             </ul>
 
             <ul class="user-link">
-                <li><a href="wishlist.html">Wishlist</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="{{ route('site.wishlist') }}">Wishlist</a></li>
+                <li><a href="{{route('site.cart')}}">Cart</a></li>
+                <li><a href="{{route('site.checkout')}}">Checkout</a></li>
             </ul>
         </div>
         <!-- End Mobile contact Info -->
@@ -284,8 +284,8 @@
                 <span class="offcanvas-cart-total-price-value">$170.00</span>
             </div>
             <ul class="offcanvas-cart-action-button">
-                <li><a href="cart.html" class="btn btn-block btn-golden">View Cart</a></li>
-                <li><a href="compare.html" class=" btn btn-block btn-golden mt-5">Checkout</a></li>
+                <li><a href="{{route('site.cart')}}" class="btn btn-block btn-golden">View Cart</a></li>
+                <li><a href="{{route('site.checkout')}}" class=" btn btn-block btn-golden mt-5">Checkout</a></li>
             </ul>
         </div> <!-- End  Offcanvas Addcart Wrapper -->
 
@@ -358,7 +358,7 @@
                 </li>
             </ul>
             <ul class="offcanvas-wishlist-action-button">
-                <li><a href="#" class="btn btn-block btn-golden">View wishlist</a></li>
+                <li><a href="{{ route('site.wishlist') }}" class="btn btn-block btn-golden">View wishlist</a></li>
             </ul>
         </div> <!-- End Offcanvas Mobile Menu Wrapper -->
 

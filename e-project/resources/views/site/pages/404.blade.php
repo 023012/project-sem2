@@ -11,7 +11,7 @@
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="{{route('site.home')}}">Home</a></li>
                                     <li><a href="#">Page</a></li>
                                     <li class="active" aria-current="page">404 Page</li>
                                 </ul>
@@ -40,7 +40,7 @@
                                 <button class="default-search-style-input-btn" type="submit"><i
                                         class="fa fa-search"></i></button>
                             </div>
-                            <a href="index.html" class="btn btn-md btn-black-default-hover mt-7" data-aos="fade-up"
+                            <a href="{{route('site.home')}}" class="btn btn-md btn-black-default-hover mt-7" data-aos="fade-up"
                                 data-aos-delay="800">Back to home page</a>
                         </div>
                     </div>

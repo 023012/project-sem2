@@ -11,8 +11,8 @@
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                    <li><a href="{{route('site.home')}}">Home</a></li>
+                                    <li><a href="{{route('site.blog-grid-sidebar-left')}}">Shop</a></li>
                                     <li class="active" aria-current="page">Cart</li>
                                 </ul>
                             </nav>
@@ -49,10 +49,10 @@
                                         <tr>
                                             <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
                                             </td>
-                                            <td class="product_thumb"><a href="product-details-default.html"><img
+                                            <td class="product_thumb"><a href="{{route('site.product_details_default')}}"><img
                                                         src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}"
                                                         alt=""></a></td>
-                                            <td class="product_name"><a href="product-details-default.html">Handbag
+                                            <td class="product_name"><a href="{{route('site.product_details_default')}}">Handbag
                                                     fringilla</a></td>
                                             <td class="product-price">$65.00</td>
                                             <td class="product_quantity"><label>Quantity</label> <input min="1"
@@ -63,10 +63,10 @@
                                         <tr>
                                             <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
                                             </td>
-                                            <td class="product_thumb"><a href="product-details-default.html"><img
+                                            <td class="product_thumb"><a href="{{route('site.product_details_default')}}"><img
                                                         src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}"
                                                         alt=""></a></td>
-                                            <td class="product_name"><a href="product-details-default.html">Handbags
+                                            <td class="product_name"><a href="{{route('site.product_details_default')}}">Handbags
                                                     justo</a></td>
                                             <td class="product-price">$90.00</td>
                                             <td class="product_quantity"><label>Quantity</label> <input min="1"
@@ -77,10 +77,10 @@
                                         <tr>
                                             <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
                                             </td>
-                                            <td class="product_thumb"><a href="product-details-default.html"><img
+                                            <td class="product_thumb"><a href="{{route('site.product_details_default')}}"><img
                                                         src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}"
                                                         alt=""></a></td>
-                                            <td class="product_name"><a href="product-details-default.html">Handbag
+                                            <td class="product_name"><a href="{{route('site.product_details_default')}}">Handbag
                                                     elit</a></td>
                                             <td class="product-price">$80.00</td>
                                             <td class="product_quantity"><label>Quantity</label> <input min="1"

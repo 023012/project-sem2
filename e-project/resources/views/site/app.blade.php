@@ -25,6 +25,7 @@
 
     <!-- material-scrolltop button -->
     <button class="material-scrolltop" type="button"></button>
+    @include('site.partials.modal_quickview_cart')
     @include('site.partials.modal_add_cart')
     @include('site.partials.scripts')
 </body>
