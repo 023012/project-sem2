@@ -15,24 +15,24 @@ class ProductComment extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class, 'category_id', 'id');
+        return $this->hasMany(Product::class, 'id', 'product_id');
     }
 
     public function index(){
-        $categories = DB::table('categories')
+        $product_comments = DB::table('product_comments')
             ->get();
-        return $categories;
+        return $product_comments;
     }
 
     public function store() {
-        DB::table('categories')
+        DB::table('product_comments')
         ->insert([
             'name' => $this->name,
         ]);
     }
 
     public function edit(){
-        DB::table('categories')
+        DB::table('product_comments')
         ->where('id', $this->id)
         ->update([
             'name' => $this->name,
@@ -40,8 +40,8 @@ class ProductComment extends Model
     }
 
     public function delete(){
-        DB::table('categories')
-        ->where('id', $this->id)
-        ->delete();
+        DB::table('product-comments')
+            ->where('id', $this->id)
+            ->delete();
     }
 }

@@ -19,11 +19,11 @@
                     <div class="card-body">
                       <form  method="POST" action="{{ route('admin.category.store') }}" class="form-inline">
                         @csrf
-                        <label class="my-1 mr-2" >Tên danh mục</label>
+                        <label class="my-1 mr-2" >Tên danh mục:</label>
                         <input name="name" type="text" class="form-control mb-2 mr-sm-2" placeholder="Tên danh mục">
                         <span>
                             @if ($errors->has("name"))
-                                {{ $error->first('name') }}
+                                {{ $errors->first('name') }}
                             @endif
                         </span>
                         <button type="submit" class="btn btn-primary mb-2">Submit</button>
