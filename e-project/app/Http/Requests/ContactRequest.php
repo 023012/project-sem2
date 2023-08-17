@@ -27,9 +27,8 @@ class ContactRequest extends FormRequest
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required|regex:/^0[0-9]{9,11}$/',
-            'address' => 'required',
-            'content' => 'required'
-            
+            'message' => 'required'
+
         ];
     }
 
@@ -41,8 +40,7 @@ class ContactRequest extends FormRequest
             'email.email' => "Email không hợp lệ",
             'phone.required' => "Vui lòng nhập số điện thoại",
             'phone.regex' => "Số điện thoại không hợp lệ",
-            'address.required' => "Vui lòng nhập địa chỉ",
-            'content.required' => "Vui lòng nhập content"
+            'message.required' => "Vui lòng nhập content"
         ];
     }
 }

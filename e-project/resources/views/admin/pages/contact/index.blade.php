@@ -31,8 +31,7 @@ Thông tin Liên lạc
                                             <th data-field="name">Họ & Tên</th>
                                             <th data-field="email">Email</th>
                                             <th>Số điện thoại</th>
-                                            <th>Địa chỉ</th>
-                                            <th>content</th>
+                                            <th>Message</th>
                                             <th>Thao tác</th>
                                         </tr>
                                     </thead>
@@ -43,8 +42,7 @@ Thông tin Liên lạc
                                             <td>{{ $contact->name }}</td>
                                             <td>{{ $contact->email }}</td>
                                             <td>{{ $contact->phone }}</td>
-                                            <td>{{ $contact->address }}</td>
-                                            <td>{{ $contact->content }}</td>
+                                            <td>{{ $contact->message }}</td>
                                             <td>
                                                 <form method="POST" action="{{ route('admin.contact.destroy', $contact->id) }}">
                                                     @csrf
@@ -62,10 +60,8 @@ Thông tin Liên lạc
                                             <th data-field="name" data-sortable="true">Họ & Tên</th>
                                             <th data-field="email" data-sortable="true">Email</th>
                                             <th data-field="phone" data-sortable="true">phone</th>
-                                            <th>Địa chỉ</th>
                                             <th>content</th>
-                                            <th>Sửa</th>
-                                            <th>Xóa</th>
+                                            <th>Thao tác</th>
                                         </tr>
                                     </tfoot>
                                 </table>

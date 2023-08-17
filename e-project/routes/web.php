@@ -19,66 +19,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('site.pages.homepage');
 // });
 
-Route::get('/shop', function () {
-    return view('site.pages.shop');
-});
-
-Route::get('/wishlist', function () {
-    return view('site.pages.wishlist');
-});
-
-Route::get('/product-details-tab-left', function () {
-    return view('site.pages.product-details-tab-left');
-});
-
-Route::get('/my-account', function () {
-    return view('site.pages.my-account');
-});
-
-Route::get('/contact-us', function () {
-    return view('site.pages.contact-us');
-});
-
-Route::get('/checkout', function () {
-    return view('site.pages.checkout');
-});
-
-Route::get('/cart', function () {
-    return view('site.pages.cart');
-});
-
-Route::get('/blog-single-sidebar-left', function () {
-    return view('site.pages.blog-single-sidebar-left');
-});
-
-Route::get('/blog-grid-sidebar-left', function () {
-    return view('site.pages.blog-grid-sidebar-left');
-});
-
-Route::get('/about-us', function () {
-    return view('site.pages.about-us');
-});
-
-Route::get('/404', function () {
-    return view('site.pages.404');
-});
-
-Route::get('/login', function () {
-    return view('auth.login');
-});
-
-Route::get('/auth/login', function () {
-    return view('auth.login');
-});
-
-Route::get('/admin', function () {
-    return view('admin.pages.dashboard');
-});
-
-
-
 // Admin
 Route::group(['prefix' => 'admin'], function () {
+    Route::get('/',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.dashboard');
 
     //admin
     Route::prefix('/admin-manage')->group(function () {
@@ -93,7 +36,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     // category
     Route::group(['prefix' => 'category'], function () {
-        Route::get('/index', [\App\Http\Controllers\Admin\CategoryController::class, 'index'])
+        Route::get('/', [\App\Http\Controllers\Admin\CategoryController::class, 'index'])
             ->name('admin.category.index');
         Route::get('/create', [\App\Http\Controllers\Admin\CategoryController::class, 'create'])->name('admin.category.create');
         Route::post('/store', [\App\Http\Controllers\Admin\CategoryController::class, 'store'])->name('admin.category.store');
@@ -103,22 +46,22 @@ Route::group(['prefix' => 'admin'], function () {
     });
 
         //product-comments
-    Route::group(['prefix' => 'product-comments'], function () {
-        Route::get('/index', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'index'])
-            ->name('admin.category.index');
-        Route::get('/create', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'create'])->name('admin.product-comments.create');
-        Route::post('/store', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'store'])->name('admin.product-comments.store');
-        Route::get('/{category}/edit', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'edit'])->name('admin.product-comments.edit');
-        Route::put('/{category}/update', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'update'])->name('admin.product-comments.update');
-        Route::delete('/{category}/delete', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
-    });
+//    Route::group(['prefix' => 'product-comments'], function () {
+//        Route::get('/', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'index'])
+//            ->name('admin.category.index');
+//        Route::get('/create', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'create'])->name('admin.product-comments.create');
+//        Route::post('/store', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'store'])->name('admin.product-comments.store');
+//        Route::get('/{category}/edit', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'edit'])->name('admin.product-comments.edit');
+//        Route::put('/{category}/update', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'update'])->name('admin.product-comments.update');
+//        Route::delete('/{category}/delete', [\App\Http\Controllers\Admin\ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
+//    });
       //product
     Route::prefix('/products')->group(function () {
         Route::get('/', [\App\Http\Controllers\Admin\ProductController::class, 'index'])->name('admin.products.index');
     });
-  
+
     //user
-    
+
     Route::prefix('/user-manage')->group(function(){
         Route::get('/user', [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.user.index');
         Route::get('/user-create', [\App\Http\Controllers\Admin\UserController::class, 'create'])->name('admin.user.create');
@@ -128,20 +71,20 @@ Route::group(['prefix' => 'admin'], function () {
         Route::delete('/user/{user}', [\App\Http\Controllers\Admin\UserController::class, 'destroy'])->name('admin.user.destroy');
     });
     //contact
-     
-    Route::prefix('/contact-manage')->group(function(){
-        Route::get('/contact', [\App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contact.index');
-        Route::get('/contact-create', [\App\Http\Controllers\Admin\ContactController::class, 'create'])->name('admin.contact.create');
-        Route::post('/contact-create', [\App\Http\Controllers\Admin\ContactController::class, 'store'])->name('admin.contact.store');
-        Route::get('/contact/{contact}/edit', [\App\Http\Controllers\Admin\ContactController::class, 'edit'])->name('admin.contact.edit');
-        Route::put('/contact/{contact}/edit', [\App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contact.update');
-        Route::delete('/contact/{contact}', [\App\Http\Controllers\Admin\ContactController::class, 'destroy'])->name('admin.contact.destroy');
+
+    Route::prefix('/contact')->group(function(){
+        Route::get('/', [\App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contact.index');
+        Route::get('/create', [\App\Http\Controllers\Admin\ContactController::class, 'create'])->name('admin.contact.create');
+        Route::post('/create', [\App\Http\Controllers\Admin\ContactController::class, 'store'])->name('admin.contact.store');
+        Route::get('/{contact}/edit', [\App\Http\Controllers\Admin\ContactController::class, 'edit'])->name('admin.contact.edit');
+        Route::put('/{contact}/edit', [\App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contact.update');
+        Route::delete('/{contact}/delete', [\App\Http\Controllers\Admin\ContactController::class, 'destroy'])->name('admin.contact.destroy');
 });
 });
 
 // Client
 Route::group(['prefix' => ''], function(){
-    
+
     Route::get('/',[\App\Http\Controllers\User\HomeController::class, 'index'])->name('site.home');
     Route::get('/shop',[\App\Http\Controllers\User\ShopController::class, 'index'])->name('site.shop');
     Route::get('/blog-grid',[\App\Http\Controllers\User\BlogController::class, 'index'])->name('site.blog-grid-sidebar-left');
@@ -154,5 +97,5 @@ Route::group(['prefix' => ''], function(){
     Route::get('/produc_details_default',[\App\Http\Controllers\User\ProductDetailsDefaultController::class, 'index'])->name('site.product_details_default');
     Route::get('/compare',[\App\Http\Controllers\User\CompareController::class, 'index'])->name('site.compare');
     Route::get('/my_account',[\App\Http\Controllers\User\MyAccountController::class, 'index'])->name('site.my_account');
-    Route::get('/login',[\App\Http\Controllers\User\LoginController::class, 'index'])->name('auth.login');  
+    Route::get('/login',[\App\Http\Controllers\User\LoginController::class, 'index'])->name('auth.login');
 });
