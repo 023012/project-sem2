@@ -60,7 +60,7 @@ Thông tin Liên lạc
                                             <th data-field="name" data-sortable="true">Họ & Tên</th>
                                             <th data-field="email" data-sortable="true">Email</th>
                                             <th data-field="phone" data-sortable="true">phone</th>
-                                            <th>content</th>
+                                            <th>message</th>
                                             <th>Thao tác</th>
                                         </tr>
                                     </tfoot>

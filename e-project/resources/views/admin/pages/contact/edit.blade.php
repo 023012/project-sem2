@@ -34,13 +34,9 @@ Sửa thông tin liên lạc
                         <label for="inputAddress">Số điện thoại</label>
                         <input name="phone" type="text" class="form-control" id="inputAdress" placeholder="phone" value="{{ $contact->phone }}">
                       </div>
-                      <div class="form-group">
-                      <label for="inputAddress">Địa chỉ</label>
-                      <input name="address" type="text" class="form-control" id="inputAddress" placeholder="địa chỉ" value="{{ $contact->address }}">
-                    </div>
                     <div class="form-group col-md-6">
-                        <label for="inputEmail4">content</label>
-                        <input name="content" type="text" class="form-control" id="inputAdress" placeholder="content" value="{{ $contact->content }}">
+                        <label for="inputEmail4">Message</label>
+                        <input name="message" type="text" class="form-control" id="inputAdress" placeholder="message" value="{{ $contact->message }}">
                       </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Edit</button>

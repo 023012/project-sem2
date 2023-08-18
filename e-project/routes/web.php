@@ -75,7 +75,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::prefix('/contact')->group(function(){
         Route::get('/', [\App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contact.index');
         Route::get('/create', [\App\Http\Controllers\Admin\ContactController::class, 'create'])->name('admin.contact.create');
-        Route::post('/create', [\App\Http\Controllers\Admin\ContactController::class, 'store'])->name('admin.contact.store');
+        Route::post('/store', [\App\Http\Controllers\Admin\ContactController::class, 'store'])->name('admin.contact.store');
         Route::get('/{contact}/edit', [\App\Http\Controllers\Admin\ContactController::class, 'edit'])->name('admin.contact.edit');
         Route::put('/{contact}/edit', [\App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contact.update');
         Route::delete('/{contact}/delete', [\App\Http\Controllers\Admin\ContactController::class, 'destroy'])->name('admin.contact.destroy');
