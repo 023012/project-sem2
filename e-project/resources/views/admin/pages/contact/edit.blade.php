@@ -23,21 +23,22 @@ Sửa thông tin liên lạc
                     @method('PUT')
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputEmail4">Tên thông tin liên lạc</label>
-                        <input name="name" type="text" class="form-control" id="inputAdress" placeholder="tên liên lạc" value="{{ $contact->name }}">
+                        <label >Tên khách hàng</label>
+                        <input name="name" type="text" class="form-control" placeholder="tên liên lạc" value="{{ $contact->name }}">
                       </div>
+
                       <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="Email" value="{{ $contact->email }}">
+                        <label>Số điện thoại</label>
+                        <input name="phone" type="text" class="form-control" placeholder="phone" value="{{ $contact->phone }}">
                       </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputAddress">Số điện thoại</label>
-                        <input name="phone" type="text" class="form-control" id="inputAdress" placeholder="phone" value="{{ $contact->phone }}">
-                      </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Message</label>
-                        <input name="message" type="text" class="form-control" id="inputAdress" placeholder="message" value="{{ $contact->message }}">
-                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label >Email</label>
+                      <input name="email" type="email" class="form-control"  placeholder="Email" value="{{ $contact->email }}" />
+                    </div>
+                    <div class="form-group">
+                      <label >Message</label>
+                      <textarea name="message" type="text" class="form-control" placeholder="message" value="{{ $contact->message }}"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Edit</button>
                   </form>
