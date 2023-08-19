@@ -19,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $users = new User();
-        $user = $users->index();
+        $user = $users::all();
         return view('admin.pages.customer.index', [
             'users' => $user,
         ]);
@@ -38,7 +38,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreUserRequest;  $request
+     * @param  \App\Http\Requests\UserRequest;
      * @return \Illuminate\Http\Response
      */
     public function store(UserRequest $request)
@@ -49,8 +49,9 @@ class UserController extends Controller
         $user->phone = $request->phone;
         $user->password = bcrypt($request->password);
         $user->address = $request->address;
-        $user->store();
-        return Redirect::route('admin.user.index');
+        $user->save();
+        return Redirect::route('admin.user.index')
+            ->with('success', 'Thêm mới thành công');
     }
 
     /**
@@ -80,30 +81,32 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateUserRequest;
-     * @param  \App\Models\User $admin
+     * @param  \App\Http\Requests\UserRequest;
+     * @param  \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
         $user->name = $request->name;
         $user->email = $request->email;
         $user->phone = $request->phone;
         $user->password = bcrypt($request->password);
         $user->address = $request->address;
-        $user->edit();
-        return Redirect::route('admin.user.index');
+        $user->save();
+        return Redirect::route('admin.user.index')
+            ->with('success', 'Sửa thành công');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User $admin
+     * @param  \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
     {
         $user->delete();
-        return Redirect::route('admin.user.index');
+        return Redirect::route('admin.user.index')
+            ->with('success','Xóa thành công');
     }
 }

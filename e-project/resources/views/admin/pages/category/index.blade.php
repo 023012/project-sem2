@@ -1,11 +1,4 @@
 @extends('admin.app')
-@push('styles')
-    <link rel="stylesheet" href="{{ asset('backend/css/dataTables.bootstrap4.css') }}">
-@endpush
-@push('title')
-    Danh mục sản phẩm
-@endpush
-
 @section('content')
     <main role="main" class="main-content">
         <div class="container-fluid">
@@ -19,39 +12,46 @@
                         <div class="col-md-12">
                             <div class="card shadow">
                                 <div class="card-body">
-                                    <!-- table -->
+                                {{--              Notification                  --}}
+                                @include('admin.partials.message')
+                                <!-- table -->
                                     <table class="table datatables" id="tbl">
                                         <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Tên danh mục</th>
-                                                <th>Thao tác</th>
-                                            </tr>
+                                        <tr>
+                                            <th data-field="stt" data-sortable="true">STT</th>
+                                            <th>ID</th>
+                                            <th>Tên danh mục</th>
+                                            <th>Thao tác</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($categories as $category)
-                                                <tr>
-                                                    <td>{{ $category->id }}</td>
-                                                    <td>{{ $category->name }}</td>
-                                                    <td>
-                                                        <form method="POST" action="{{ route('admin.category.destroy', $category->id) }}">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <a href="{{ route('admin.category.edit', $category->id) }}" class="btn" onclick="handleEdit()"><span
-                                                                    class="fa-solid fa-pen-to-square"></span></a>
-                                                            <button type="submit" class="btn"><span
-                                                                    class="fa-solid fa-trash"></span></button>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
+                                        @foreach ($categories as $index => $category)
+                                            <tr>
+                                                <td>{{ $index + 1 }}</td>
+                                                <td>{{ $category->id }}</td>
+                                                <td>{{ $category->name }}</td>
+                                                <td>
+                                                    <form method="POST"
+                                                          action="{{ route('admin.category.destroy', $category->id) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <a href="{{ route('admin.category.edit', $category->id) }}"
+                                                           class="btn" onclick="handleEdit()"><span
+                                                                class="fa-solid fa-pen-to-square"></span></a>
+                                                        <button type="submit" class="btn"><span
+                                                                class="fa-solid fa-trash"></span></button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                         <tfoot>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Tên danh mục</th>
-                                                <th>Thao tác</th>
-                                            </tr>
+                                        <tr>
+                                            <th data-field="stt" data-sortable="true">STT</th>
+                                            <th data-field="id" data-sortable="true">ID</th>
+                                            <th>Tên danh mục</th>
+                                            <th>Thao tác</th>
+                                        </tr>
                                         </tfoot>
                                     </table>
                                 </div>
@@ -61,23 +61,6 @@
                 </div> <!-- .col-12 -->
             </div> <!-- .row -->
         </div> <!-- .container-fluid -->
-{{--        aria-hidden="true">--}}
+        {{--        aria-hidden="true">--}}
     </main>
 @endsection
-
-@push('scripts')
-    <script src="{{ asset('backend/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('backend/js/dataTables.bootstrap4.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $('#tbl').DataTable();
-        });
-        $('#tbl').DataTable({
-            autoWidth: true,
-            "lengthMenu": [
-                [16, 32, 64, -1],
-                [16, 32, 64, "All"]
-            ]
-        });
-    </script>
-@endpush

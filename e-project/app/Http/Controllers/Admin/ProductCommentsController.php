@@ -70,6 +70,8 @@ class ProductCommentsController extends Controller
     {
         //
         $productcomments->delete();
-        return redirect()->route('admin.product-comments.index');
+        return redirect()->route('admin.product-comments.index')
+            ->with('success','Xóa thành công');
+        ;
     }
 }

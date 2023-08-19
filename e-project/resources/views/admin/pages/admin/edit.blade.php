@@ -1,7 +1,4 @@
 @extends('admin.app')
-@push('title')
-    Sửa thành viên
-@endpush
 @section('content')
 <main role="main" class="main-content">
     <div class="container-fluid">
@@ -54,6 +51,5 @@
         </div> <!-- .col-12 -->
       </div> <!-- .row -->
     </div> <!-- .container-fluid -->
-    </div>
   </main> <!-- main -->
 @endsection

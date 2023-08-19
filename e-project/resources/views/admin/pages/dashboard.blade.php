@@ -1,4 +1,5 @@
 @extends('admin.app')
+@section('title') Dashboard @endsection
 @section('content')
 {{-- Start main --}}
 <main role="main" class="main-content">

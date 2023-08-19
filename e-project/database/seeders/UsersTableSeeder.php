@@ -14,10 +14,10 @@ class UsersTableSeeder extends Seeder
     public function run(): void
     {
         $users = [
-            ['Nguyễn Thành Đạt', 'dat@gmail.com', bcrypt('12345678'), 'Hà Nội', '0912345646', '0'],
-            ['Nguyễn Minh Tuấn', 'tuan@gmail.com', bcrypt('12345678'), 'Hà Nội', '0912345678', '0'],
-            ['Nguyễn Trường Giang', 'giang@gmail.com', bcrypt('12345678'), 'Hà Nội', '0912345632', '0'],
-            ['Đào Tuấn Anh', 'tuananh@gmail.com', bcrypt('12345678'), 'Hà Nội', '0964345632', '0'],
+            ['Nguyễn Thành Đạt', 'dat@gmail.com', bcrypt('12345678'), 'Hà Nội', '0912345646', '1', '0'],
+            ['Nguyễn Minh Tuấn', 'tuan@gmail.com', bcrypt('12345678'), 'Hà Nội', '0912345678', '1', '0'],
+            ['Nguyễn Trường Giang', 'giang@gmail.com', bcrypt('12345678'), 'Hà Nội', '0912345632', '1', '0'],
+            ['Đào Tuấn Anh', 'tuananh@gmail.com', bcrypt('12345678'), 'Hà Nội', '0964345632', '1', '0'],
         ];
 
         foreach($users as $user) {
@@ -27,7 +27,8 @@ class UsersTableSeeder extends Seeder
                 'password' => $user[2],
                 'address' => $user[3],
                 'phone' => $user[4],
-                'role' => $user[5]
+                'is_active' => $user[5],
+                'role' => $user[6]
             ]);
         }
     }

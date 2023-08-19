@@ -1,7 +1,4 @@
 @extends('admin.app')
-@push('title')
-    Thêm thông tin liên lạc
-@endpush
 @section('content')
     <main role="main" class="main-content">
         <div class="container-fluid">

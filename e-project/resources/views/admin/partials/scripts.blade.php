@@ -216,3 +216,34 @@
 
 {{-- Font Awesome --}}
 <script src="https://kit.fontawesome.com/c986b55ed3.js" crossorigin="anonymous"></script>
+
+{{-- use data table --}}
+<script src="{{ asset('backend/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('backend/js/dataTables.bootstrap4.min.js') }}"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#tbl').DataTable();
+    });
+    $('#tbl').DataTable({
+        autoWidth: true,
+        "lengthMenu": [
+            [10, 25, 50, -1],
+            [10, 25, 50, "All"]
+        ]
+    });
+</script>
+
+{{-- use response notification--}}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const closeSuccessAlert = document.getElementById('closeSuccessAlert');
+        const successAlert = document.getElementById('successAlert');
+
+        if (closeSuccessAlert && successAlert) {
+            closeSuccessAlert.addEventListener('click', function () {
+                successAlert.style.display = 'none';
+            });
+        }
+    });
+</script>

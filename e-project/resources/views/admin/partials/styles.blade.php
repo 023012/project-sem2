@@ -16,4 +16,5 @@
 <link rel="stylesheet" href="{{ asset('backend/css/app-light.css') }}" id="lightTheme">
 <link rel="stylesheet" href="{{ asset('backend/css/app-dark.css') }}" id="darkTheme" disabled>
 
-
+{{-- use data table --}}
+<link rel="stylesheet" href="{{ asset('backend/css/dataTables.bootstrap4.css') }}">

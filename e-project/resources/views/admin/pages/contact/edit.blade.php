@@ -1,7 +1,4 @@
 @extends('admin.app')
-@push('title')
-    Sửa thông tin liên lạc
-@endpush
 @section('content')
     <main role="main" class="main-content">
         <div class="container-fluid">
@@ -65,7 +62,8 @@
                                                     @enderror
                                                 </span>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Edit</button>
+                                            <button type="submit" class="btn btn-primary">Lưu</button>
+                                            <a href="{{ route('admin.contact.index') }}" class=" btn btn-secondary">Hủy</a>
                                         </form>
                                     </div>
                                 </div>

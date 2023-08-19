@@ -38,7 +38,8 @@ class CategoryController extends Controller
         $category = new Category();
         $category->name = $request->name;
         $category->save();
-        return redirect()->route('admin.category.index');
+        return redirect()->route('admin.category.index')
+            ->with('success', 'Thêm mới thành công');
     }
 
     /**
@@ -66,7 +67,8 @@ class CategoryController extends Controller
     {
         $category->name = $request->name;
         $category->save();
-        return redirect()->route('admin.category.index');
+        return redirect()->route('admin.category.index')
+            ->with('success', 'Sửa thành công');
     }
 
     /**
@@ -75,6 +77,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route('admin.category.index');
+        return redirect()->route('admin.category.index')
+        ->with('success', 'Xóa thành công');
     }
 }

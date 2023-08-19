@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\Admin\AdminController;
+//use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
@@ -12,14 +12,14 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
 
     //admin
-    Route::prefix('/admin-manage')->group(function () {
-        Route::get('/', [AdminController::class, 'index'])->name('admin.admin-manage.index');
-        Route::get('/create', [AdminController::class, 'create'])->name('admin.admin-manage.create');
-        Route::post('/store', [AdminController::class, 'store'])->name('admin.admin-manage.store');
-        Route::get('/{admin}/edit', [AdminController::class, 'edit'])->name('admin.admin-manage.edit');
-        Route::put('/{admin}/edit', [AdminController::class, 'update'])->name('admin.admin-manage.update');
-        Route::delete('/{admin}', [AdminController::class, 'destroy'])->name('admin-manage.destroy');
-    });
+//    Route::prefix('/admin-manage')->group(function () {
+//        Route::get('/', [AdminController::class, 'index'])->name('admin.admin-manage.index');
+//        Route::get('/create', [AdminController::class, 'create'])->name('admin.admin-manage.create');
+//        Route::post('/store', [AdminController::class, 'store'])->name('admin.admin-manage.store');
+//        Route::get('/{admin}/edit', [AdminController::class, 'edit'])->name('admin.admin-manage.edit');
+//        Route::put('/{admin}/edit', [AdminController::class, 'update'])->name('admin.admin-manage.update');
+//        Route::delete('/{admin}', [AdminController::class, 'destroy'])->name('admin-manage.destroy');
+//    });
 
 
     // category

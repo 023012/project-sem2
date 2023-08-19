@@ -1,7 +1,5 @@
 @extends('admin.app')
-@push('title')
-    Tài khoản mới
-@endpush
+
 @section('content')
 <main role="main" class="main-content">
     <div class="container-fluid">

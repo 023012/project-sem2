@@ -1,11 +1,4 @@
 @extends('admin.app')
-@push('styles')
-    <link rel="stylesheet" href="{{ asset('backend/css/dataTables.bootstrap4.css') }}">
-@endpush
-@push('title')
-    Quản lí tài khoản
-@endpush
-
 @section('content')
     <main role="main" class="main-content">
         <div class="container-fluid">
@@ -54,6 +47,7 @@
                                                 <th>#</th>
                                                 <th>Tên thành viên</th>
                                                 <th>Email</th>
+                                                <th>Thao tác</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -67,22 +61,3 @@
 {{--        aria-hidden="true">--}}
     </main>
 @endsection
-
-@push('scripts')
-    <script src="{{ asset('backend/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('backend/js/dataTables.bootstrap4.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $('#tbl').DataTable();
-        });
-        $('#tbl').DataTable({
-            autoWidth: true,
-            "lengthMenu": [
-                [16, 32, 64, -1],
-                [16, 32, 64, "All"]
-            ]
-        });
-
-    </script>
-
-@endpush
