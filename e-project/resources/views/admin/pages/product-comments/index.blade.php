@@ -39,9 +39,6 @@
                                                           action="{{ route('admin.product-comments.destroy', $ProductComments->id) }}">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <a href="{{ route('admin.product-comments.edit', $ProductComments->id) }}"
-                                                           class="btn" onclick="handleEdit()"><span
-                                                                class="fa-solid fa-pen-to-square"></span></a>
                                                         <button type="submit" class="btn"><span
                                                                 class="fa-solid fa-trash"></span></button>
                                                     </form>

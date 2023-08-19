@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ProductComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
+use App\Models\Product;
+
 
 class ProductCommentsController extends Controller
 {
@@ -14,12 +18,17 @@ class ProductCommentsController extends Controller
     public function index()
     {
         //
-        $Product_Comments = new ProductComment();
-        $ProductComments = $Product_Comments->index();
-        return view('admin.pages.product-comments.index', [
-            'product_comments' => $ProductComments,
-        ]);
+        // $Product_Comments = new ProductComment();
+        // $ProductComments = $Product_Comments->index();
+        // return view('admin.pages.product-comments.index', [
+        //     'product_comments' => $ProductComments,
+        // ]);
+        $ProductComments = ProductComment::select('product_comments.id', 'products.name as product_name', 'product_comments.message', 'users.name as user_name', 'product_comments.rating')
+            ->join('products', 'product_comments.product_id', '=', 'products.id')
+            ->join('users', 'product_comments.user_id', '=', 'users.id')
+            ->get();
 
+        return view('admin.pages.product-comments.index', ['product_comments' => $ProductComments]);
     }
 
     /**
@@ -66,12 +75,11 @@ class ProductCommentsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ProductComment $productcomments)
+    public function destroy(ProductComment $ProductComments)
     {
         //
-        $productcomments->delete();
+        $ProductComments->delete();
         return redirect()->route('admin.product-comments.index')
-            ->with('success','Xóa thành công');
         ;
     }
 }

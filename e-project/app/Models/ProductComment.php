@@ -10,7 +10,10 @@ class ProductComment extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name'
+        'user_id',
+        'product_id',
+        'message',
+        'rating'
     ];
 
     public function products()
@@ -25,10 +28,7 @@ class ProductComment extends Model
     }
 
     public function store() {
-        DB::table('product_comments')
-        ->insert([
-            'name' => $this->name,
-        ]);
+        
     }
 
     public function edit(){
@@ -39,8 +39,8 @@ class ProductComment extends Model
         ]);
     }
 
-    public function delete(){
-        DB::table('product-comments')
+    public function delete(){ 
+        DB::table('product_comments')
             ->where('id', $this->id)
             ->delete();
     }

@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCommentsController;
+use Illuminate\Support\Facades\Route;
+
 // Admin
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
@@ -37,11 +39,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'product-comments'], function () {
         Route::get('/', [ProductCommentsController::class, 'index'])
             ->name('admin.product-comments.index');
-        Route::get('/create', [ProductCommentsController::class, 'create'])->name('admin.product-comments.create');
-        Route::post('/store', [ProductCommentsController::class, 'store'])->name('admin.product-comments.store');
-        Route::get('/{category}/edit', [ProductCommentsController::class, 'edit'])->name('admin.product-comments.edit');
-        Route::put('/{category}/update', [ProductCommentsController::class, 'update'])->name('admin.product-comments.update');
-        Route::delete('/{category}/delete', [ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
+        Route::delete('/{ProductComments}/delete', [ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
     });
     //product
     Route::prefix('/products')->group(function () {
