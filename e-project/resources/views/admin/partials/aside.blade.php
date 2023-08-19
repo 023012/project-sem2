@@ -107,10 +107,10 @@
                               <a class="nav-link pl-3"  href="{{ route('admin.products.index') }}"><span class="ml-1 item-text">Danh sách sản phẩm</span>
                               </a>
                           </li>
-{{--                          <li class="nav-item">--}}
-{{--                              <a class="nav-link pl-3" href="{{ route('admin.product.create') }}"><span class="ml-1 item-text">Thêm mới sản phẩm</span>--}}
-{{--                              </a>--}}
-{{--                          </li>--}}
+                          <li class="nav-item">
+                              <a class="nav-link pl-3" href="{{ route('admin.product-comments.index') }}"><span class="ml-1 item-text">nhận xét sản phẩm</span>
+                              </a>
+                          </li>
                       </ul>
                   </li>
 

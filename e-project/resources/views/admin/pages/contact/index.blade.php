@@ -18,9 +18,12 @@ Thông tin Liên lạc
                     <div class="col-md-12">
                         <div class="card shadow">
                             <div class="card-body">
-                                @if(session('mess'))
-                                <div class="alert alert-access">
-                                    {{session('mess')}}
+                                @if(session('success'))
+                                <div class="alert alert-success" id="successAlert">
+                                    {{session('success')}}
+                                    <button class="close" id="closeSuccessAlert">
+                                        <i class="fa-solid fa-x"></i>
+                                    </button>
                                 </div>
                                 @endif
                                 <!-- table -->
@@ -89,6 +92,18 @@ Thông tin Liên lạc
             [16, 32, 64, -1],
             [16, 32, 64, "All"]
         ]
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const closeSuccessAlert = document.getElementById('closeSuccessAlert');
+        const successAlert = document.getElementById('successAlert');
+
+        if (closeSuccessAlert && successAlert) {
+            closeSuccessAlert.addEventListener('click', function () {
+                successAlert.style.display = 'none';
+            });
+        }
     });
 </script>
 @endpush

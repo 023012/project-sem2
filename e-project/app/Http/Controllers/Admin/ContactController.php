@@ -48,7 +48,8 @@ class ContactController extends Controller
         $contact->phone = $request->phone;
         $contact->message = $request->message;
         $contact->save();
-        return Redirect::route('admin.contact.index');
+        return Redirect::route('admin.contact.index')
+            ->with('success', 'Thêm mới thành công');
     }
 
     /**
@@ -88,7 +89,8 @@ class ContactController extends Controller
         $contact->phone = $request->phone;
         $contact->message = $request->message;
         $contact->save();
-        return Redirect::route('admin.contact.index');
+        return Redirect::route('admin.contact.index')
+            ->with('success', 'Sửa thành công');
     }
 
     /**
@@ -99,6 +101,7 @@ class ContactController extends Controller
     public function destroy(Contact $contact)
     {
         $contact->delete();
-        return Redirect::route('admin.contact.index');
+        return Redirect::route('admin.contact.index')
+            ->with('success', 'Xóa thành công');
     }
 }
