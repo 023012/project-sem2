@@ -19,7 +19,7 @@ class ContactController extends Controller
     {
         //
         $contacts = new Contact();
-        $contact = $contacts->index(); 
+        $contact = $contacts::all();
         return view('admin.pages.contact.index',[
             'contacts' => $contact,
         ]);
@@ -27,7 +27,7 @@ class ContactController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -37,7 +37,7 @@ class ContactController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *  @param  \App\Http\Requests\Contact  $request
+     *  @param  \App\Http\Requests\ContactRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(ContactRequest $request)
@@ -46,10 +46,10 @@ class ContactController extends Controller
         $contact->name = $request->name;
         $contact->email = $request->email;
         $contact->phone = $request->phone;
-        $contact->address = $request->address;
-        $contact->content = $request->content;
-        $contact->store();
-        return Redirect::route('admin.contact.index');
+        $contact->message = $request->message;
+        $contact->save();
+        return Redirect::route('admin.contact.index')
+            ->with('success', 'Thêm mới thành công');
     }
 
     /**
@@ -64,43 +64,44 @@ class ContactController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     * 
+     *
      * @param  App\Models\Contact $contact
      * @return \Illuminate\Http\Response
      */
     public function edit(Contact $contact)
     {
-        return view('admin.pages.contact.edit', [
+        return view('/admin.pages.contact.edit', [
             'contact' => $contact,
         ]);
     }
 
     /**
      * Update the specified resource in storage.
-     * 
-     * @param  \App\Http\Requests\UpdateContactRequest;
-     * @param  \App\Models\Contact $admin
+     *
+     * @param  \App\Http\Requests\ContactRequest;
+     * @param  \App\Models\Contact $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateContactRequest $request, Contact $contact)
+    public function update(ContactRequest $request, Contact $contact)
     {
         $contact->name = $request->name;
         $contact->email = $request->email;
         $contact->phone = $request->phone;
-        $contact->address = $request->address;
-        $contact->content = $request->content;
-        $contact->edit();
-        return Redirect::route('admin.contact.index');
+        $contact->message = $request->message;
+        $contact->save();
+        return Redirect::route('admin.contact.index')
+            ->with('success', 'Sửa thành công');
     }
 
     /**
      * Remove the specified resource from storage.
-     * @param  \App\Models\Contact $admin
+     * @param  \App\Models\Contact $contact
      * @return \Illuminate\Http\Response
      */
     public function destroy(Contact $contact)
     {
         $contact->delete();
-        return Redirect::route('admin.contact.index');
+        return Redirect::route('admin.contact.index')
+            ->with('success', 'Xóa thành công');
     }
 }
