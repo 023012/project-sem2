@@ -62,7 +62,7 @@
                   </li>
 
                   {{-- Quản lý danh mục --}}
-                  <li class="nav-item dropdown">
+                  <li class="nav-item ">
                       <a href="#Category" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                           <i class="fe fe-grid fe-16"></i>
                           <span class="ml-3 item-text">Quản lý danh mục</span>
@@ -78,6 +78,7 @@
                       </li>
                     </ul>
                   </li>
+
 
                   {{-- Quản lý contac --}}
                   <li class="nav-item dropdown">
@@ -96,6 +97,24 @@
                       </li>
                     </ul>
                   </li>
+                  {{-- Quản lí Product-Comments --}}
+                  <li class="nav-item dropdown">
+                      <a href="#ProductComments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                          <i class="fe fe-grid fe-16"></i>
+                          <span class="ml-3 item-text">Quản lý nhận xét</span>
+                      </a>
+                      <ul class="collapse list-unstyled pl-4 w-100" id="ProductComments">
+                          <li class="nav-item">
+                              <a class="nav-link pl-3"  href="{{ route('admin.product-comments.index') }}"><span class="ml-1 item-text">Danh sách nhận xét</span>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link pl-3" href="{{ route('admin.product-comments.create') }}"><span class="ml-1 item-text">Thêm mới nhận xét</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+
                   {{-- Quản lý sản phẩm --}}
                   <li class="nav-item dropdown">
                       <a href="#Products" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">

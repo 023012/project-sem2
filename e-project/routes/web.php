@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\User\HomerController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/homepage', function () {
 //     return view('site.pages.homepage');
 // });
-
 
 // Client
 Route::group(['prefix' => ''], function () {
