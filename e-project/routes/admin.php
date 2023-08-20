@@ -1,17 +1,30 @@
 <?php
 
 use App\Http\Controllers\Admin\HomeController;
+
 //use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCommentsController;
-use Illuminate\Support\Facades\Route;
 
 // Admin
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
+
+    Route::get('login', [LoginController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('login', [LoginController::class, 'login'])->name('admin.login.post');
+    Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
+
+    Route::group(['middleware' => ['auth:admin']], function () {
+
+        Route::get('/', function () {
+            return view('admin.pages.dashboard');
+        })->name('admin.dashboard');
+
+    });
+
 
     //admin
 //    Route::prefix('/admin-manage')->group(function () {
