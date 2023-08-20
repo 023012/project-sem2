@@ -1,9 +1,11 @@
 <?php
+
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdminRequest extends FormRequest{
+class LoginRequest extends FormRequest
+{
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -22,8 +24,7 @@ class AdminRequest extends FormRequest{
     public function rules()
     {
         return [
-            'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required',
             'password' => 'required'
         ];
     }
@@ -31,7 +32,6 @@ class AdminRequest extends FormRequest{
     public function messages()
     {
         return [
-            'name.required' => "Vui lòng nhập tên thành viên!",
             'email.required' => "Vui lòng nhập email!",
             'email.email' => "Email không hợp lệ",
             'password.required' => "Vui lòng nhập mật khẩu"

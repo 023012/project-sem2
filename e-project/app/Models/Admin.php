@@ -3,57 +3,38 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Admin extends Model
+class Admin extends Authenticatable
 {
     use HasFactory;
+    use Notifiable;
 
-    protected $table = 'admins';
-
-    public $timestamps = true;
-
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'address',
-        'phone'
+        'name', 'email', 'password',
     ];
 
-    public function index(){
-        $admins = DB::table('admins')
-            ->get();
-        return $admins;
-    }
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 
-    public function store() {
-        DB::table('admins')
-        ->insert([
-            'name' => $this->name,
-            'email' => $this->email,
-            'address' => $this->address,
-            'phone' => $this->phone,
-            'password' => $this->password,
-        ]);
-    }
-
-    public function edit(){
-        DB::table('admins')
-        ->where('id', $this->id)
-        ->update([
-            'name' => $this->name,
-            'email' => $this->email,
-            'address' => $this->address,
-            'password' => $this->password,
-            'phone' => $this->phone,
-        ]);
-    }
-
-    public function delete(){
-        DB::table('admins')
-        ->where('id', $this->id)
-        ->delete();
-    }
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }
