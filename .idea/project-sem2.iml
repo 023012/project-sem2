@@ -119,6 +119,7 @@
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/ramsey/uuid" />
     </content>
+
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
