@@ -130,6 +130,10 @@
                               <a class="nav-link pl-3" href="{{ route('admin.product-comments.index') }}"><span class="ml-1 item-text">nhận xét sản phẩm</span>
                               </a>
                           </li>
+                          <li class="nav-item">
+                              <a class="nav-link pl-3"  href="{{ route('admin.discount.index') }}"><span class="ml-1 item-text">giảm giá</span>
+                              </a>
+                          </li>
                       </ul>
                   </li>
 

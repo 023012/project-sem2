@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 //use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
@@ -7,19 +7,22 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCommentsController;
+use App\Http\Controllers\Admin\DiscountController;
+
+
 // Admin
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
 
     //admin
-//    Route::prefix('/admin-manage')->group(function () {
-//        Route::get('/', [AdminController::class, 'index'])->name('admin.admin-manage.index');
-//        Route::get('/create', [AdminController::class, 'create'])->name('admin.admin-manage.create');
-//        Route::post('/store', [AdminController::class, 'store'])->name('admin.admin-manage.store');
-//        Route::get('/{admin}/edit', [AdminController::class, 'edit'])->name('admin.admin-manage.edit');
-//        Route::put('/{admin}/edit', [AdminController::class, 'update'])->name('admin.admin-manage.update');
-//        Route::delete('/{admin}', [AdminController::class, 'destroy'])->name('admin-manage.destroy');
-//    });
+    //    Route::prefix('/admin-manage')->group(function () {
+    //        Route::get('/', [AdminController::class, 'index'])->name('admin.admin-manage.index');
+    //        Route::get('/create', [AdminController::class, 'create'])->name('admin.admin-manage.create');
+    //        Route::post('/store', [AdminController::class, 'store'])->name('admin.admin-manage.store');
+    //        Route::get('/{admin}/edit', [AdminController::class, 'edit'])->name('admin.admin-manage.edit');
+    //        Route::put('/{admin}/edit', [AdminController::class, 'update'])->name('admin.admin-manage.update');
+    //        Route::delete('/{admin}', [AdminController::class, 'destroy'])->name('admin-manage.destroy');
+    //    });
 
 
     // category
@@ -67,5 +70,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/{contact}/edit', [ContactController::class, 'edit'])->name('admin.contact.edit');
         Route::put('/{contact}/edit', [ContactController::class, 'update'])->name('admin.contact.update');
         Route::delete('/{contact}/delete', [ContactController::class, 'destroy'])->name('admin.contact.destroy');
+    });
+
+    //discount
+    
+    Route::prefix('/discount')->group(function () {
+        Route::get('/', [DiscountController::class, 'index'])->name('admin.discount.index');
+        Route::get('/create', [DiscountController::class, 'create'])->name('admin.discount.create');
+        Route::post('/store', [DiscountController::class, 'store'])->name('admin.discount.store');
+        Route::get('/{discount}/edit', [DiscountController::class, 'edit'])->name('admin.discount.edit');
+        Route::put('/{discount}/edit', [DiscountController::class, 'update'])->name('admin.discount.update');
+        Route::delete('/{discount}/delete', [DiscountController::class, 'destroy'])->name('admin.discount.destroy');
     });
 });
