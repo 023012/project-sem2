@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Nette\Utils\Paginator;
 
 class ProductController extends Controller
@@ -13,8 +14,15 @@ class ProductController extends Controller
      */
     public function index()
     {
-//        $data=Paginator::$last
-        return view('admin.pages.product.index');
+//        $productList = new Product();
+//        $products =  $productList::all();
+        $products = DB::table('products as p')
+            ->select('p.id', 'p.thumbnail', 'p.name', 'c.name as category', 'd.name as discount', 'p.price', 'p.quantity', 'p.status', 'p.featured', 'p.active')
+            ->join('categories as c', 'p.category_id', '=', 'c.id')
+            ->join('discounts as d', 'p.discount_id', '=', 'd.id')
+            ->get();
+        return view('admin.pages.product.index', ['products' => $products]);
+//        return view('admin.pages.product.index', ['products' => $products]);
     }
 
     /**
@@ -22,13 +30,18 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = DB::table('categories')->get();
+        $discounts = DB::table('discounts')->get();
+        return view('admin.pages.product.create', [
+            'categories' => $categories,
+            'discounts' => $discounts,
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store( $request)
     {
         //
     }

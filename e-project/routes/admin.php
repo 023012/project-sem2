@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCommentsController;
+use Illuminate\Support\Facades\Route;
 
 // Admin
 Route::group(['prefix' => 'admin'], function () {
@@ -56,6 +57,11 @@ Route::group(['prefix' => 'admin'], function () {
     //product
     Route::prefix('/products')->group(function () {
         Route::get('/', [ProductController::class, 'index'])->name('admin.products.index');
+        Route::get('/create', [ProductController::class, 'create'])->name('admin.product.create');
+        Route::post('/store', [ProductController::class, 'store'])->name('admin.product.store');
+        Route::get('/{product}/edit', [ProductController::class, 'edit'])->name('admin.product.edit');
+        Route::put('/{product}/edit', [ProductController::class, 'update'])->name('admin.product.update');
+        Route::delete('/{product}/delete', [ProductController::class, 'destroy'])->name('admin.product.destroy');
     });
 
     //user
