@@ -23,12 +23,12 @@ class ProductCommentsController extends Controller
         // return view('admin.pages.product-comments.index', [
         //     'product_comments' => $ProductComments,
         // ]);
-        $ProductComments = ProductComment::select('product_comments.id', 'products.name as product_name', 'product_comments.message', 'users.name as user_name', 'product_comments.rating')
+        $productComments = ProductComment::select('product_comments.id', 'users.name as user_id', 'products.name as product_id', 'product_comments.message', 'product_comments.rating')
             ->join('products', 'product_comments.product_id', '=', 'products.id')
             ->join('users', 'product_comments.user_id', '=', 'users.id')
             ->get();
 
-        return view('admin.pages.product-comments.index', ['product_comments' => $ProductComments]);
+        return view('admin.pages.product-comments.index', ['productComments' => $productComments]);
     }
 
     /**
@@ -75,10 +75,10 @@ class ProductCommentsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ProductComment $ProductComments)
+    public function destroy(ProductComment $productComments)
     {
         //
-        $ProductComments->delete();
+        $productComments->delete();
         return redirect()->route('admin.product-comments.index')
         ;
     }

@@ -26,7 +26,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ($product_comments as $index => $ProductComments)
+                                        @foreach ($productComments as $index => $ProductComments)
                                             <tr>
                                                 <td>{{ $index + 1 }}</td>
                                                 <td>{{ $ProductComments->id }}</td>
