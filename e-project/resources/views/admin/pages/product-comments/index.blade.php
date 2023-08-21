@@ -30,8 +30,8 @@
                                             <tr>
                                                 <td>{{ $index + 1 }}</td>
                                                 <td>{{ $ProductComments->id }}</td>
-                                                <td>{{ $ProductComments->user_id }}</td>
-                                                <td>{{ $ProductComments->product_id }}</td>
+                                                <td>{{ $ProductComments->user_name }}</td>
+                                                <td>{{ $ProductComments->product_name }}</td>
                                                 <td>{{ $ProductComments->message }}</td>
                                                 <td>{{ $ProductComments->rating }}</td>
                                                 <td>
