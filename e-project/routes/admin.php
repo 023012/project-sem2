@@ -9,7 +9,6 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCommentsController;
-
 use App\Http\Controllers\Admin\DiscountController;
 
 // Admin
@@ -54,7 +53,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'product-comments'], function () {
         Route::get('/', [ProductCommentsController::class, 'index'])
             ->name('admin.product-comments.index');
-        Route::delete('/{ProductComments}/delete', [ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
+
+        Route::delete('/{productComments}/delete', [ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
     });
     //product
     Route::prefix('/products')->group(function () {
