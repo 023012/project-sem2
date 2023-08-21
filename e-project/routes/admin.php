@@ -1,18 +1,32 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\HomeController;
+//use App\Http\Controllers\Admin\HomeController;
 //use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCommentsController;
-use App\Http\Controllers\Admin\DiscountController;
 
+use App\Http\Controllers\Admin\DiscountController;
 
 // Admin
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('admin.dashboard');
+
+    Route::get('login', [LoginController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('login', [LoginController::class, 'login'])->name('admin.login.post');
+    Route::get('logout', [LoginController::class, 'logout'])->name('admin.logout');
+
+    Route::group(['middleware' => ['auth:admin']], function () {
+
+        Route::get('/', function () {
+            return view('admin.pages.dashboard');
+        })->name('admin.dashboard');
+
+    });
+
 
     //admin
     //    Route::prefix('/admin-manage')->group(function () {
@@ -40,11 +54,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix' => 'product-comments'], function () {
         Route::get('/', [ProductCommentsController::class, 'index'])
             ->name('admin.product-comments.index');
-        Route::get('/create', [ProductCommentsController::class, 'create'])->name('admin.product-comments.create');
-        Route::post('/store', [ProductCommentsController::class, 'store'])->name('admin.product-comments.store');
-        Route::get('/{category}/edit', [ProductCommentsController::class, 'edit'])->name('admin.product-comments.edit');
-        Route::put('/{category}/update', [ProductCommentsController::class, 'update'])->name('admin.product-comments.update');
-        Route::delete('/{category}/delete', [ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
+        Route::delete('/{ProductComments}/delete', [ProductCommentsController::class, 'destroy'])->name('admin.product-comments.destroy');
     });
     //product
     Route::prefix('/products')->group(function () {

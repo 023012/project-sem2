@@ -8,7 +8,6 @@
         <link rel="icon" href="favicon.ico">
         <title>Dashboard HONO</title>
         @include('admin.partials.styles')
-        @stack('styles')
       </head>
 <body>
     <div class="vertical  light ">
@@ -19,6 +18,5 @@
         </div>
     </div>
     @include('admin.partials.scripts')
-    @stack('scripts')
 </body>
 </html>

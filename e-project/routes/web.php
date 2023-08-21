@@ -39,3 +39,4 @@ Route::group(['prefix' => ''], function () {
 });
 
 require 'admin.php';
+

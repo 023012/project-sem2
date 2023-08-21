@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\DB;
 class Discount extends Model
 {
     use HasFactory;
-    protected $table = 'discounts';
+    protected string $table = 'discounts';
 
-    public $timestamps = true;
+    public bool $timestamps = true;
 
     protected $fillable = [
         'name',
