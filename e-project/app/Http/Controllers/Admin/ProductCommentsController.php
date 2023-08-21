@@ -17,14 +17,7 @@ class ProductCommentsController extends Controller
      */
     public function index()
     {
-        //
-        // $Product_Comments = new ProductComment();
-        // $ProductComments = $Product_Comments->index();
-        // return view('admin.pages.product-comments.index', [
-        //     'product_comments' => $ProductComments,
-        // ]);
-
-        $productComments = ProductComment::select('product_comments.id', 'users.name as user_id', 'products.name as product_id', 'product_comments.message', 'product_comments.rating')
+        $ProductComments = ProductComment::select('product_comments.id', 'products.name as product_name', 'product_comments.message', 'users.name as user_name', 'product_comments.rating')
             ->join('products', 'product_comments.product_id', '=', 'products.id')
             ->join('users', 'product_comments.user_id', '=', 'users.id')
             ->get();
