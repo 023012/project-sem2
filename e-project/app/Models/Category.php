@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class Category extends Model
 {
     use HasFactory;
-    protected string $table = 'categories';
+    protected  $table = 'categories';
 
     protected $fillable = [
         'name'
