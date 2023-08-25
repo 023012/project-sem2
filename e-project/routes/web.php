@@ -37,6 +37,11 @@ Route::group(['prefix' => ''], function () {
     Route::get('/my_account', [\App\Http\Controllers\User\MyAccountController::class, 'index'])->name('site.my_account');
     Route::get('/login', [\App\Http\Controllers\User\LoginController::class, 'index'])->name('auth.login');
 });
+Route::group(['prefix' => 'contact-us'], function () {
+
+    Route::get('/', [\App\Http\Controllers\User\ContactController::class, 'index'])->name('site.pages.contact-us');
+});
+
 
 require 'admin.php';
 

@@ -30,7 +30,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.contact.create');
+        return view('site.pages.contact-us');
     }
 
     /**

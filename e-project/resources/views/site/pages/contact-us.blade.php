@@ -90,6 +90,10 @@
                 </div> <!-- End Contact Details -->
             </div>
             <div class="col-lg-8">
+                
+            {{--              Notification                  --}}
+                                    @include('admin.partials.message')
+
                 <div class="contact-form section-top-gap-100" data-aos="fade-up" data-aos-delay="200">
                     <h3>Get In Touch</h3>
                     <form id="contact-form" action="{{ route('admin.contact.store') }}" method="post">
@@ -141,9 +145,8 @@
                             </div>
                             <div class="col-lg-12">
                                 <button class="btn btn-lg btn-black-default-hover" type="submit">Gửi</button>
-                                <a href="{{ route('admin.contact.index') }}"></a>
+                                <a href="{{ route('site.pages.contact-us') }}"></a>
                             </div>
-                            <p class="form-messege"></p>
                         </div>
                     </form>
                 </div>
