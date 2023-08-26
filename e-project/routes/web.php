@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\User\ProductDetailController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,10 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/homepage', function () {
 //     return view('site.pages.homepage');
 // });
-
+//Route::get('product',[\App\Http\Controllers\User\ShopController::class,'showProductDetail']);
+//Route::get('product',function (){
+//    return view('site.pages.product');
+//});
 // Client
 Route::group(['prefix' => ''], function () {
 
@@ -32,7 +36,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('/wishlist', [\App\Http\Controllers\User\WishlistController::class, 'index'])->name('site.wishlist');
     Route::get('/cart', [\App\Http\Controllers\User\CartController::class, 'index'])->name('site.cart');
     Route::get('/checkout', [\App\Http\Controllers\User\CheckoutController::class, 'index'])->name('site.checkout');
-    Route::get('/produc_details_default', [\App\Http\Controllers\User\ProductDetailsDefaultController::class, 'index'])->name('site.product_details_default');
+    Route::get('/product/{id}', [\App\Http\Controllers\User\ShopController::class, 'showProductDetail'])->name('site.product');
     Route::get('/compare', [\App\Http\Controllers\User\CompareController::class, 'index'])->name('site.compare');
     Route::get('/my_account', [\App\Http\Controllers\User\MyAccountController::class, 'index'])->name('site.my_account');
     Route::get('/login', [\App\Http\Controllers\User\LoginController::class, 'index'])->name('auth.login');
