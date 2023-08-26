@@ -1,4 +1,4 @@
-<script src="{{ asset('backend/js/jquery.min.js') }}"></script>
+ <script src="{{ asset('backend/js/jquery.min.js') }}"></script>
 <script src="{{ asset('backend/js/popper.min.js') }}"></script>
 <script src="{{ asset('backend/js/moment.min.js') }}"></script>
 <script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
@@ -231,19 +231,5 @@
             [10, 25, 50, -1],
             [10, 25, 50, "All"]
         ]
-    });
-</script>
-
-{{-- use response notification--}}
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const closeSuccessAlert = document.getElementById('closeSuccessAlert');
-        const successAlert = document.getElementById('successAlert');
-
-        if (closeSuccessAlert && successAlert) {
-            closeSuccessAlert.addEventListener('click', function () {
-                successAlert.style.display = 'none';
-            });
-        }
     });
 </script>

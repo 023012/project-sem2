@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class Category extends Model
 {
     use HasFactory;
-    protected $table = 'categories';
+    protected  $table = 'categories';
 
     protected $fillable = [
         'name'
@@ -17,6 +17,6 @@ class Category extends Model
 
     public function products()
     {
-        return $this->hasMany(Product::class, 'category_id', 'id');
+        return $this->belongsToMany(Product::class, 'category_id', 'id');
     }
 }

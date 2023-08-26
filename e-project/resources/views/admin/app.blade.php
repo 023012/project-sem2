@@ -7,6 +7,7 @@
         <meta name="author" content="">
         <link rel="icon" href="favicon.ico">
         <title>Dashboard HONO</title>
+        @stack('style')
         @include('admin.partials.styles')
       </head>
 <body>
@@ -18,5 +19,6 @@
         </div>
     </div>
     @include('admin.partials.scripts')
+    @stack('script')
 </body>
 </html>
