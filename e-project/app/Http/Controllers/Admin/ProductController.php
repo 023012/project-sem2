@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -41,9 +42,34 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store( $request)
+    public function store(ProductRequest $request)
     {
-        //
+        if($request->has('file_upload')){
+            $file = $request->file_upload;
+            $ext = $request->file_upload->extension();
+            $file_name = time().'-'.'product.'.$ext;
+            $file->move(public_path('uploads'), $file_name);
+        }
+        $request->merge(['thumbnail' => $file_name]);
+
+        $product = new Product();
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->thumbnail = $request->thumbnail;
+        $product->category_id = $request->category_id;
+        $product->discount_id = $request->discount_id;
+        $product->quantity = $request->quantity;
+        $product->description =  $request->description;
+        $product->material = $request->material;
+        $product->length = $request->length;
+        $product->width = $request->width;
+        $product->high = $request->high;
+        $product->status = $request->status;
+        $product->featured = $request->featured;
+        $product->active = $request->active;
+        $product->store();
+
+        return redirect()->route('admin.products.index')->with('success', 'Thêm sản phẩm mới thành công!');
     }
 
     /**
@@ -51,7 +77,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('admin.pages.product.details');
     }
 
     /**

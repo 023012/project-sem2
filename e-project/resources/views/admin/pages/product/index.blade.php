@@ -17,16 +17,16 @@
                                 <!-- table -->
                                     <table class="table datatables" id="tbl" style=" overflow-x: scroll; width: auto;">
                                         <thead>
-                                        <tr >
+                                        <tr>
                                             <th data-field="stt" data-sortable="true">STT</th>
                                             <th>ID</th>
                                             <th style="  width: 100px;">Ảnh</th>
                                             <th style=" width: 400px">Tên</th>
                                             <th style="  width: 100px;">Danh mục</th>
-{{--                                            <th style="  width: 100px;">Vật liệu</th>--}}
-{{--                                            <th style="  width: 100px;">Cao</th>--}}
-{{--                                            <th style="  width: 100px;">Rộng</th>--}}
-{{--                                            <th style="  width: 100px;">Dài</th>--}}
+                                            {{--                                            <th style="  width: 100px;">Vật liệu</th>--}}
+                                            {{--                                            <th style="  width: 100px;">Cao</th>--}}
+                                            {{--                                            <th style="  width: 100px;">Rộng</th>--}}
+                                            {{--                                            <th style="  width: 100px;">Dài</th>--}}
                                             <th style="  width: 100px;">Mã giảm giá</th>
                                             <th style="  width: 100px;">Đơn giá</th>
                                             <th style="  width: 100px;">SL</th>
@@ -44,10 +44,10 @@
                                                 <td style="  width: 100px;">{{ $product->thumbnail }}</td>
                                                 <td style=" width: 400px">{{ $product->name }}</td>
                                                 <td style="  width: 100px;">{{ $product->category }}</td>
-{{--                                                <td style="  width: 100px;">{{ $product->material }}</td>--}}
-{{--                                                <td style="  width: 100px;">{{ $product->high }}</td>--}}
-{{--                                                <td style="  width: 100px;">{{ $product->width }}</td>--}}
-{{--                                                <td style="  width: 100px;">{{ $product->length }}</td>--}}
+                                                {{--                                                <td style="  width: 100px;">{{ $product->material }}</td>--}}
+                                                {{--                                                <td style="  width: 100px;">{{ $product->high }}</td>--}}
+                                                {{--                                                <td style="  width: 100px;">{{ $product->width }}</td>--}}
+                                                {{--                                                <td style="  width: 100px;">{{ $product->length }}</td>--}}
                                                 <td style="  width: 100px;">{{ $product->discount }}</td>
                                                 <td style="  width: 100px;">{{ $product->price }}</td>
                                                 <td style="  width: 100px;">{{ $product->quantity }}</td>
@@ -59,7 +59,8 @@
                                                           action="{{ route('admin.product.destroy', $product->id) }}">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <a href="" class="btn"><span class="fa-solid fa-circle-info"></span></a>
+                                                        <a href="{{ route('admin.product.show', $product->id) }}"
+                                                           class="btn"><span class="fa-solid fa-circle-info"></span></a>
                                                         <a href="{{ route('admin.product.edit', $product->id) }}"
                                                            class="btn"><span
                                                                 class="fa-solid fa-pen-to-square"></span></a>
@@ -77,10 +78,10 @@
                                             <th style="  width: 100px;">Ảnh</th>
                                             <th style=" width: 400px">Tên</th>
                                             <th style="  width: 100px;">Danh mục</th>
-{{--                                            <th style="  width: 100px;">Vật liệu</th>--}}
-{{--                                            <th style="  width: 100px;">Cao</th>--}}
-{{--                                            <th style="  width: 100px;">Rộng</th>--}}
-{{--                                            <th style="  width: 100px;">Dài</th>--}}
+                                            {{--                                            <th style="  width: 100px;">Vật liệu</th>--}}
+                                            {{--                                            <th style="  width: 100px;">Cao</th>--}}
+                                            {{--                                            <th style="  width: 100px;">Rộng</th>--}}
+                                            {{--                                            <th style="  width: 100px;">Dài</th>--}}
                                             <th style="  width: 100px;">Mã giảm giá</th>
                                             <th style="  width: 100px;">Đơn giá</th>
                                             <th style="  width: 100px;">SL</th>

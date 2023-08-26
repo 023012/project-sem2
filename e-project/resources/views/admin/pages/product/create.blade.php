@@ -10,128 +10,185 @@
                     <h2 class="mb-2 page-title">Danh sách sản phẩm</h2>
                     <div class="card shadow mb-4">
                         <div class="card-header">
-                            <strong class="card-title">Advanced Validation</strong>
+                            <strong class="card-title">Thêm mới sản phẩm</strong>
                         </div>
                         <div class="card-body">
-                            <form class="needs-validation" novalidate>
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <label>Tên sản phẩm</label>
-                                        <input name="name" type="text" class="form-control" value="Mark" required>
-                                        <span>
-                                            @error('name')
-                                                <div class="alert alert-danger">{{ $message }}</div>
-                                            @enderror
-                                        </span>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label>Last name</label>
-                                        <input type="text" class="form-control" value="Otto" required>
-                                        <div class="valid-feedback"> Looks good!</div>
-                                    </div>
-                                </div> <!-- /.form-row -->
-                                <div class="form-row">
-                                    <div class="col-md-8 mb-3">
-                                        <label for="exampleInputEmail2">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail2"
-                                               aria-describedby="emailHelp1" required>
-                                        <div class="invalid-feedback"> Please use a valid email</div>
-                                        <small id="emailHelp1" class="form-text text-muted">We'll never share your email
-                                            with anyone else.</small>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="custom-phone">US Telephone</label>
-                                        <input class="form-control input-phoneus" id="custom-phone" maxlength="14"
-                                               required>
-                                        <div class="invalid-feedback"> Please enter a correct phone</div>
-                                    </div>
-                                </div> <!-- /.form-row -->
-                                <div class="form-group mb-3">
-                                    <label for="address-wpalaceholder">Address</label>
-                                    <input type="text" id="address-wpalaceholder" class="form-control"
-                                           placeholder="Enter your address">
-                                    <div class="valid-feedback"> Looks good!</div>
-                                    <div class="invalid-feedback"> Badd address</div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustom33">City</label>
-                                        <input type="text" class="form-control" id="validationCustom33" required>
-                                        <div class="invalid-feedback"> Please provide a valid city.</div>
-                                    </div>
-                                    <div class="col-md-3 mb-3">
-                                        <label for="validationSelect2">State</label>
-                                        <select class="form-control select2" id="validationSelect2" required>
-                                            <option value="">Select state</option>
-                                            <optgroup label="Mountain Time Zone">
-                                                <option value="AZ">Arizona</option>
-                                                <option value="CO">Colorado</option>
-                                                <option value="ID">Idaho</option>
-                                                <option value="MT">Montana</option>
-                                                <option value="NE">Nebraska</option>
-                                                <option value="NM">New Mexico</option>
-                                                <option value="ND">North Dakota</option>
-                                                <option value="UT">Utah</option>
-                                                <option value="WY">Wyoming</option>
-                                            </optgroup>
-                                            <optgroup label="Central Time Zone">
-                                                <option value="AL">Alabama</option>
-                                                <option value="AR">Arkansas</option>
-                                                <option value="IL">Illinois</option>
-                                                <option value="IA">Iowa</option>
-                                                <option value="KS">Kansas</option>
-                                                <option value="KY">Kentucky</option>
-                                                <option value="LA">Louisiana</option>
-                                                <option value="MN">Minnesota</option>
-                                                <option value="MS">Mississippi</option>
-                                                <option value="MO">Missouri</option>
-                                                <option value="OK">Oklahoma</option>
-                                                <option value="SD">South Dakota</option>
-                                                <option value="TX">Texas</option>
-                                                <option value="TN">Tennessee</option>
-                                                <option value="WI">Wisconsin</option>
-                                            </optgroup>
-                                        </select>
-                                        <div class="invalid-feedback"> Please select a valid state.</div>
-                                    </div>
-                                    <div class="col-md-3 mb-3">
-                                        <label for="custom-zip">Zip code</label>
-                                        <input class="form-control input-zip" id="custom-zip" autocomplete="off"
-                                               maxlength="9" required>
-                                        <div class="invalid-feedback"> Please provide a valid zip.</div>
-                                    </div>
-                                </div>
-                                <div class="form-row mb-3">
-                                    <div class="col-md-4 mx-auto mb-3">
-                                        <p class="mb-3">Trạng thái</p>
-                                        <div class="custom-control custom-switch">
-                                            <input type="checkbox" class="custom-control-input"
-                                                   required>
-                                            <label class="custom-control-label" for="customSwitch1">Yes</label>
+                            <form action="{{ route('admin.product.store') }}" method="POST" class="needs-validation"
+                                  novalidate>
+                                @csrf
+                                <div class="row">
+                                    <div class="form-row">
+                                        <div class="col-md-6 mb-3 p-3">
+                                            <div class="form-group mb-3">
+                                                <label><strong>Tên sản phẩm</strong></label>
+                                                <input name="name" type="text" class="form-control"
+                                                       placeholder="Tên sản phẩm"
+                                                       required>
+                                                <span>
+                                                @error('name')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </span>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Vật liệu</strong></label>
+                                                <input name="material" type="text" class="form-control"
+                                                       placeholder="Vật liệu"
+                                                       required>
+                                                <span>
+                                                @error('material')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </span>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Kích thước</strong></label>
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label><strong>Chiều dài</strong></label>
+                                                        <input name="length" type="text" class="form-control"
+                                                               placeholder="Chiều dài (mm)" required>
+                                                        @error('length')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label><strong>Chiều rộng</strong></label>
+                                                        <input name="width" type="text" class="form-control"
+                                                               placeholder="Chiều rộng (mm)" required>
+                                                        @error('width')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label><strong>Chiều cao</strong></label>
+                                                        <input name="high" type="text" class="form-control"
+                                                               placeholder="Chiều cao (mm)" required>
+                                                        @error('high')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-row mb-3">
+                                                <div class="col-md-6 mb-3">
+                                                    <label><strong>Số lượng</strong></label>
+                                                    <input name="quantity" type="number" class="form-control"
+                                                           placeholder="100"
+                                                           required>
+                                                    <span>
+                                                @error('quantity')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </span>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label><strong>Đơn giá</strong></label>
+                                                    <input name="price" type="text" class="form-control"
+                                                           placeholder="Giá sản phẩm"
+                                                           required>
+                                                    <span>
+                                                @error('price')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-row mb-3">
+                                                <div class="col-md-6 mb-3">
+                                                    <label><strong>Sản phẩm nổi bật</strong></label>
+                                                    <div class="custom-control custom-radio">
+                                                        <input name="featured" value="1" type="radio" id="is_featured"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="is_featured">Có nổi
+                                                            bật</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input name="featured" value="0" type="radio" id="not_featured"
+                                                               class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="not_featured">Không nổi
+                                                            bật</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label><strong>Trạng thái</strong></label>
+                                                    <div class="custom-control custom-radio">
+                                                        <input name="status" value="1" type="radio" id="con_hang"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="con_hang">Còn
+                                                            hàng</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input name="status" value="0" type="radio" id="het_hang"
+                                                               class="custom-control-input" checked>
+                                                        <label class="custom-control-label" for="het_hang">Hết
+                                                            hàng</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Hiển thị sản phẩm</strong></label>
+                                                <p class="text-muted"><span> Sản phẩm được hiển thị hoặc sẽ ẩn đi phía người dùng.</span>
+                                                </p>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="custom-control custom-radio">
+                                                            <input name="active" value="1" type="radio"
+                                                                   class="custom-control-input" id="is_active" required>
+                                                            <label class="custom-control-label" for="is_active">Kích
+                                                                hoạt sản phẩm</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="custom-control custom-radio mb-3">
+                                                            <input name="active" value="0" type="radio"
+                                                                   class="custom-control-input" id="not_active"
+                                                                   required>
+                                                            <label class="custom-control-label" for="not_active">Không
+                                                                kích hoạt sản phẩm</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3 p-3">
+                                            <div class="form-groupmb-3">
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label><strong>Thể loại sản phẩm</strong></label>
+                                                        <select name="category_id" class="form-control select2">
+                                                            @foreach($categories as $category)
+                                                                <option
+                                                                    value="{{ $category->id }}">{{ $category->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label><strong>Mã giảm giá</strong></label>
+                                                        <select name="discount_id" class="form-control select2">
+                                                            @foreach($discounts as $discount)
+                                                                <option
+                                                                    value="{{ $discount->id }}">{{ $discount->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Ảnh sản phẩm</strong></label>
+                                                <input name="file_upload" class="form-control-file" type="file"
+                                                       id="upload">
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Mô tả chi tiết</strong></label>
+                                                <textarea name="description" class="form-control" id="description"
+                                                          required="" rows="3"></textarea>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 mx-auto mb-3">
-                                        <p class="mb-3">Nổi bật</p>
-                                        <div class="custom-control custom-switch">
-                                            <input type="checkbox" class="custom-control-input" id="is_featured">
-                                            <label class="custom-control-label" for="is_featured"></label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mx-auto mb-3">
-                                        <p class="mb-3">Active</p>
-                                        <div class="custom-control custom-switch">
-                                            <input type="checkbox" class="custom-control-input" id="is_active">
-                                            <label class="custom-control-label" for="is_active"></label>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="form-group mb-3">
-                                    <label>Mô tả</label>
-                                    <textarea name="description" class="form-control" id="description"
-                                              placeholder="Take a note here" required="" rows="3"></textarea>
-                                    <div class="invalid-feedback"> Please enter a message in the textarea.</div>
-                                </div>
-                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                <button class="btn btn-primary" type="submit">Lưu</button>
+                                <a href="{{ route('admin.products.index') }}" class="btn btn-secondary ml-2">Hủy</a>
                             </form>
                         </div> <!-- /.card-body -->
                     </div> <!-- /.card -->
@@ -145,9 +202,10 @@
 
     <script>
         $('#description').summernote({
-            placeholder: 'Hello Bootstrap 4',
+            placeholder: 'Tên sản phẩm ' +
+                ' Mô tả sản chi tiết của sản phẩm',
             tabsize: 2,
-            height: 100
+            height: 180
         });
     </script>
 @endpush

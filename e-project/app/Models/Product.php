@@ -10,7 +10,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected string $table = 'products';
+    protected $table = 'products';
 
     public $timestamps = true;
 
