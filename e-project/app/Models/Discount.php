@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class Discount extends Model
 {
     use HasFactory;
-    protected string $table = 'discounts';
+    protected  $table = 'discounts';
 
     public $timestamps = true;
 

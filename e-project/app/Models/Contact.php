@@ -9,7 +9,7 @@ class Contact extends Model
 {
     use HasFactory;
 
-    protected string $table = 'contacts';
+    protected  $table = 'contacts';
 
     public $timestamps = true;
 
