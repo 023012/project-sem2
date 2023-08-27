@@ -55,12 +55,12 @@ Route::group(['prefix' => 'admin'], function () {
         //product
         Route::prefix('/products')->group(function () {
             Route::get('/', [ProductController::class, 'index'])->name('admin.products.index');
-            Route::get('/create', [ProductController::class, 'create'])->name('admin.product.create');
-            Route::post('/store', [ProductController::class, 'store'])->name('admin.product.store');
-            Route::get('/{product}/show', [ProductController::class, 'show'])->name('admin.product.show');
-            Route::get('/{product}/edit', [ProductController::class, 'edit'])->name('admin.product.edit');
-            Route::put('/{product}/edit', [ProductController::class, 'update'])->name('admin.product.update');
-            Route::delete('/{product}/delete', [ProductController::class, 'destroy'])->name('admin.product.destroy');
+            Route::get('/create', [ProductController::class, 'create'])->name('admin.products.create');
+            Route::post('/store', [ProductController::class, 'store'])->name('admin.products.store');
+            Route::get('/{product}/show', [ProductController::class, 'show'])->name('admin.products.show');
+            Route::get('/{product}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
+            Route::put('/{product}/edit', [ProductController::class, 'update'])->name('admin.products.update');
+            Route::delete('/{product}/delete', [ProductController::class, 'destroy'])->name('admin.products.destroy');
         });
 
         //contact

@@ -21,6 +21,7 @@ class ProductController extends Controller
             ->select('p.id', 'p.thumbnail', 'p.name', 'c.name as category', 'd.name as discount', 'p.price', 'p.quantity', 'p.status', 'p.featured', 'p.active')
             ->join('categories as c', 'p.category_id', '=', 'c.id')
             ->join('discounts as d', 'p.discount_id', '=', 'd.id')
+            ->orderBy('p.id','desc')
             ->get();
         return view('admin.pages.product.index', ['products' => $products]);
 //        return view('admin.pages.product.index', ['products' => $products]);
@@ -42,17 +43,18 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ProductRequest $request)
+    public function store(Request $request)
     {
         if($request->has('file_upload')){
             $file = $request->file_upload;
-            $ext = $request->file_upload->extension();
+            $ext = $request->file_upload->getClientOriginalExtension();
             $file_name = time().'-'.'product.'.$ext;
             $file->move(public_path('uploads'), $file_name);
         }
         $request->merge(['thumbnail' => $file_name]);
 
         $product = new Product();
+
         $product->name = $request->name;
         $product->price = $request->price;
         $product->thumbnail = $request->thumbnail;
@@ -67,7 +69,8 @@ class ProductController extends Controller
         $product->status = $request->status;
         $product->featured = $request->featured;
         $product->active = $request->active;
-        $product->store();
+
+        $product->save();
 
         return redirect()->route('admin.products.index')->with('success', 'Thêm sản phẩm mới thành công!');
     }
@@ -101,6 +104,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
-    }
+        $product->active = 0;
+        $product->save();
+        return redirect()->route('admin.products.index')
+            ->with('success', 'Ẩn đi thành công');    }
 }

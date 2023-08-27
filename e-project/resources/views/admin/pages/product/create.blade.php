@@ -13,7 +13,9 @@
                             <strong class="card-title">Thêm mới sản phẩm</strong>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.product.store') }}" method="POST" class="needs-validation"
+                            <form action="{{ route('admin.products.store') }}" method="POST"
+                                  enctype="multipart/form-data"
+                                  class="needs-validation"
                                   novalidate>
                                 @csrf
                                 <div class="row">
@@ -205,7 +207,7 @@
             placeholder: 'Tên sản phẩm ' +
                 ' Mô tả sản chi tiết của sản phẩm',
             tabsize: 2,
-            height: 180
+            height: 250
         });
     </script>
 @endpush

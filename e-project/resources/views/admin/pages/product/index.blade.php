@@ -5,7 +5,7 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <h2 class="mb-2 page-title">Danh sách sản phẩm</h2>
-                    <a href="{{ route('admin.product.create') }}" class="btn mb-2 btn-outline-secondary"><span
+                    <a href="{{ route('admin.products.create') }}" class="btn mb-2 btn-outline-secondary"><span
                             class="fa-solid fa-plus fe-16 mr-2"></span>Thêm mới</a>
                     <div class="row my-4">
                         <!-- Small table -->
@@ -41,7 +41,9 @@
                                             <tr style="height: 100px">
                                                 <td>{{ $index + 1 }}</td>
                                                 <td>{{ $product->id }}</td>
-                                                <td style="  width: 100px;">{{ $product->thumbnail }}</td>
+                                                <td style="  width: 100px;">
+                                                    <img src="{{ asset('uploads/' . $product->thumbnail) }}" alt="Product Thumbnail" width="80" height="80">
+                                                </td>
                                                 <td style=" width: 400px">{{ $product->name }}</td>
                                                 <td style="  width: 100px;">{{ $product->category }}</td>
                                                 {{--                                                <td style="  width: 100px;">{{ $product->material }}</td>--}}
@@ -56,12 +58,12 @@
                                                 <td style="  width: 100px;">{{ $product->active }}</td>
                                                 <td style="  width: 100px;">
                                                     <form method="POST"
-                                                          action="{{ route('admin.product.destroy', $product->id) }}">
+                                                          action="{{ route('admin.products.destroy', $product->id) }}">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <a href="{{ route('admin.product.show', $product->id) }}"
+                                                        <a href="{{ route('admin.products.show', $product->id) }}"
                                                            class="btn"><span class="fa-solid fa-circle-info"></span></a>
-                                                        <a href="{{ route('admin.product.edit', $product->id) }}"
+                                                        <a href="{{ route('admin.products.edit', $product->id) }}"
                                                            class="btn"><span
                                                                 class="fa-solid fa-pen-to-square"></span></a>
                                                         <button type="submit" class="btn"><span
