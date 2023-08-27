@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Models\Product;
@@ -21,7 +22,7 @@ class ProductController extends Controller
             ->select('p.id', 'p.thumbnail', 'p.name', 'c.name as category', 'd.name as discount', 'p.price', 'p.quantity', 'p.status', 'p.featured', 'p.active')
             ->join('categories as c', 'p.category_id', '=', 'c.id')
             ->join('discounts as d', 'p.discount_id', '=', 'd.id')
-            ->orderBy('p.id','desc')
+            ->orderBy('p.id', 'desc')
             ->get();
         return view('admin.pages.product.index', ['products' => $products]);
 //        return view('admin.pages.product.index', ['products' => $products]);
@@ -45,10 +46,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->has('file_upload')){
+        if ($request->has('file_upload')) {
             $file = $request->file_upload;
             $ext = $request->file_upload->getClientOriginalExtension();
-            $file_name = time().'-'.'product.'.$ext;
+            $file_name = time() . '-' . 'product.' . $ext;
             $file->move(public_path('uploads'), $file_name);
         }
         $request->merge(['thumbnail' => $file_name]);
@@ -61,7 +62,7 @@ class ProductController extends Controller
         $product->category_id = $request->category_id;
         $product->discount_id = $request->discount_id;
         $product->quantity = $request->quantity;
-        $product->description =  $request->description;
+        $product->description = $request->description;
         $product->material = $request->material;
         $product->length = $request->length;
         $product->width = $request->width;
@@ -88,7 +89,13 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $categories = DB::table('categories')->get();
+        $discounts = DB::table('discounts')->get();
+        return view('admin.pages.product.edit', [
+            'categories' => $categories,
+            'discounts' => $discounts,
+            'product' => $product,
+        ]);
     }
 
     /**
@@ -96,7 +103,32 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        if ($request->has('file_upload')) {
+            $file = $request->file_upload;
+            $ext = $request->file_upload->getClientOriginalExtension();
+            $file_name = time() . '_' . 'product' . $ext;
+            $file->move(public_path('uploads'), $file_name);
+            $product->thumbnail = $file_name;
+        }
+
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->discount_id = $request->discount_id;
+        $product->quantity = $request->quantity;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->length = $request->length;
+        $product->width = $request->width;
+        $product->material = $request->material;
+        $product->high = $request->high;
+        $product->status = $request->status;
+        $product->featured = $request->featured;
+        $product->active = $request->active;
+
+        $product->save();
+
+        return redirect()->route('admin.products.index')
+            ->with('success', 'Cập nhật thông tin sản phẩm thành công!');
     }
 
     /**
@@ -107,5 +139,6 @@ class ProductController extends Controller
         $product->active = 0;
         $product->save();
         return redirect()->route('admin.products.index')
-            ->with('success', 'Ẩn đi thành công');    }
+            ->with('success', 'Ẩn đi thành công');
+    }
 }

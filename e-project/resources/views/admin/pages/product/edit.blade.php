@@ -1,23 +1,246 @@
 @extends('admin.app')
 @push('style')
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 @endpush
 @section('content')
-    <h1>Edit</h1>
+    <main role="main" class="main-content">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h2 class="mb-2 page-title">Danh sách sản phẩm</h2>
+                    <div class="card shadow mb-4">
+                        <div class="card-header">
+                            <strong class="card-title">Thêm mới sản phẩm</strong>
+                        </div>
+                        <div class="card-body">
+                            <form action="{{ route('admin.products.update', $product->id) }}" method="POST"
+                                  enctype="multipart/form-data"
+                                  class="needs-validation"
+                                  novalidate>
+                                @csrf
+                                @method('PUT')
+                                <div class="row">
+                                    <div class="form-row">
+                                        <div class="col-md-6 mb-3 p-3">
+                                            <div class="form-group mb-3">
+                                                <label><strong>Tên sản phẩm</strong></label>
+                                                <input name="name" type="text" class="form-control"
+                                                       placeholder="Tên sản phẩm"
+                                                       value="{{ $product->name }}"
+                                                       readonly
+                                                       required>
+                                                <span>
+                                                @error('name')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </span>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Vật liệu</strong></label>
+                                                <input name="material" type="text" class="form-control"
+                                                       placeholder="Vật liệu"
+                                                       value="{{ $product->material }}"
+                                                       readonly
+                                                       required>
+                                                <span>
+                                                @error('material')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </span>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Kích thước</strong></label>
+                                                <div class="form-row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <label><strong>Chiều dài</strong></label>
+                                                        <input name="length" type="text" class="form-control"
+                                                               placeholder="Chiều dài (mm)"
+                                                               value="{{ $product->length }}" readonly
+                                                               required>
+                                                        @error('length')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label><strong>Chiều rộng</strong></label>
+                                                        <input name="width" type="text" class="form-control"
+                                                               placeholder="Chiều rộng (mm)"
+                                                               value="{{ $product->width }}"
+                                                               readonly
+                                                               required>
+                                                        @error('width')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label><strong>Chiều cao</strong></label>
+                                                        <input name="high" type="text" class="form-control"
+                                                               placeholder="Chiều cao (mm)"
+                                                               value="{{ $product->high }}"
+                                                               readonly
+                                                               required>
+                                                        @error('high')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-row mb-3">
+                                                <div class="col-md-6 mb-3">
+                                                    <label><strong>Số lượng</strong></label>
+                                                    <input name="quantity" type="number" class="form-control"
+                                                           placeholder="100"
+                                                           value="{{ $product->quantity }}"
+                                                           required>
+                                                    <span>
+                                                @error('quantity')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </span>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label><strong>Đơn giá</strong></label>
+                                                    <input name="price" type="text" class="form-control"
+                                                           placeholder="Giá sản phẩm"
+                                                           value="{{ $product->price }}"
+                                                           required>
+                                                    <span>
+                                                @error('price')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
+                                            </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-row mb-3">
+                                                <div class="col-md-6 mb-3">
+                                                    <label><strong>Sản phẩm nổi bật</strong></label>
+                                                    <div class="custom-control custom-radio">
+                                                        <input name="featured" value="1" type="radio" id="is_featured"
+                                                               {{ $product->featured == 1 ? 'checked' : '' }}
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="is_featured">Có nổi
+                                                            bật</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input name="featured" value="0" type="radio" id="not_featured"
+                                                               {{ $product->featured == 0 ? 'checked' : '' }}
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="not_featured">Không nổi
+                                                            bật</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label><strong>Trạng thái</strong></label>
+                                                    <div class="custom-control custom-radio">
+                                                        <input name="status" value="1" type="radio" id="con_hang"
+                                                               {{ $product->status == 1 ? 'checked' : '' }}
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="con_hang">Còn
+                                                            hàng</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        <input name="status" value="0" type="radio" id="het_hang"
+                                                               {{ $product->status == 0 ? 'checked' : '' }}
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label" for="het_hang">Hết
+                                                            hàng</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Hiển thị sản phẩm</strong></label>
+                                                <p class="text-muted"><span> Sản phẩm được hiển thị hoặc sẽ ẩn đi phía người dùng.</span>
+                                                </p>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="custom-control custom-radio">
+                                                            <input name="active" value="1" type="radio"
+                                                                   class="custom-control-input" id="is_active"
+                                                                   {{ $product->active == 1 ? 'checked' : '' }} required>
+                                                            <label class="custom-control-label" for="is_active">Kích
+                                                                hoạt sản phẩm</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <div class="custom-control custom-radio mb-3">
+                                                            <input name="active" value="0" type="radio"
+                                                                   class="custom-control-input" id="not_active"
+                                                                   {{ $product->active == 0 ? 'checked' : '' }} required>
+                                                            <label class="custom-control-label" for="not_active">Không
+                                                                kích hoạt sản phẩm</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3 p-3">
+                                            <div class="form-groupmb-3">
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label><strong>Thể loại sản phẩm</strong></label>
+                                                        <select name="category_id" class="form-control select2">
+                                                            @foreach($categories as $category)
+                                                                <option
+                                                                    value="{{ $category->id }}" {{ $product->category_id == $category->id ? 'selected' : '' }}>
+                                                                    {{ $category->name }}
+                                                                </option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label><strong>Mã giảm giá</strong></label>
+                                                        <select name="discount_id" class="form-control select2">
+                                                            @foreach($discounts as $discount)
+                                                                <option
+                                                                    value="{{ $discount->id }}" {{ $product->discount_id == $discount->id ? 'selected' : '' }}>
+                                                                    {{ $discount->name }}
+                                                                </option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Ảnh sản phẩm</strong></label>
+                                                <input name="file_upload" class="form-control-file" type="file"
+                                                       id="upload">
+                                            </div>
+                                            @if($product->thumbnail)
+                                                <div class="form-group mb-3">
+                                                    <label><strong>Hình ảnh hiện tại</strong></label>
+                                                    <br>
+                                                    <img src="{{ asset('uploads/' . $product->thumbnail) }}"
+                                                         alt="Product Thumbnail" width="80" height="80">
+                                                </div>
+                                            @endif
+                                            <div class="form-group mb-3">
+                                                <label><strong>Mô tả chi tiết</strong></label>
+                                                <textarea name="description" class="form-control" id="description">
+                                                    {{ $product->description }}
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" type="submit">Lưu</button>
+                                <a href="{{ route('admin.products.index') }}" class="btn btn-secondary ml-2">Hủy</a>
+                            </form>
+                        </div> <!-- /.card-body -->
+                    </div> <!-- /.card -->
+                </div> <!-- .col-12 -->
+            </div> <!-- .row -->
+        </div> <!-- .container-fluid -->
+    </main>
 @endsection
 @push('script')
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
     <script>
         $('#description').summernote({
-            placeholder: 'Hello Bootstrap 4',
+            placeholder: 'Tên sản phẩm ' +
+                ' Mô tả sản chi tiết của sản phẩm',
             tabsize: 2,
-            height: 100
+            height: 250
         });
     </script>
 @endpush

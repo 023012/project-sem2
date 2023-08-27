@@ -42,20 +42,4 @@ class Product extends Model
         return $this->hasOne(Discount::class, 'id', 'discount_id')
             ->withDefault(['name' => '']);
     }
-
-    public function store() {
-        DB::table('products')
-            ->insert([
-                'name' => $this->name,
-                'price' => $this->price,
-                'thumbnail' => $this->thumbnail,
-                'category_id' => $this->category_id,
-                'discount_id' => $this->discount_id,
-                'quantity' => $this->quantity,
-                'status' => $this->status,
-                'featured' => $this->featured,
-                'description' => $this->description,
-                'active' => $this->active,
-            ]);
-    }
 }
