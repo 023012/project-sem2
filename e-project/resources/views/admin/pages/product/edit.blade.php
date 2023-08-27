@@ -10,7 +10,7 @@
                     <h2 class="mb-2 page-title">Danh sách sản phẩm</h2>
                     <div class="card shadow mb-4">
                         <div class="card-header">
-                            <strong class="card-title">Thêm mới sản phẩm</strong>
+                            <strong class="card-title">Cập nhật sản phẩm</strong>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('admin.products.update', $product->id) }}" method="POST"

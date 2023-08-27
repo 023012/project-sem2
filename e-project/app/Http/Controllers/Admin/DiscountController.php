@@ -16,7 +16,7 @@ class DiscountController extends Controller
      */
     public function index()
     {
-        
+
         $discounts = Discount::all();
         return view('admin.pages.discount.index', [
             'discounts' => $discounts,
@@ -39,8 +39,7 @@ class DiscountController extends Controller
         $discount = new Discount();
         $discount->name = $request->name;
         $discount->discount_percent = $request->discount_percent;
-        //$discount->active = $request->active;
-        $discount->active = 1; // Hoặc 0 tùy theo yêu cầu
+        $discount->active = $request->active;
         $discount->save();
         return redirect()->route('admin.discount.index')
             ->with('success', 'Thêm mới thành công');
@@ -66,7 +65,7 @@ class DiscountController extends Controller
 
     /**
      * Update the specified resource in storage.
-     * 
+     *
      * @param  \App\Http\Requests\DiscountRequest;
      * @param  \App\Models\Discount $discount
      * @return \Illuminate\Http\Response
@@ -75,7 +74,7 @@ class DiscountController extends Controller
     {
         $discount->name = $request->name;
         $discount->discount_percent = $request->discount_percent;
-        //$discount->active = $request->active;
+        $discount->active = $request->active;
         $discount->save();
         return redirect()->route('admin.discount.index')
             ->with('success', 'Sửa thành công');

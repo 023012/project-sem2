@@ -39,17 +39,19 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            <!-- <div class="form-group">
-                                                <label>Active</label>
-                                                <textarea name="active" type="text" class="form-control"
-                                                          placeholder="Hoạt động"></textarea>
-                                                <span>
-                                                    @error('message')
-                                                        <div class="alert alert-danger">{{ $message }}</div>
-                                                    @enderror
-                                                </span>
+                                            <div class="form-group">
+                                                <label><strong>Kích hoạt</strong></label>
+                                                <div class="custom-control custom-radio">
+                                                    <input name="active" value="1" type="radio" id="is_active"
+                                                           class="custom-control-input">
+                                                    <label class="custom-control-label" for="is_active">Có kích hoạt</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input name="active" value="0" type="radio" id="not_active"
+                                                           class="custom-control-input" checked>
+                                                    <label class="custom-control-label" for="not_active">Không kích hoạt</label>
+                                                </div>
                                             </div>
--->
                                             <button type="submit" class="btn btn-primary">Thêm</button>
                                             <a href="{{ route('admin.discount.index') }}" class="btn btn-secondary">Hủy</a>
                                         </form>

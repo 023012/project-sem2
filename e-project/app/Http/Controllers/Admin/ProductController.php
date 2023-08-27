@@ -16,16 +16,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-//        $productList = new Product();
-//        $products =  $productList::all();
         $products = DB::table('products as p')
-            ->select('p.id', 'p.thumbnail', 'p.name', 'c.name as category', 'd.name as discount', 'p.price', 'p.quantity', 'p.status', 'p.featured', 'p.active')
+            ->select('p.id', 'p.thumbnail', 'p.name', 'p.material' ,'c.name as category', 'd.name as discount', 'p.price', 'p.quantity', 'p.status', 'p.featured', 'p.active')
             ->join('categories as c', 'p.category_id', '=', 'c.id')
             ->join('discounts as d', 'p.discount_id', '=', 'd.id')
             ->orderBy('p.id', 'desc')
             ->get();
         return view('admin.pages.product.index', ['products' => $products]);
-//        return view('admin.pages.product.index', ['products' => $products]);
     }
 
     /**
@@ -81,8 +78,12 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('admin.pages.product.details');
+        $productDetails = DB::select('CALL ShowProductDetails(?)', [$product->id]);
+        return view('admin.pages.product.details', [
+            'productDetails' => $productDetails
+        ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
