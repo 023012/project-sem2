@@ -1,11 +1,17 @@
 <?php
 
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\User\ProductDetailController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\ContactController;
+use App\Http\Controllers\User\ShopController;
+use App\Http\Controllers\User\MyAccountController;
+use App\Http\Controllers\User\CheckoutController;
+use App\Http\Controllers\User\BlogController;
+use App\Http\Controllers\User\AboutController;
+use App\Http\Controllers\User\WishlistController;
+use App\Http\Controllers\User\CompareController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,35 +23,33 @@ use App\Http\Controllers\User\ContactController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-// Route::get('/homepage', function () {
-//     return view('site.pages.homepage');
-// });
-//Route::get('product',[\App\Http\Controllers\User\ShopController::class,'showProductDetail']);
-//Route::get('product',function (){
-//    return view('site.pages.product');
-//});
 // Client
-Route::group(['prefix' => ''], function () {
 
-    Route::get('/', [\App\Http\Controllers\User\HomeController::class, 'index'])->name('site.home');
-    Route::get('/shop', [\App\Http\Controllers\User\ShopController::class, 'index'])->name('site.shop');
-    Route::get('/blog-grid', [\App\Http\Controllers\User\BlogController::class, 'index'])->name('site.blog-grid-sidebar-left');
-    Route::get('/blog-single', [\App\Http\Controllers\User\BlogController::class, 'blog_single_sidebar_left'])->name('site.blog-single-sidebar-left');
-    Route::get('/about', [\App\Http\Controllers\User\AboutController::class, 'index'])->name('site.about-us');
-    Route::get('/wishlist', [\App\Http\Controllers\User\WishlistController::class, 'index'])->name('site.wishlist');
-    Route::get('/cart', [\App\Http\Controllers\User\CartController::class, 'index'])->name('site.cart');
-    Route::get('/checkout', [\App\Http\Controllers\User\CheckoutController::class, 'index'])->name('site.checkout');
-    Route::get('/product/{id}', [\App\Http\Controllers\User\ShopController::class, 'showProductDetail'])->name('site.product');
-    Route::get('/compare', [\App\Http\Controllers\User\CompareController::class, 'index'])->name('site.compare');
-    Route::get('/my_account', [\App\Http\Controllers\User\MyAccountController::class, 'index'])->name('site.my_account');
-    Route::get('/login', [\App\Http\Controllers\User\LoginController::class, 'index'])->name('auth.login');
+Route::get('/login', [AuthController::class, 'index'])->name('site.login');
+Route::post('/login', [AuthController::class, 'login'])->name('site.login.store');
+Route::get('/register', [AuthController::class, 'registerForm'])->name('site.register');
+Route::post('/register', [AuthController::class, 'register'])->name('site.register.store');
+
+Route::get('/', [HomeController::class, 'index'])->name('site.home');
+Route::get('/blogs', [BlogController::class, 'index'])->name('site.blogs');
+Route::get('/blog-single', [BlogController::class, 'blog_single'])->name('site.blog-single');
+Route::get('/about', [AboutController::class, 'index'])->name('site.about-us');
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('site.wishlist');
+Route::get('/compare', [CompareController::class, 'index'])->name('site.compare');
+
+//Shop
+Route::get('/shop', [ShopController::class, 'index'])->name('site.shop');
+Route::get('/{product}/product', [ShopController::class, 'showProductDetail'])->name('site.product');
+//Contact
+Route::get('/contact', [ContactController::class, 'index'])->name('site.contact-us');
+Route::post('/contact', [ContactController::class, 'sendContact'])->name('site.contactUs.sendContact');
 
 
-    Route::get('/contact', [ContactController::class, 'index'])->name('site.contact-us');
-    Route::post('/contact', [ContactController::class, 'sendContact'])->name('site.contactUs.sendContact');
+Route::get('/cart', [CartController::class, 'index'])->name('site.cart');
 
-
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/my-account', [MyAccountController::class, 'index'])->name('site.my_account');
+    Route::get('/checkout', [CheckoutController::class, 'index'])->name('site.checkout');
 });
 
 

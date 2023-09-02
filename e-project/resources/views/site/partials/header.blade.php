@@ -24,13 +24,24 @@
                                         </li>
                                         <li><a href="{{ route('site.shop') }}">Shop</a></li>
                                         <li>
-                                            <a href="{{ route('site.blog-grid-sidebar-left') }}">Blog </a>
+                                            <a href="{{ route('site.blogs') }}">Blog </a>
                                         </li>
                                         <li>
                                             <a href="{{ route('site.about-us') }}">About Us</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('site.contact-us') }}">Contact Us</a>
+                                        </li>
+                                        <li>\
+                                            @guest
+                                                <a href="{{ route('site.login') }}">
+                                                    Đăng nhập <i class="fa-regular fa-user"></i>
+                                                </a>
+                                            @else
+                                                <a href="{{ route('site.login') }}">
+                                                    <i class="fa-regular fa-user"></i> Tài khoản
+                                                </a>
+                                            @endguest
                                         </li>
                                     </ul>
                                 </nav>
@@ -39,6 +50,11 @@
 
                             <!-- Start Header Action Link -->
                             <ul class="header-action-link action-color--black action-hover-color--golden">
+                                <li>
+                                    <a href="#search">
+                                        <i class="icon-magnifier"></i>
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="#offcanvas-wishlish" class="offcanvas-toggle">
                                         <i class="icon-heart"></i>
@@ -49,11 +65,6 @@
                                     <a href="#offcanvas-add-cart" class="offcanvas-toggle">
                                         <i class="icon-bag"></i>
                                         <span class="item-count">3</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#search">
-                                        <i class="icon-magnifier"></i>
                                     </a>
                                 </li>
                                 <li>
@@ -141,7 +152,7 @@
                             <a href="{{ route('site.home') }}"><span>Home</span></a>
                         </li>
                         <li><a href="{{ route('site.shop') }}">Shop</a></li>
-                        <li><a href="{{ route('site.blog-grid-sidebar-left') }}">Blogs</a></li>
+                        <li><a href="{{ route('site.blogs') }}">Blogs</a></li>
                         <li><a href="{{ route('site.about-us') }}">About Us</a></li>
                         <li><a href="{{ route('site.contact-us') }}">Contact Us</a></li>
                     </ul>

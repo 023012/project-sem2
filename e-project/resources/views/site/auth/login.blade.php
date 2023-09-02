@@ -29,24 +29,31 @@
                 <!--login area start-->
                 <div class="col-lg-6 col-md-6">
                     <div class="account_form" data-aos="fade-up" data-aos-delay="0">
-                        <h3>login</h3>
-                        <form action="#" method="POST">
+                        <h3>Đăng nhập</h3>
+                        <form  action="{{ route('site.login.store') }}" method="POST">
+                            @csrf
                             <div class="default-form-box">
-                                <label>Username or email <span>*</span></label>
-                                <input type="text">
+                                <label>Email <span>*</span></label>
+                                <input name="email" type="text" value="{{ old('email') }}" required>
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="default-form-box">
-                                <label>Passwords <span>*</span></label>
-                                <input type="password">
+                                <label>Mật khẩu <span>*</span></label>
+                                <input name="password" type="password" required>
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="login_submit">
-                                <button class="btn btn-md btn-black-default-hover mb-4" type="submit">login</button>
-                                <label class="checkbox-default mb-4" for="offer">
-                                    <input type="checkbox" id="offer">
-                                    <span>Remember me</span>
-                                </label>
-                                <a href="#">Lost your password?</a>
-
+                                <button class="btn btn-md btn-black-default-hover mb-4" type="submit">Đăng nhập</button>
+                                <a href="{{ route('site.register') }}">Đăng ký tài khoản</a>
+                                <a href="#">Quên mật khẩu?</a>
                             </div>
                         </form>
                     </div>
@@ -55,22 +62,7 @@
 
                 <!--register area start-->
                 <div class="col-lg-6 col-md-6">
-                    <div class="account_form register" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Register</h3>
-                        <form action="#">
-                            <div class="default-form-box">
-                                <label>Email address <span>*</span></label>
-                                <input type="text">
-                            </div>
-                            <div class="default-form-box">
-                                <label>Passwords <span>*</span></label>
-                                <input type="password">
-                            </div>
-                            <div class="login_submit">
-                                <button class="btn btn-md btn-black-default-hover" type="submit">Register</button>
-                            </div>
-                        </form>
-                    </div>
+                    <img class="img-fluid" src="{{ asset('frontend/assets/images/banner/banner-style-3-img-1.jpg') }}"/>
                 </div>
                 <!--register area end-->
             </div>

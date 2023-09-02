@@ -17,17 +17,16 @@ class ShopController extends Controller
         ->join('categories', 'products.category_id', '=', 'categories.id')
         ->join('discounts', 'products.discount_id', '=', 'discounts.id')
         ->orderBy('id','asc')
-        ->simplePaginate(12);
+        ->simplePaginate(18);
 
-        return view('site.pages.shop', [
+        return view('site.pages.shop.index', [
             'products' => $products,
         ]);
     }
-    public function showProductDetail($id){
-        $product=Product::where('id', '=', $id)
-        ->select('*')->first();
-        return view('site.pages.product',[
-            'product'=>$product
+    public function showProductDetail(Product $product){
+        $productDetails= DB::select('CALL ShowProductDetails(?)', [$product->id]);
+        return view('site.pages.shop.product',[
+            'productDetails'=>$productDetails
         ]);
 
     }

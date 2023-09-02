@@ -48,25 +48,19 @@
                                                 <td style="  width: 100px;">{{ $product->price }}</td>
                                                 <td style="  width: 100px;">{{ $product->quantity }}</td>
                                                 <td style="  width: 100px;">
-                                                    @if($product->status === 1)
-                                                        <span class="badge badge-success">Còn hàng</span>
-                                                    @else
-                                                        <span class="badge badge-warning">Hết hàng</span>
-                                                    @endif
+                                                    <span class="badge {{ $product->status === 1 ? 'badge-success' : 'badge-warning' }}">
+                                                        {{ $product->status === 1 ? 'Còn hàng' : 'Hết hàng' }}
+                                                    </span>
                                                 </td>
                                                 <td style="  width: 100px;">
-                                                    @if($product->featured === 1)
-                                                        <span class="badge badge-success">Nổi bật</span>
-                                                    @else
-                                                        <span class="badge badge-primary">Không nổi bật</span>
-                                                    @endif
+                                                    <span class="badge {{ $product->featured === 1 ? 'badge-success' : 'badge-primary' }}">
+                                                        {{ $product->featured === 1 ? 'Nổi bật' : 'Không nổi bật' }}
+                                                    </span>
                                                 </td>
                                                 <td style="  width: 100px;">
-                                                    @if($product->active === 1)
-                                                        <span class="badge badge-success">Kích hoạt</span>
-                                                    @else
-                                                        <span class="badge badge-danger">Không kích hoạt</span>
-                                                    @endif
+                                                    <span class="badge {{ $product->active === 1 ? 'badge-success' : 'badge-danger' }}">
+                                                        {{ $product->active === 1 ? 'Kích hoạt' : 'Không kích hoạt' }}
+                                                    </span>
                                                 </td>
                                                 <td style="  width: 100px;">
                                                     <form method="POST"

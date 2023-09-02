@@ -12,7 +12,6 @@
                                 <ul>
                                     <li><a href="{{route('site.home')}}">Home</a></li>
                                     <li><a href="{{route('site.shop')}}">Shop</a></li>
-                                    <li class="active" aria-current="page">Shop Grid Left Sidebar</li>
                                 </ul>
                             </nav>
                         </div>
@@ -28,171 +27,7 @@
             <div class="row flex-column-reverse flex-lg-row">
                 <div class="col-lg-3">
                     <!-- Start Sidebar Area -->
-                    <div class="siderbar-section" data-aos="fade-up" data-aos-delay="0">
-
-                        <!-- Start Single Sidebar Widget -->
-                        <div class="sidebar-single-widget">
-                            <h6 class="sidebar-title">Danh mục</h6>
-                            <div class="sidebar-content">
-                                <ul class="sidebar-menu">
-                                    <li>
-                                        <ul class="sidebar-menu-collapse">
-                                            <!-- Start Single Menu Collapse List -->
-                                            <li class="sidebar-menu-collapse-list">
-                                                <div class="accordion">
-                                                    <a href="#" class="accordion-title collapsed"
-                                                       data-bs-toggle="collapse" data-bs-target="#men-fashion"
-                                                       aria-expanded="false">Men <i
-                                                            class="ion-ios-arrow-right"></i></a>
-                                                    <div id="men-fashion" class="collapse">
-                                                        <ul class="accordion-category-list">
-                                                            <li><a href="#">Dresses</a></li>
-                                                            <li><a href="#">Jackets &amp; Coats</a></li>
-                                                            <li><a href="#">Sweaters</a></li>
-                                                            <li><a href="#">Jeans</a></li>
-                                                            <li><a href="#">Blouses &amp; Shirts</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li> <!-- End Single Menu Collapse List -->
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Football</a></li>
-                                    <li><a href="#"> Men's</a></li>
-                                    <li><a href="#"> Portable Audio</a></li>
-                                    <li><a href="#"> Smart Watches</a></li>
-                                    <li><a href="#">Tennis</a></li>
-                                    <li><a href="#"> Uncategorized</a></li>
-                                    <li><a href="#"> Video Games</a></li>
-                                    <li><a href="#">Women's</a></li>
-                                </ul>
-                            </div>
-                        </div> <!-- End Single Sidebar Widget -->
-
-                        <!-- Start Single Sidebar Widget -->
-                        <div class="sidebar-single-widget">
-                            <h6 class="sidebar-title">FILTER BY PRICE</h6>
-                            <div class="sidebar-content">
-                                <div id="slider-range"></div>
-                                <div class="filter-type-price">
-                                    <label for="amount">Price range:</label>
-                                    <input type="text" id="amount">
-                                </div>
-                            </div>
-                        </div> <!-- End Single Sidebar Widget -->
-
-                        <!-- Start Single Sidebar Widget -->
-                        <div class="sidebar-single-widget">
-                            <h6 class="sidebar-title">MANUFACTURER</h6>
-                            <div class="sidebar-content">
-                                <div class="filter-type-select">
-                                    <ul>
-                                        <li>
-                                            <label class="checkbox-default" for="brakeParts">
-                                                <input type="checkbox" id="brakeParts">
-                                                <span>Brake Parts(6)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox-default" for="accessories">
-                                                <input type="checkbox" id="accessories">
-                                                <span>Accessories (10)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox-default" for="EngineParts">
-                                                <input type="checkbox" id="EngineParts">
-                                                <span>Engine Parts (4)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox-default" for="hermes">
-                                                <input type="checkbox" id="hermes">
-                                                <span>hermes (10)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox-default" for="tommyHilfiger">
-                                                <input type="checkbox" id="tommyHilfiger">
-                                                <span>Tommy Hilfiger(7)</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> <!-- End Single Sidebar Widget -->
-
-                        <!-- Start Single Sidebar Widget -->
-                        <div class="sidebar-single-widget">
-                            <h6 class="sidebar-title">SELECT BY COLOR</h6>
-                            <div class="sidebar-content">
-                                <div class="filter-type-select">
-                                    <ul>
-                                        <li>
-                                            <label class="checkbox-default" for="black">
-                                                <input type="checkbox" id="black">
-                                                <span>Black (6)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox-default" for="blue">
-                                                <input type="checkbox" id="blue">
-                                                <span>Blue (8)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox-default" for="brown">
-                                                <input type="checkbox" id="brown">
-                                                <span>Brown (10)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox-default" for="Green">
-                                                <input type="checkbox" id="Green">
-                                                <span>Green (6)</span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="checkbox-default" for="pink">
-                                                <input type="checkbox" id="pink">
-                                                <span>Pink (4)</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> <!-- End Single Sidebar Widget -->
-
-                        <!-- Start Single Sidebar Widget -->
-                        <div class="sidebar-single-widget">
-                            <h6 class="sidebar-title">Tag products</h6>
-                            <div class="sidebar-content">
-                                <div class="tag-link">
-                                    <a href="#">asian</a>
-                                    <a href="#">brown</a>
-                                    <a href="#">euro</a>
-                                    <a href="#">fashion</a>
-                                    <a href="#">hat</a>
-                                    <a href="#">t-shirt</a>
-                                    <a href="#">teen</a>
-                                    <a href="#">travel</a>
-                                    <a href="#">white</a>
-                                </div>
-                            </div>
-                        </div> <!-- End Single Sidebar Widget -->
-
-                        <!-- Start Single Sidebar Widget -->
-                        <div class="sidebar-single-widget">
-                            <div class="sidebar-content">
-                                <a href="#"
-                                   class="sidebar-banner img-hover-zoom">
-                                    <img class="img-fluid"
-                                         src="{{asset('frontend/assets/images/banner/side-banner.jpg')}}" alt="">
-                                </a>
-                            </div>
-                        </div> <!-- End Single Sidebar Widget -->
-
-                    </div> <!-- End Sidebar Area -->
+                    @include('site.pages.shop.category')
                 </div>
                 <div class="col-lg-9">
                     <!-- Start Shop Product Sorting Section -->
@@ -212,7 +47,7 @@
                                                         alt=""></a></li>
                                             <li><a class="nav-link" data-bs-toggle="tab" href="#layout-list"><img
                                                         src="{{asset('frontend/assets/images/icons/bkg_list.png')}}"
-                                                        alt=""></a></li>
+                                                        alt=""></a></li>'
                                         </ul>
 
                                         <!-- Start Page Amount -->
@@ -254,6 +89,11 @@
                                         <div class="tab-pane active show sort-layout-single" id="layout-3-grid">
                                             <div class="row">
                                                 @foreach ($products as $product)
+                                                    @php
+                                                        $price = $product->price;
+                                                        $discount_percent = $product->discount_percent;
+                                                        $price_sale = $price - (($price * $discount_percent) / 100 );
+                                                    @endphp
                                                     <div class="col-xl-4 col-sm-6 col-12">
                                                         <!-- Start Product Default Single Item -->
 
@@ -262,13 +102,12 @@
                                                             <div class="image-box">
                                                                 <a href="{{ route('site.product',$product->id) }}"
                                                                    class="image-link">
-                                                                    <img
-                                                                        src="{{asset('frontend/assets/images/product/default/home-1/default-9.jpg')}}"
-                                                                        alt="">
-                                                                    <img
-                                                                        src="{{asset('frontend/assets/images/product/default/home-1/default-10.jpg')}}"
-                                                                        alt="">
+                                                                    <img src="{{ asset('uploads/' . $product->thumbnail) }}"
+                                                                         alt="Product Thumbnail" class="img-fluid">
                                                                 </a>
+                                                                <div class="tag">
+                                                                    <span>{{ $product->discount }}</span>
+                                                                </div>
                                                                 <div class="action-link">
                                                                     <div class="action-link-left">
                                                                         <a href="#" data-bs-toggle="modal"
@@ -310,7 +149,8 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="content-right">
-                                                                    <span class="price">{{$product->price}} VND</span>
+                                                                    <span class="price">
+                                                                        <del>{{$price}}₫</del> {{$price_sale}}₫</span>
                                                                 </div>
 
                                                             </div>
@@ -336,12 +176,8 @@
                                                         <div class="product-list-single product-color--golden">
                                                             <a href="{{ route('site.product', $product->id) }}"
                                                                class="product-list-img-link">
-                                                                <img class="img-fluid"
-                                                                     src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}"
-                                                                     alt="">
-                                                                <img class="img-fluid"
-                                                                     src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}"
-                                                                     alt="">
+                                                                <img src="{{ asset('uploads/' . $product->thumbnail) }}"
+                                                                     alt="Product Thumbnail" class="img-fluid">
                                                             </a>
                                                             <div class="product-list-content">
                                                                 <h5 class="product-list-link"><a
@@ -359,9 +195,9 @@
                                                                     <li class="empty"><i class="ion-android-star"></i>
                                                                     </li>
                                                                 </ul>
-                                                                <span class="product-list-price"><del>{{$price}}</del>
-                                                                {{$price_sale}} VND</span>
-                                                                <p>{{$product->description}} VND</p>
+                                                                <span class="product-list-price"><del>{{$price}}₫</del>
+                                                                {{$price_sale}} ₫</span>
+                                                                <p>{{$product->description}}</p>
                                                                 <div class="product-action-icon-link-list">
                                                                     <a href="#" data-bs-toggle="modal"
                                                                        data-bs-target="#modalAddcart"
