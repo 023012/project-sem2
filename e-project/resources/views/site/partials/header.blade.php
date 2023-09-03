@@ -1,5 +1,5 @@
-   <!-- Start Header && Search  -->
-   <div>
+<!-- Start Header && Search  -->
+<div>
     <!-- Start Header Area -->
     <header class="header-section d-none d-xl-block">
         <div class="header-wrapper">
@@ -10,7 +10,8 @@
                             <!-- Start Header Logo -->
                             <div class="header-logo">
                                 <div class="logo">
-                                    <a href="{{ route('site.home') }}"><img src="{{ asset('frontend/assets/images/logo/logo_black.png') }}" alt=""></a>
+                                    <a href="{{ route('site.home') }}"><img
+                                            src="{{ asset('frontend/assets/images/logo/logo_black.png') }}" alt=""></a>
                                 </div>
                             </div>
                             <!-- End Header Logo -->
@@ -32,14 +33,15 @@
                                         <li>
                                             <a href="{{ route('site.contact-us') }}">Contact Us</a>
                                         </li>
-                                        <li>\
+                                        <li>
                                             @guest
-                                                <a href="{{ route('site.login') }}">
+                                                <a href="{{ route('login') }}">
                                                     Đăng nhập <i class="fa-regular fa-user"></i>
                                                 </a>
                                             @else
-                                                <a href="{{ route('site.login') }}">
-                                                    <i class="fa-regular fa-user"></i> Tài khoản
+                                                <a href="{{ route('site.my_account') }}">
+                                                    Tôi
+                                                    <i class="fa-regular fa-user"></i>
                                                 </a>
                                             @endguest
                                         </li>
@@ -162,7 +164,8 @@
             <!-- Start Mobile contact Info -->
             <div class="mobile-contact-info">
                 <div class="logo">
-                    <a href="{{route('site.home')}}"><img src="{{ asset('frontend/assets/images/logo/logo_white.png') }}" alt=""></a>
+                    <a href="{{route('site.home')}}"><img
+                            src="{{ asset('frontend/assets/images/logo/logo_white.png') }}" alt=""></a>
                 </div>
 
                 <address class="address">
@@ -199,7 +202,8 @@
         <!-- Start Mobile contact Info -->
         <div class="mobile-contact-info">
             <div class="logo">
-                <a href="{{route('site.home')}}"><img src="{{ asset('frontend/assets/images/logo/logo_white.png') }}" alt=""></a>
+                <a href="{{route('site.home')}}"><img src="{{ asset('frontend/assets/images/logo/logo_white.png') }}"
+                                                      alt=""></a>
             </div>
 
             <address class="address">
@@ -239,7 +243,7 @@
                     <div class="offcanvas-cart-item-block">
                         <a href="#" class="offcanvas-cart-item-image-link">
                             <img src="{{ asset('frontend/assets/images/product/default/home-1/default-1.jpg') }}" alt=""
-                                class="offcanvas-cart-image">
+                                 class="offcanvas-cart-image">
                         </a>
                         <div class="offcanvas-cart-item-content">
                             <a href="#" class="offcanvas-cart-item-link">Car Wheel</a>
@@ -257,7 +261,7 @@
                     <div class="offcanvas-cart-item-block">
                         <a href="#" class="offcanvas-cart-item-image-link">
                             <img src="{{ asset('frontend/assets/images/product/default/home-2/default-1.jpg') }}" alt=""
-                                class="offcanvas-cart-image">
+                                 class="offcanvas-cart-image">
                         </a>
                         <div class="offcanvas-cart-item-content">
                             <a href="#" class="offcanvas-cart-item-link">Car Vails</a>
@@ -275,7 +279,7 @@
                     <div class="offcanvas-cart-item-block">
                         <a href="#" class="offcanvas-cart-item-image-link">
                             <img src="{{ asset('frontend/assets/images/product/default/home-3/default-1.jpg') }}" alt=""
-                                class="offcanvas-cart-image">
+                                 class="offcanvas-cart-image">
                         </a>
                         <div class="offcanvas-cart-item-content">
                             <a href="#" class="offcanvas-cart-item-link">Shock Absorber</a>
@@ -317,7 +321,7 @@
                     <div class="offcanvas-wishlist-item-block">
                         <a href="#" class="offcanvas-wishlist-item-image-link">
                             <img src="{{ asset('frontend/assets/images/product/default/home-1/default-1.jpg') }}" alt=""
-                                class="offcanvas-wishlist-image">
+                                 class="offcanvas-wishlist-image">
                         </a>
                         <div class="offcanvas-wishlist-item-content">
                             <a href="#" class="offcanvas-wishlist-item-link">Car Wheel</a>
@@ -335,7 +339,7 @@
                     <div class="offcanvas-wishlist-item-block">
                         <a href="#" class="offcanvas-wishlist-item-image-link">
                             <img src="{{ asset('frontend/assets/images/product/default/home-2/default-1.jpg') }}" alt=""
-                                class="offcanvas-wishlist-image">
+                                 class="offcanvas-wishlist-image">
                         </a>
                         <div class="offcanvas-wishlist-item-content">
                             <a href="#" class="offcanvas-wishlist-item-link">Car Vails</a>
@@ -353,7 +357,7 @@
                     <div class="offcanvas-wishlist-item-block">
                         <a href="#" class="offcanvas-wishlist-item-image-link">
                             <img src="{{ asset('frontend/assets/images/product/default/home-3/default-1.jpg') }}" alt=""
-                                class="offcanvas-wishlist-image">
+                                 class="offcanvas-wishlist-image">
                         </a>
                         <div class="offcanvas-wishlist-item-content">
                             <a href="#" class="offcanvas-wishlist-item-link">Shock Absorber</a>
@@ -379,7 +383,7 @@
     <div id="search" class="search-modal">
         <button type="button" class="close">×</button>
         <form>
-            <input type="search" placeholder="type keyword(s) here" />
+            <input type="search" placeholder="type keyword(s) here"/>
             <button type="submit" class="btn btn-lg btn-golden">Search</button>
         </form>
     </div>

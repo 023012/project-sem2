@@ -1,17 +1,17 @@
 <?php
 
-use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\Site\HomeController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\User\AuthController;
-use App\Http\Controllers\User\ContactController;
-use App\Http\Controllers\User\ShopController;
-use App\Http\Controllers\User\MyAccountController;
-use App\Http\Controllers\User\CheckoutController;
-use App\Http\Controllers\User\BlogController;
-use App\Http\Controllers\User\AboutController;
-use App\Http\Controllers\User\WishlistController;
-use App\Http\Controllers\User\CompareController;
+use App\Http\Controllers\Site\AuthController;
+use App\Http\Controllers\Site\ContactController;
+use App\Http\Controllers\Site\ShopController;
+use App\Http\Controllers\Site\MyAccountController;
+use App\Http\Controllers\Site\CheckoutController;
+use App\Http\Controllers\Site\BlogController;
+use App\Http\Controllers\Site\AboutController;
+use App\Http\Controllers\Site\WishlistController;
+use App\Http\Controllers\Site\CompareController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +25,10 @@ use App\Http\Controllers\User\CompareController;
 */
 // Client
 
-Route::get('/login', [AuthController::class, 'index'])->name('site.login');
-Route::post('/login', [AuthController::class, 'login'])->name('site.login.store');
-Route::get('/register', [AuthController::class, 'registerForm'])->name('site.register');
-Route::post('/register', [AuthController::class, 'register'])->name('site.register.store');
+//Route::get('/login', [AuthController::class, 'index'])->name('site.login');
+//Route::post('/login', [AuthController::class, 'login'])->name('site.login.store');
+//Route::get('/register', [AuthController::class, 'registerForm'])->name('site.register');
+//Route::post('/register', [AuthController::class, 'register'])->name('site.register.store');
 
 Route::get('/', [HomeController::class, 'index'])->name('site.home');
 Route::get('/blogs', [BlogController::class, 'index'])->name('site.blogs');
@@ -50,6 +50,8 @@ Route::get('/cart', [CartController::class, 'index'])->name('site.cart');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/my-account', [MyAccountController::class, 'index'])->name('site.my_account');
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('site.checkout');
+
+//    Route::get('logout',[AuthController::class, 'logout'] )->name('site.logout');
 });
 
 
