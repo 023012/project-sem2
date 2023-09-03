@@ -11,6 +11,7 @@ use App\Http\Controllers\Site\BlogController;
 use App\Http\Controllers\Site\AboutController;
 use App\Http\Controllers\Site\WishlistController;
 use App\Http\Controllers\Site\CompareController;
+use App\Http\Controllers\Site\CartController;
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -45,9 +46,12 @@ Route::get('/{product}/product', [ShopController::class, 'showProductDetail'])->
 //Contact
 Route::get('/contact', [ContactController::class, 'index'])->name('site.contact-us');
 Route::post('/contact', [ContactController::class, 'sendContact'])->name('site.contactUs.sendContact');
-
-
-Route::get('/cart', [CartController::class, 'index'])->name('site.cart');
+//Cart
+Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
+Route::post('cart', [CartController::class, 'addToCart'])->name('cart.store');
+Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
+Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/my-profile', [MyAccountController::class, 'index'])->name('site.user.profile');

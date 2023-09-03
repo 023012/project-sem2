@@ -94,14 +94,14 @@
                                             <td>May 10, 2018</td>
                                             <td><span class="success">Completed</span></td>
                                             <td>$25.00 for 1 item </td>
-                                            <td><a href="{{ route('site.cart') }}" class="view">view</a></td>
+                                            <td><a href="{{ route('cart.list') }}" class="view">view</a></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>May 10, 2018</td>
                                             <td>Processing</td>
                                             <td>$17.00 for 1 item </td>
-                                            <td><a href="{{ route('site.cart') }}" class="view">view</a></td>
+                                            <td><a href="{{ route('cart.list') }}" class="view">view</a></td>
                                         </tr>
                                     </tbody>
                                 </table>

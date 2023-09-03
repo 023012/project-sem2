@@ -25,7 +25,7 @@
                                     <div class="modal-add-cart-info"><i class="fa fa-check-square"></i>Added to cart
                                         successfully!</div>
                                     <div class="modal-add-cart-product-cart-buttons">
-                                        <a href="{{route('site.cart')}}">View Cart</a>
+                                        <a href="{{route('cart.list')}}">View Cart</a>
                                         <a href="{{route('site.checkout')}}">Checkout</a>
                                     </div>
                                 </div>
