@@ -39,9 +39,9 @@
                                                     Đăng nhập <i class="fa-regular fa-user"></i>
                                                 </a>
                                             @else
-                                                <a href="{{ route('site.my_account') }}">
-                                                    Tôi
-                                                    <i class="fa-regular fa-user"></i>
+                                                <a href="{{ route('site.user.profile') }}">
+                                                    {{ Auth::user()->name }}
+                                                    <span class="fa-regular fa-user"></span>
                                                 </a>
                                             @endguest
                                         </li>

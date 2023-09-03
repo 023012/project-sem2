@@ -30,7 +30,7 @@ use App\Http\Controllers\Auth\RegisterController;
 Route::get('/login', [LoginController::class, 'loginForm'])->name('site.login');
 Route::post('/login', [LoginController::class, 'login'])->name('site.login.post');
 Route::get('/register', [RegisterController::class, 'registerForm'])->name('site.register');
-Route::post('/register', [RegisterController::class, 'create'])->name('site.register.store');
+Route::post('/register', [RegisterController::class, 'register'])->name('site.register.post');
 
 Route::get('/', [HomeController::class, 'index'])->name('site.home');
 Route::get('/blogs', [BlogController::class, 'index'])->name('site.blogs');
@@ -50,10 +50,10 @@ Route::post('/contact', [ContactController::class, 'sendContact'])->name('site.c
 Route::get('/cart', [CartController::class, 'index'])->name('site.cart');
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/my-account', [MyAccountController::class, 'index'])->name('site.my_account');
+    Route::get('/my-profile', [MyAccountController::class, 'index'])->name('site.user.profile');
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('site.checkout');
 
-//    Route::get('logout',[AuthController::class, 'logout'] )->name('site.logout');
+    Route::get('logout',[LoginController::class, 'logout'] )->name('site.logout');
 });
 
 

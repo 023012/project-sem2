@@ -25,8 +25,8 @@
                             data-aos-delay="200">
                             <h5 class="title">MY ACCOUNT</h5>
                             <ul class="footer-nav">
-                                <li><a href="{{route('site.my_account')}}">My account</a></li>
-                                <li><a href="{{route('site.wishlist')}}">Wishlist</a></li>
+                                <li><a href="{{route('site.user.profile')}}">Tài khoản</a></li>
+                                <li><a href="{{route('site.wishlist')}}">Yêu thích</a></li>
                                 <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Frequently Questions</a></li>
                                 <li><a href="#">Order History</a></li>

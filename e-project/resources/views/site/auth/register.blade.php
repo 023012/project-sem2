@@ -27,18 +27,32 @@
         <div class="container">
             <div class="row">
                 <!--register area start-->
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-7 col-md-6">
                     <div class="account_form register" data-aos="fade-up" data-aos-delay="200">
                         <h3>Đăng ký</h3>
-                        <form action="{{ route('site.register.store') }}" method="POST">
+                        <form action="{{ route('site.register.post') }}" method="POST">
                             @csrf
+                            <div class="default-form-box">
+                                <label>Họ và tên <span>*</span></label>
+                                <input name="name" type="text" value="{{ old('name') }}" required>
+                            </div>
                             <div class="default-form-box">
                                 <label>Email <span>*</span></label>
                                 <input name="email" type="text" value="{{ old('email') }}" required>
                             </div>
+                            <div class="row">
+                                <div class="col-lg-6 default-form-box">
+                                    <label>Mật khẩu <span>*</span></label>
+                                    <input name="password" type="password" required>
+                                </div>
+                                <div class="col-lg-6 default-form-box">
+                                    <label>Số điện thoại <span>*</span></label>
+                                    <input name="phone" type="text" value="{{ old('phone') }}" required>
+                                </div>
+                            </div>
                             <div class="default-form-box">
-                                <label>Mật khẩu <span>*</span></label>
-                                <input name="password" type="password" required>
+                                <label>Địa chỉ<span>*</span></label>
+                                <input name="address" type="text" value="{{ old('address') }}" required>
                             </div>
                             <div class="login_submit">
                                 <button class="btn btn-md btn-black-default-hover" type="submit">Đăng ký</button>
@@ -48,7 +62,7 @@
                 </div>
                 <!--register area end-->
                 <!--login area start-->
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-5 col-md-6">
                     <img class="img-fluid" src="{{ asset('frontend/assets/images/banner/banner-style-3-img-1.jpg') }}"/>
                 </div>
                 <!--login area start-->
