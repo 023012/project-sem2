@@ -30,7 +30,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="account_form" data-aos="fade-up" data-aos-delay="0">
                         <h3>Đăng nhập</h3>
-                        <form  action="{{ route('site.login.store') }}" method="POST">
+                        <form  action="{{ route('site.login.post') }}" method="POST">
                             @csrf
                             <div class="default-form-box">
                                 <label>Email <span>*</span></label>

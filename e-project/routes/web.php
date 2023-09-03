@@ -3,7 +3,6 @@
 use App\Http\Controllers\Site\HomeController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Site\AuthController;
 use App\Http\Controllers\Site\ContactController;
 use App\Http\Controllers\Site\ShopController;
 use App\Http\Controllers\Site\MyAccountController;
@@ -12,6 +11,9 @@ use App\Http\Controllers\Site\BlogController;
 use App\Http\Controllers\Site\AboutController;
 use App\Http\Controllers\Site\WishlistController;
 use App\Http\Controllers\Site\CompareController;
+
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +27,10 @@ use App\Http\Controllers\Site\CompareController;
 */
 // Client
 
-//Route::get('/login', [AuthController::class, 'index'])->name('site.login');
-//Route::post('/login', [AuthController::class, 'login'])->name('site.login.store');
-//Route::get('/register', [AuthController::class, 'registerForm'])->name('site.register');
-//Route::post('/register', [AuthController::class, 'register'])->name('site.register.store');
+Route::get('/login', [LoginController::class, 'loginForm'])->name('site.login');
+Route::post('/login', [LoginController::class, 'login'])->name('site.login.post');
+Route::get('/register', [RegisterController::class, 'registerForm'])->name('site.register');
+Route::post('/register', [RegisterController::class, 'create'])->name('site.register.store');
 
 Route::get('/', [HomeController::class, 'index'])->name('site.home');
 Route::get('/blogs', [BlogController::class, 'index'])->name('site.blogs');

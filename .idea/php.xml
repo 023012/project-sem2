@@ -112,6 +112,7 @@
       <path value="$PROJECT_DIR$/e-project/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/e-project/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/e-project/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/e-project/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

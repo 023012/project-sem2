@@ -35,7 +35,7 @@
                                         </li>
                                         <li>
                                             @guest
-                                                <a href="{{ route('login') }}">
+                                                <a href="{{ route('site.login') }}">
                                                     Đăng nhập <i class="fa-regular fa-user"></i>
                                                 </a>
                                             @else
