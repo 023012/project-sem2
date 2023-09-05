@@ -63,16 +63,20 @@
                                             </td>
                                             <td class="product-price">${{ $item->price }}</td>
                                             <td class="product_quantity">
-                                                <label>Quantity</label>
-                                                <input min="1" max="100" value="{{ $item->quantity }}" type="number">
+                                                <form action="{{ route('cart.update') }}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="id" value="{{ $item->id }}">
+                                                    <input min="1" max="100" value="{{ $item->quantity }}" type="number" name="quantity">
+                                                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                                </form>
                                             </td>
                                             <td class="product_total">{{ $item->price * $item->quantity }} vnđ</td>
                                             <td class="product_remove">
                                                 <form action="{{ route('cart.remove') }}" method="POST">
                                                     @csrf
                                                     <input type="hidden" value="{{ $item->id }}" name="id">
-                                                    <button>
-                                                        <i class="fa fa-trash-o"></i>
+                                                    <button type="submit">
+                                                        <i class="fa-regular fa-trash-can"></i>
                                                     </button>
                                                 </form>
                                             </td>
@@ -82,10 +86,6 @@
                                 </table>
                             </div>
                             <div class="cart_submit">
-                                <form action="{{ route('cart.update') }}" method="POST">
-                                    @csrf
-                                    <button class="btn btn-md btn-golden" type="submit">Cập nhật</button>
-                                </form>
                                 <form action="{{ route('cart.clear') }}" method="POST">
                                     @csrf
                                     <button class="btn btn-md btn-pink">Xóa giỏ hàng</button>
@@ -113,21 +113,21 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
-                            <h3>Cart Totals</h3>
+                            <h3>Tổng số tiền</h3>
                             <div class="coupon_inner">
                                 <div class="cart_subtotal">
-                                    <p>Subtotal</p>
+                                    <p>Tổng</p>
                                     <p class="cart_amount">{{ Cart::getTotal() }} đ</p>
                                 </div>
                                 <div class="cart_subtotal ">
-                                    <p>Shipping</p>
-                                    <p class="cart_amount"><span>Flat Rate:</span> đ</p>
+                                    <p>Giao hàng</p>
+                                    <p class="cart_amount"> Miễn phí</p>
                                 </div>
                                 <a href="#">Calculate shipping</a>
 
                                 <div class="cart_subtotal">
-                                    <p>Total</p>
-                                    <p class="cart_amount"></p>
+                                    <p>Thành tiền</p>
+                                    <p class="cart_amount">{{ Cart::getTotal() }} đ</p>
                                 </div>
                                 <div class="checkout_btn">
                                     <a href="{{ route('site.checkout') }}" class="btn btn-md btn-golden">Thanh toán</a>

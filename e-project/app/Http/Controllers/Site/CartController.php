@@ -24,6 +24,7 @@ class CartController extends Controller
             'price' => $request->price,
             'quantity' => $request->quantity,
             'attributes' => array(
+                'stock_quantity' => $request->stock_quantity,
                 'thumbnail' => $request->thumbnail,
             )
         ]);
@@ -34,6 +35,21 @@ class CartController extends Controller
 
     public function updateCart(Request $request)
     {
+        $id = $request->input('id');
+        $quantity = $request->input('quantity');
+
+        // Kiểm tra xem sản phẩm có tồn tại trong giỏ hàng không
+        $cartItem = \Cart::get($id);
+
+        if (!$cartItem) {
+            return redirect()->route('cart.index')->with('error', 'Sản phẩm không tồn tại trong giỏ hàng.');
+        }
+
+        // Kiểm tra xem số lượng trong giỏ hàng có lớn hơn số lượng sản phẩm không
+        if ($quantity > $cartItem->attributes->stock_quantity) {
+            return redirect()->route('cart.list')->with('error', 'Số lượng trong giỏ hàng lớn hơn số lượng sản phẩm.');
+        }
+
         \Cart::update(
             $request->id,
             [

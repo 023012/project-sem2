@@ -113,11 +113,10 @@
                                             <input type="hidden" value="{{ $product->name }}" name="name">
                                             <input type="hidden" value="{{ $product->price }}" name="price">
                                             <input type="hidden" value="{{ $product->thumbnail }}"  name="thumbnail">
+                                            <input type="hidden" value="{{ $product->quantity }}" name="stock_quantity">
                                             <input type="hidden" value="1" name="quantity">
-                                            <button class="px-4 py-2 text-white bg-blue-800 rounded">Thêm vào giỏ</button>
+                                            <button class="btn btn-block btn-lg btn-black-default-hover"> + Thêm vào giỏ</button>
                                         </form>
-{{--                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">+ Add To--}}
-{{--                                            Cart</a>--}}
                                     </div>
                                 </div>
                                 <!-- Start  Product Details Meta Area-->
