@@ -1,4 +1,5 @@
 @extends('site.app')
+
 @section('content')
 
     <!-- ...:::: Start Breadcrumb Section:::... -->
@@ -7,13 +8,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="breadcrumb-title">Cart</h3>
+                        <h3 class="breadcrumb-title">Giỏ hàng</h3>
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="{{route('site.home')}}">Home</a></li>
-                                    <li><a href="{{route('site.blog-grid-sidebar-left')}}">Shop</a></li>
-                                    <li class="active" aria-current="page">Cart</li>
+                                    <li><a href="{{ route('site.home') }}">Trang chủ</a></li>
+                                    <li><a href="{{ route('site.shop') }}">Cửa hàng</a></li>
+                                    <li class="active" aria-current="page">Giỏ hàng</li>
                                 </ul>
                             </nav>
                         </div>
@@ -21,9 +22,9 @@
                 </div>
             </div>
         </div>
-    </div> <!-- ...:::: End Breadcrumb Section:::... -->
+    </div>
+    <!-- ...:::: End Breadcrumb Section:::... -->
 
-    <!-- ...:::: Start Cart Section:::... -->
     <div class="cart-section">
         <!-- Start Cart Table -->
         <div class="cart-table-wrapper" data-aos="fade-up" data-aos-delay="0">
@@ -35,63 +36,60 @@
                                 <table>
                                     <!-- Start Cart Table Head -->
                                     <thead>
-                                        <tr>
-                                            <th class="product_remove">Delete</th>
-                                            <th class="product_thumb">Image</th>
-                                            <th class="product_name">Product</th>
-                                            <th class="product-price">Price</th>
-                                            <th class="product_quantity">Quantity</th>
-                                            <th class="product_total">Total</th>
-                                        </tr>
+                                    <tr>
+                                        <th class="product_thumb">Image</th>
+                                        <th class="product_name">Product</th>
+                                        <th class="product-price">Price</th>
+                                        <th class="product_quantity">Quantity</th>
+                                        <th class="product_total">Total</th>
+                                        <th class="product_remove">Delete</th>
+                                    </tr>
                                     </thead> <!-- End Cart Table Head -->
                                     <tbody>
-                                        <!-- Start Cart Single Item-->
+                                    <!-- Start Cart Single Item-->
+                                    @foreach($cartItems as $item)
                                         <tr>
-                                            <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
+                                            <td class="product_thumb">
+                                                <a href="{{ route('site.product', $item->id) }}">
+                                                    <img class="img-fluid"
+                                                         src="{{ asset('/uploads/' . $item->attributes->thumbnail) }}"
+                                                         alt="">
+                                                </a>
                                             </td>
-                                            <td class="product_thumb"><a href="{{route('site.product_details_default')}}"><img
-                                                        src="{{asset('frontend/assets/images/product/default/home-1/default-1.jpg')}}"
-                                                        alt=""></a></td>
-                                            <td class="product_name"><a href="{{route('site.product_details_default')}}">Handbag
-                                                    fringilla</a></td>
-                                            <td class="product-price">$65.00</td>
-                                            <td class="product_quantity"><label>Quantity</label> <input min="1"
-                                                    max="100" value="1" type="number"></td>
-                                            <td class="product_total">$130.00</td>
-                                        </tr> <!-- End Cart Single Item-->
-                                        <!-- Start Cart Single Item-->
-                                        <tr>
-                                            <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
+                                            <td class="product_name">
+                                                <a href="{{ route('site.product', $item->id) }}">
+                                                    {{ $item->name }}
+                                                </a>
                                             </td>
-                                            <td class="product_thumb"><a href="{{route('site.product_details_default')}}"><img
-                                                        src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}"
-                                                        alt=""></a></td>
-                                            <td class="product_name"><a href="{{route('site.product_details_default')}}">Handbags
-                                                    justo</a></td>
-                                            <td class="product-price">$90.00</td>
-                                            <td class="product_quantity"><label>Quantity</label> <input min="1"
-                                                    max="100" value="1" type="number"></td>
-                                            <td class="product_total">$180.00</td>
-                                        </tr> <!-- End Cart Single Item-->
-                                        <!-- Start Cart Single Item-->
-                                        <tr>
-                                            <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
+                                            <td class="product-price">${{ $item->price }}</td>
+                                            <td class="product_quantity">
+                                                <form action="{{ route('cart.update') }}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="id" value="{{ $item->id }}">
+                                                    <input min="1" max="100" value="{{ $item->quantity }}" type="number" name="quantity">
+                                                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                                </form>
                                             </td>
-                                            <td class="product_thumb"><a href="{{route('site.product_details_default')}}"><img
-                                                        src="{{asset('frontend/assets/images/product/default/home-1/default-3.jpg')}}"
-                                                        alt=""></a></td>
-                                            <td class="product_name"><a href="{{route('site.product_details_default')}}">Handbag
-                                                    elit</a></td>
-                                            <td class="product-price">$80.00</td>
-                                            <td class="product_quantity"><label>Quantity</label> <input min="1"
-                                                    max="100" value="1" type="number"></td>
-                                            <td class="product_total">$160.00</td>
+                                            <td class="product_total">{{ $item->price * $item->quantity }} vnđ</td>
+                                            <td class="product_remove">
+                                                <form action="{{ route('cart.remove') }}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" value="{{ $item->id }}" name="id">
+                                                    <button type="submit">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
                                         </tr> <!-- End Cart Single Item-->
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
                             <div class="cart_submit">
-                                <button class="btn btn-md btn-golden" type="submit">update cart</button>
+                                <form action="{{ route('cart.clear') }}" method="POST">
+                                    @csrf
+                                    <button class="btn btn-md btn-pink">Xóa giỏ hàng</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -99,7 +97,7 @@
             </div>
         </div> <!-- End Cart Table -->
 
-        <!-- Start Coupon Start -->
+        <!-- Start Coupon Section -->
         <div class="coupon_area">
             <div class="container">
                 <div class="row">
@@ -115,31 +113,30 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
-                            <h3>Cart Totals</h3>
+                            <h3>Tổng số tiền</h3>
                             <div class="coupon_inner">
                                 <div class="cart_subtotal">
-                                    <p>Subtotal</p>
-                                    <p class="cart_amount">$215.00</p>
+                                    <p>Tổng</p>
+                                    <p class="cart_amount">{{ Cart::getTotal() }} đ</p>
                                 </div>
                                 <div class="cart_subtotal ">
-                                    <p>Shipping</p>
-                                    <p class="cart_amount"><span>Flat Rate:</span> $255.00</p>
+                                    <p>Giao hàng</p>
+                                    <p class="cart_amount"> Miễn phí</p>
                                 </div>
                                 <a href="#">Calculate shipping</a>
 
                                 <div class="cart_subtotal">
-                                    <p>Total</p>
-                                    <p class="cart_amount">$215.00</p>
+                                    <p>Thành tiền</p>
+                                    <p class="cart_amount">{{ Cart::getTotal() }} đ</p>
                                 </div>
                                 <div class="checkout_btn">
-                                    <a href="#" class="btn btn-md btn-golden">Proceed to Checkout</a>
+                                    <a href="{{ route('site.checkout') }}" class="btn btn-md btn-golden">Thanh toán</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!-- End Coupon Start -->
+        </div> <!-- End Coupon Section -->
     </div> <!-- ...:::: End Cart Section:::... -->
-
 @endsection

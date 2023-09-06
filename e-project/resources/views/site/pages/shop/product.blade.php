@@ -6,13 +6,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="breadcrumb-title">Product Details - Tab Left</h3>
+                        <h3 class="breadcrumb-title">Sản phẩm</h3>
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="{{ route('site.home') }}">Home</a></li>
-                                    <li><a href="{{ route('site.shop') }}">Shop</a></li>
-                                    <li class="active" aria-current="page">Product Details</li>
+                                    <li><a href="{{ route('site.home') }}">Trang chủ</a></li>
+                                    <li><a href="{{ route('site.shop') }}">Cửa hàng</a></li>
+                                    <li class="active" aria-current="page">Chi tiết sản phẩm</li>
                                 </ul>
                             </nav>
                         </div>
@@ -107,8 +107,16 @@
                                     </div>
 
                                     <div class="product-add-to-cart-btn">
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalAddcart">+ Add To
-                                            Cart</a>
+                                        <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" value="{{ $product->id }}" name="id">
+                                            <input type="hidden" value="{{ $product->name }}" name="name">
+                                            <input type="hidden" value="{{ $product->price }}" name="price">
+                                            <input type="hidden" value="{{ $product->thumbnail }}"  name="thumbnail">
+                                            <input type="hidden" value="{{ $product->quantity }}" name="stock_quantity">
+                                            <input type="hidden" value="1" name="quantity">
+                                            <button class="btn btn-block btn-lg btn-black-default-hover"> + Thêm vào giỏ</button>
+                                        </form>
                                     </div>
                                 </div>
                                 <!-- Start  Product Details Meta Area-->

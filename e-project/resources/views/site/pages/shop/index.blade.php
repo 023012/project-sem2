@@ -6,12 +6,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="breadcrumb-title">Shop - Grid Left Sidebar</h3>
+                        <h3 class="breadcrumb-title">Cửa hàng</h3>
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="{{route('site.home')}}">Home</a></li>
-                                    <li><a href="{{route('site.shop')}}">Shop</a></li>
+                                    <li><a href="{{route('site.home')}}">Trang chủ</a></li>
+                                    <li><a href="{{route('site.shop')}}">Cửa hàng</a></li>
                                 </ul>
                             </nav>
                         </div>

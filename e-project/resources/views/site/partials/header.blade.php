@@ -66,7 +66,9 @@
                                 <li>
                                     <a href="#offcanvas-add-cart" class="offcanvas-toggle">
                                         <i class="icon-bag"></i>
-                                        <span class="item-count">3</span>
+                                        <span class="item-count">
+                                            {{ Cart::getTotalQuantity()}}
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
@@ -183,7 +185,7 @@
 
                 <ul class="user-link">
                     <li><a href="{{ route('site.wishlist') }}">Wishlist</a></li>
-                    <li><a href="{{route('site.cart')}}">Cart</a></li>
+                    <li><a href="{{route('cart.list')}}">Cart</a></li>
                     <li><a href="{{route('site.checkout')}}">Checkout</a></li>
                 </ul>
             </div>
@@ -221,7 +223,7 @@
 
             <ul class="user-link">
                 <li><a href="{{ route('site.wishlist') }}">Wishlist</a></li>
-                <li><a href="{{route('site.cart')}}">Cart</a></li>
+                <li><a href="{{route('cart.list')}}">Cart</a></li>
                 <li><a href="{{route('site.checkout')}}">Checkout</a></li>
             </ul>
         </div>
@@ -299,7 +301,7 @@
                 <span class="offcanvas-cart-total-price-value">$170.00</span>
             </div>
             <ul class="offcanvas-cart-action-button">
-                <li><a href="{{route('site.cart')}}" class="btn btn-block btn-golden">View Cart</a></li>
+                <li><a href="{{route('cart.list')}}" class="btn btn-block btn-golden">View Cart</a></li>
                 <li><a href="{{route('site.checkout')}}" class=" btn btn-block btn-golden mt-5">Checkout</a></li>
             </ul>
         </div> <!-- End  Offcanvas Addcart Wrapper -->
