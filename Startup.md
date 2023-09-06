@@ -58,7 +58,7 @@ Sau khi cài đặt xong, bạn cần cấu hình gói `cart`. Thêm ServiceProv
 Sau đó, chạy lệnh sau để xuất bản cấu hình của `cart`:
 
 ```
-php artisan vendor:publish --tag=cart-config
+php artisan vendor:publish --provider="Darryldecode\Cart\CartServiceProvider" --tag="config"
 ```
 
 **Bước 3: Sử dụng `cart` trong ứng dụng Laravel**
