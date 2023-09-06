@@ -26,7 +26,6 @@
                                         successfully!</div>
                                     <div class="modal-add-cart-product-cart-buttons">
                                         <a href="{{route('cart.list')}}">View Cart</a>
-                                        <a href="{{route('site.checkout')}}">Checkout</a>
                                     </div>
                                 </div>
                             </div>

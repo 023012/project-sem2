@@ -14,9 +14,13 @@ class Order extends Model
     public $timestamps = true;
 
     protected $fillable = [
+        'order_number',
         'user_id',
         'status',
-        'message'
+        'item-count',
+        'notes',
+        'payment_status',
+        'payment_method',
     ];
 
     public function orderDetails()

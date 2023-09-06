@@ -55,7 +55,6 @@ Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear'
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/my-profile', [MyAccountController::class, 'index'])->name('site.user.profile');
-    Route::get('/checkout', [CheckoutController::class, 'index'])->name('site.checkout');
     Route::post('/checkout', [CheckoutController::class, 'checkout'])->name('site.checkout.post');
     Route::get('/checkout-success', [CheckoutController::class, 'success'])->name('site.checkout.success');
 

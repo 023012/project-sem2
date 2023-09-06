@@ -79,22 +79,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($cartItems as $item)
                                         <tr>
-                                            <td> Handbag fringilla <strong> × 2</strong></td>
-                                            <td> $165.00</td>
+                                            <td> {{ $item->name }} <strong> × {{ $item->quantity }} sản phẩm</strong></td>
+                                            <td> {{ $item->price * $item->quantity }}</td>
                                         </tr>
-                                        <tr>
-                                            <td> Handbag justo <strong> × 2</strong></td>
-                                            <td> $50.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td> Handbag elit <strong> × 2</strong></td>
-                                            <td> $50.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td> Handbag Rutrum <strong> × 1</strong></td>
-                                            <td> $50.00</td>
-                                        </tr>
+                                    @endforeach
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -148,8 +138,10 @@
                         </form>
                     </div>
                 </div>
-            </div> <!-- Start User Details Checkout Form -->
+            </div>
+            <!-- Start User Details Checkout Form -->
         </div>
-    </div><!-- ...:::: End Checkout Section:::... -->
+    </div>
+    <!-- ...:::: End Checkout Section:::... -->
 
 @endsection

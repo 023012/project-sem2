@@ -34,7 +34,7 @@
     -> Pages - My Account
     -> Pages - FAQ
     -> Pages - Privacy Policy
-    -> Pages - 404 
+    -> Pages - 404
     -> Pages - About
     -> Pages - Contact
     -> Pages - Blog
@@ -14595,7 +14595,7 @@ input {
 }
 
 /***********************
-* Components - Hero 
+* Components - Hero
 ************************/
 .hero-slider-active {
     position: relative;
@@ -16078,7 +16078,7 @@ input {
     margin-bottom: 20px;
 }
 .default-form-box label {
-    font-weight: 600;
+    font-weight: 600
     font-size: 14px;
     margin-bottom: 10px;
     display: block;

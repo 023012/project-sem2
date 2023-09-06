@@ -61,16 +61,22 @@
                                                     {{ $item->name }}
                                                 </a>
                                             </td>
-                                            <td class="product-price">${{ $item->price }}</td>
+                                            <td class="product-price">{{ number_format($item->price, 0, '', '.')  }}
+                                                vnđ
+                                            </td>
                                             <td class="product_quantity">
                                                 <form action="{{ route('cart.update') }}" method="POST">
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{ $item->id }}">
-                                                    <input min="1" max="100" value="{{ $item->quantity }}" type="number" name="quantity">
-                                                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                                    <input min="1" max="100" value="{{ $item->quantity }}" type="number"
+                                                           name="quantity">
+                                                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i>
+                                                    </button>
                                                 </form>
                                             </td>
-                                            <td class="product_total">{{ $item->price * $item->quantity }} vnđ</td>
+                                            <td class="product_total">{{ number_format($item->price * $item->quantity, 0, '', '.') }}
+                                                vnđ
+                                            </td>
                                             <td class="product_remove">
                                                 <form action="{{ route('cart.remove') }}" method="POST">
                                                     @csrf
@@ -97,46 +103,118 @@
             </div>
         </div> <!-- End Cart Table -->
 
-        <!-- Start Coupon Section -->
-        <div class="coupon_area">
+        <!-- ...:::: Start Checkout Section:::... -->
+        <div class="checkout-section mt-10">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="coupon_code left" data-aos="fade-up" data-aos-delay="200">
-                            <h3>Coupon</h3>
-                            <div class="coupon_inner">
-                                <p>Enter your coupon code if you have one.</p>
-                                <input class="mb-2" placeholder="Coupon code" type="text">
-                                <button type="submit" class="btn btn-md btn-golden">Apply coupon</button>
+                <!-- Start User Details Checkout Form -->
+                <div class="checkout_form" data-aos="fade-up" data-aos-delay="400">
+                    <form action="{{ route('site.checkout.post') }}" method="POST">
+                        @csrf
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <h3>Chi tiết thanh toán</h3>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="default-form-box">
+                                            <label>Họ và tên <span>*</span></label>
+                                            <input type="text" name="name" value="{{ Auth::user()->name }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="default-form-box">
+                                            <label for="country">Địa chỉ <span>*</span></label>
+                                            <input type="text" name="address" value="{{ Auth::user()->address }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="default-form-box">
+                                            <label>Số điện thoại<span>*</span></label>
+                                            <input type="text" name="phone" value="{{ Auth::user()->phone }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="default-form-box">
+                                            <label> Email <span>*</span></label>
+                                            <input type="text" name="email" value="{{ Auth::user()->email }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <div class="order-notes default-form-box">
+                                            <label for="order_note">Ghi chú</label>
+                                            <textarea id="order_note" name="notes" placeholder="Ghi chú"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
-                            <h3>Tổng số tiền</h3>
-                            <div class="coupon_inner">
-                                <div class="cart_subtotal">
-                                    <p>Tổng</p>
-                                    <p class="cart_amount">{{ Cart::getTotal() }} đ</p>
+                            <div class="col-lg-6 col-md-6">
+                                <h3>Đơn hàng của bạn</h3>
+                                <div class="order_table table-responsive">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>Sản phẩm</th>
+                                            <th>Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($cartItems as $item)
+                                            <tr>
+                                                <td> {{ $item->name }} <strong> × {{ $item->quantity }} sản phẩm</strong></td>
+                                                <td> {{ number_format($item->price * $item->quantity, 0, '', '.') }} vnđ</td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                        <tfoot>
+                                        <tr>
+                                            <th>Tổng số tiền</th>
+                                            <td>{{ number_format(Cart::getTotal(), 0, '', '.') }} vnđ</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phí giao hàng</th>
+                                            <td><strong>Miễn phí</strong></td>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
                                 </div>
-                                <div class="cart_subtotal ">
-                                    <p>Giao hàng</p>
-                                    <p class="cart_amount"> Miễn phí</p>
-                                </div>
-                                <a href="#">Calculate shipping</a>
+                                <div class="payment_method">
+                                    <div class="panel-default">
+                                        <label class="checkbox-default" for="currencyCod" data-bs-toggle="collapse"
+                                               data-bs-target="#methodCod">
+                                            <input type="checkbox" id="currencyCod" name="payment_method" value="COD">
+                                            <span>COD</span>
+                                        </label>
 
-                                <div class="cart_subtotal">
-                                    <p>Thành tiền</p>
-                                    <p class="cart_amount">{{ Cart::getTotal() }} đ</p>
-                                </div>
-                                <div class="checkout_btn">
-                                    <a href="{{ route('site.checkout') }}" class="btn btn-md btn-golden">Thanh toán</a>
+                                        <div id="methodCod" class="collapse" data-parent="#methodCod">
+                                            <div class="card-body1">
+                                                <p>Please send a check to Store Name, Store Street, Store Town, Store
+                                                    State / County, Store Postcode.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-default">
+                                        <label class="checkbox-default" for="currencyPaypal" data-bs-toggle="collapse"
+                                               data-bs-target="#methodPaypal">
+                                            <input type="checkbox" id="currencyPaypal" name="payment_method" value="PayPal">
+                                            <span>PayPal</span>
+                                        </label>
+                                        <div id="methodPaypal" class="collapse " data-parent="#methodPaypal">
+                                            <div class="card-body1">
+                                                <p>Pay via PayPal; you can pay with your credit card if you don’t have a
+                                                    PayPal account.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order_button pt-3">
+                                        <button class="btn btn-md btn-black-default-hover" type="submit">Đặt mua</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
+                <!-- Start User Details Checkout Form -->
             </div>
-        </div> <!-- End Coupon Section -->
+        </div>
+        <!-- ...:::: End Checkout Section:::... -->
     </div> <!-- ...:::: End Cart Section:::... -->
 @endsection

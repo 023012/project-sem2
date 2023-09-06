@@ -13,9 +13,13 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('order_number')->unique();
             $table->unsignedInteger('user_id');
-            $table->tinyInteger('status')->default('0');
-            $table->string('message')->nullable();
+            $table->unsignedInteger('item_count');
+            $table->enum('status', ['pending', 'processing', 'completed', 'decline'])->default('pending');
+            $table->text('notes')->nullable();
+            $table->boolean('payment_status')->default(1);
+            $table->string('payment_method')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
