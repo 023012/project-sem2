@@ -6,12 +6,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="breadcrumb-title">Contact Us</h3>
+                        <h3 class="breadcrumb-title">LIÊN HỆ</h3>
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="{{route('site.home')}}">Home</a></li>
-                                    <li class="active" aria-current="page">Contact Us</li>
+                                    <li><a href="{{route('site.home')}}">Trang Chủ</a></li>
+                                    <li class="active" aria-current="page">Liên Hệ</li>
                                 </ul>
                             </nav>
                         </div>
@@ -81,7 +81,7 @@
                         </div>
                         <!-- Start Contact Social Link -->
                         <div class="contact-social">
-                            <h4>Follow Us</h4>
+                            <h4>Theo Dõi Chúng Tôi</h4>
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="contact-form section-top-gap-100" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Get In Touch</h3>
+                        <h3>Liên Lạc</h3>
                         <form id="contact-form" action="{{ route('site.contactUs.sendContact') }}" method="post">
                             @csrf
                             <div class="row">

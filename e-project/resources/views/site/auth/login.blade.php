@@ -6,13 +6,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="breadcrumb-title">Login</h3>
+                        <h3 class="breadcrumb-title">ĐĂNG NHẬP</h3>
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
-                                    <li class="active" aria-current="page">Login</li>
+                                    <li><a href="index.html">Trang Chủ</a></li>
+                                    <li><a href="shop-grid-sidebar-left.html">Cửa Hàng</a></li>
+                                    <li class="active" aria-current="page">Đăng Nhập</li>
                                 </ul>
                             </nav>
                         </div>

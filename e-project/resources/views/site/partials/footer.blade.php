@@ -9,12 +9,12 @@
                         <!-- Start Footer Single Item -->
                         <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
                             data-aos-delay="0">
-                            <h5 class="title">INFORMATION</h5>
+                            <h5 class="title">Thông Tin</h5>
                             <ul class="footer-nav">
-                                <li><a href="#">Delivery Information</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="{{route('site.contact-us')}}">Contact</a></li>
-                                <li><a href="#">Returns</a></li>
+                                <li><a href="#">Thông Tin Giao Hàng</a></li>
+                                <li><a href="#">Điều Khoản & Điều Kiến</a></li>
+                                <li><a href="{{route('site.contact-us')}}">Liên Hệ</a></li>
+                                <li><a href="#">Trở Lại</a></li>
                             </ul>
                         </div>
                         <!-- End Footer Single Item -->
@@ -23,13 +23,13 @@
                         <!-- Start Footer Single Item -->
                         <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
                             data-aos-delay="200">
-                            <h5 class="title">MY ACCOUNT</h5>
+                            <h5 class="title">Tài Khoản Của Tôi</h5>
                             <ul class="footer-nav">
                                 <li><a href="{{route('site.user.profile')}}">Tài khoản</a></li>
                                 <li><a href="{{route('site.wishlist')}}">Yêu thích</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Frequently Questions</a></li>
-                                <li><a href="#">Order History</a></li>
+                                <li><a href="#">Chính Sách Bảo Mật</a></li>
+                                <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                                <li><a href="#">Lịch Sử Mua Hàng</a></li>
                             </ul>
                         </div>
                         <!-- End Footer Single Item -->
@@ -38,13 +38,13 @@
                         <!-- Start Footer Single Item -->
                         <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
                             data-aos-delay="400">
-                            <h5 class="title">CATEGORIES</h5>
+                            <h5 class="title">Thể Loại</h5>
                             <ul class="footer-nav">
-                                <li><a href="#">Decorative</a></li>
-                                <li><a href="#">Kitchen utensils</a></li>
-                                <li><a href="#">Chair & Bar stools</a></li>
-                                <li><a href="#">Sofas and Armchairs</a></li>
-                                <li><a href="#">Interior lighting</a></li>
+                                <li><a href="#">Trang Trí</a></li>
+                                <li><a href="#">Dụng cụ nhà bếp</a></li>
+                                <li><a href="#">Ghế & Ghế Bar</a></li>
+                                <li><a href="#">Ghế Sofa và Ghế Bành</a></li>
+                                <li><a href="#">Đèn nội thất</a></li>
                             </ul>
                         </div>
                         <!-- End Footer Single Item -->
@@ -53,13 +53,12 @@
                         <!-- Start Footer Single Item -->
                         <div class="footer-widget-single-item footer-widget-color--golden" data-aos="fade-up"
                             data-aos-delay="600">
-                            <h5 class="title">ABOUT US</h5>
+                            <h5 class="title">Về Chúng Tôi</h5>
                             <div class="footer-about">
-                                <p>We are a team of designers and developers that create high quality Magento,
-                                    Prestashop, Opencart.</p>
+                                <p>Chúng tôi là một nhóm gồm các nhà thiết kế và phát triển tạo ra sản phẩm chất lượng cao</p>
 
                                 <address class="address">
-                                    <span>Address: Your address goes here.</span>
+                                    <span>Địa Chỉ: Số 8 Tôn Thất Thuyết, Phường Mỹ Đình, Quận Từ Liêm, Hà Nội.</span>
                                     <span>Email: demo@example.com</span>
                                 </address>
                             </div>
@@ -77,7 +76,7 @@
                 <div class="row mb-n6">
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-6">
                         <div class="footer-social" data-aos="fade-up" data-aos-delay="0">
-                            <h4 class="title">FOLLOW US</h4>
+                            <h4 class="title">Theo Dõi Chúng Tôi</h4>
                             <ul class="footer-social-link">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -88,12 +87,12 @@
                     </div>
                     <div class="col-xl-7 col-lg-6 col-md-6 mb-6">
                         <div class="footer-newsletter" data-aos="fade-up" data-aos-delay="200">
-                            <h4 class="title">DON'T MISS OUT ON THE LATEST</h4>
+                            <h4 class="title">Đừng Bỏ Lỡ Những Cập Nhật Mới</h4>
                             <div class="form-newsletter">
                                 <form action="#" method="post">
                                     <div class="form-fild-newsletter-single-item input-color--golden">
-                                        <input type="email" placeholder="Your email address..." required>
-                                        <button type="submit">SUBSCRIBE!</button>
+                                        <input type="email" placeholder="Địa Chỉ Email ..." required>
+                                        <button type="submit">Đăng Kí!</button>
                                     </div>
                                 </form>
                             </div>
@@ -107,16 +106,7 @@
         <!-- Start Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
-                <div
-                    class="row justify-content-between align-items-center align-items-center flex-column flex-md-row mb-n6">
-                    <div class="col-auto mb-6">
-                        <div class="footer-copyright">
-                            <p class="copyright-text">&copy; 2021 <a href="{{route('site.home')}}">therankme</a>. Made with <i
-                                    class="fa fa-heart text-danger"></i> by <a href="{{route('site.home')}}"
-                                    target="_blank">therankme</a> </p>
-
-                        </div>
-                    </div>
+                <div class="row justify-content-between align-items-center align-items-center flex-column flex-md-row mb-n6">
                     <div class="col-auto mb-6">
                         <div class="footer-payment">
                             <div class="image">
