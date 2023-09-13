@@ -62,6 +62,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('logout',[LoginController::class, 'logout'] )->name('site.logout');
 });
 
+//Search
+Route::get('/search', [HomeController::class, 'search'])->name('site.search');
 
 require 'admin.php';
 

@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class OrderController extends Controller
 {
@@ -12,7 +15,13 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders=DB::table('orders as o')
+            ->select('o.*','u.name','u.email','u.phone','u.address')
+            ->join('users as u','u.id','=','o.user_id')
+            ->get();
+        return view('admin.pages.order.index',[
+            'orders'=>$orders
+        ]);
     }
 
     /**

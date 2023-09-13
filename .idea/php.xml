@@ -124,6 +124,12 @@
       <path value="$PROJECT_DIR$/e-project/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/e-project/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/e-project/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/e-project/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/e-project/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/e-project/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/e-project/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/e-project/vendor/darryldecode/cart" />
+      <path value="$PROJECT_DIR$/e-project/vendor/psr/clock" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
