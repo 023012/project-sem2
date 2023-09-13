@@ -21,17 +21,17 @@
                                 <nav>
                                     <ul>
                                         <li class="has-dropdown">
-                                            <a class="active main-menu-link" href="{{ route('site.home') }}">Home</a>
+                                            <a class="active main-menu-link" href="{{ route('site.home') }}">Trang Chủ</a>
                                         </li>
-                                        <li><a href="{{ route('site.shop') }}">Shop</a></li>
+                                        <li><a href="{{ route('site.shop') }}">Cửa Hàng</a></li>
                                         <li>
-                                            <a href="{{ route('site.blogs') }}">Blog </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('site.about-us') }}">About Us</a>
+                                            <a href="{{ route('site.blogs') }}">Bài Viết </a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('site.contact-us') }}">Contact Us</a>
+                                            <a href="{{ route('site.about-us') }}">Thông Tin</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('site.contact-us') }}">Liên Hệ</a>
                                         </li>
                                         <li>
                                             @guest
@@ -153,12 +153,12 @@
                 <div class="offcanvas-menu">
                     <ul>
                         <li>
-                            <a href="{{ route('site.home') }}"><span>Home</span></a>
+                            <a href="{{ route('site.home') }}"><span>Trang Chủ </span></a>
                         </li>
-                        <li><a href="{{ route('site.shop') }}">Shop</a></li>
-                        <li><a href="{{ route('site.blogs') }}">Blogs</a></li>
-                        <li><a href="{{ route('site.about-us') }}">About Us</a></li>
-                        <li><a href="{{ route('site.contact-us') }}">Contact Us</a></li>
+                        <li><a href="{{ route('site.shop') }}">Cửa Hàng</a></li>
+                        <li><a href="{{ route('site.blogs') }}">Bài Viết</a></li>
+                        <li><a href="{{ route('site.about-us') }}">Thông Tin</a></li>
+                        <li><a href="{{ route('site.contact-us') }}">Liên Hệ</a></li>
                     </ul>
                 </div> <!-- End Mobile Menu Nav -->
             </div> <!-- End Mobile Menu -->
@@ -171,8 +171,8 @@
                 </div>
 
                 <address class="address">
-                    <span>Address: Your address goes here.</span>
-                    <span>Call Us: 0123456789, 0123456789</span>
+                    <span>Địa Chỉ: Số 8 Tôn Thất Thuyết, Phường Mỹ Đình, Quận Từ Liêm, Hà Nội.</span>
+                    <span>Liên Hệ: 0123456789, 0123456789</span>
                     <span>Email: demo@example.com</span>
                 </address>
 
@@ -184,8 +184,8 @@
                 </ul>
 
                 <ul class="user-link">
-                    <li><a href="{{ route('site.wishlist') }}">Wishlist</a></li>
-                    <li><a href="{{route('cart.list')}}">Cart</a></li>
+                    <li><a href="{{ route('site.wishlist') }}">Yêu Thích</a></li>
+                    <li><a href="{{route('cart.list')}}">Giỏ Hàng</a></li>
                 </ul>
             </div>
             <!-- End Mobile contact Info -->
@@ -208,8 +208,8 @@
             </div>
 
             <address class="address">
-                <span>Address: Your address goes here.</span>
-                <span>Call Us: 0123456789, 0123456789</span>
+                <span>Địa Chỉ: Số 8 Tôn Thất Thuyết, Phường Mỹ Đình, Quận Từ Liêm, Hà Nội.</span>
+                <span>Liên Hệ: 0123456789, 0123456789</span>
                 <span>Email: demo@example.com</span>
             </address>
 
@@ -221,8 +221,8 @@
             </ul>
 
             <ul class="user-link">
-                <li><a href="{{ route('site.wishlist') }}">Wishlist</a></li>
-                <li><a href="{{route('cart.list')}}">Cart</a></li>
+                <li><a href="{{ route('site.wishlist') }}">Sản Phẩm Yêu Thích</a></li>
+                <li><a href="{{route('cart.list')}}">Giỏ Hàng</a></li>
             </ul>
         </div>
         <!-- End Mobile contact Info -->
@@ -237,7 +237,7 @@
 
         <!-- Start  Offcanvas Addcart Wrapper -->
         <div class="offcanvas-add-cart-wrapper">
-            <h4 class="offcanvas-title">Shopping Cart</h4>
+            <h4 class="offcanvas-title">Giỏ Hàng</h4>
             <ul class="offcanvas-cart">
                 <li class="offcanvas-cart-item-single">
                     <div class="offcanvas-cart-item-block">
@@ -295,11 +295,11 @@
                 </li>
             </ul>
             <div class="offcanvas-cart-total-price">
-                <span class="offcanvas-cart-total-price-text">Subtotal:</span>
+                <span class="offcanvas-cart-total-price-text">Giá Trị:</span>
                 <span class="offcanvas-cart-total-price-value">$170.00</span>
             </div>
             <ul class="offcanvas-cart-action-button">
-                <li><a href="{{route('cart.list')}}" class="btn btn-block btn-golden">View Cart</a></li>
+                <li><a href="{{route('cart.list')}}" class="btn btn-block btn-golden">Thanh Toán</a></li>
             </ul>
         </div> <!-- End  Offcanvas Addcart Wrapper -->
 
@@ -314,7 +314,7 @@
 
         <!-- Start Offcanvas Mobile Menu Wrapper -->
         <div class="offcanvas-wishlist-wrapper">
-            <h4 class="offcanvas-title">Wishlist</h4>
+            <h4 class="offcanvas-title">Sản Phẩm Yêu Thích</h4>
             <ul class="offcanvas-wishlist">
                 <li class="offcanvas-wishlist-item-single">
                     <div class="offcanvas-wishlist-item-block">
@@ -372,7 +372,7 @@
                 </li>
             </ul>
             <ul class="offcanvas-wishlist-action-button">
-                <li><a href="{{ route('site.wishlist') }}" class="btn btn-block btn-golden">View wishlist</a></li>
+                <li><a href="{{ route('site.wishlist') }}" class="btn btn-block btn-golden">Tất Cả Sản Phẩm Yêu Thích</a></li>
             </ul>
         </div> <!-- End Offcanvas Mobile Menu Wrapper -->
 
@@ -385,7 +385,7 @@
             @csrf
             <input type="search" name="keyword" value="{{ request('keyword') }}" placeholder="Nhập tên sản phẩm..."/>
             <button type="submit" class="btn btn-lg btn-golden">Tìm kiếm</button>
-        </form>
+    </form>
     </div>
     <!-- End Offcanvas Search Bar Section -->
 

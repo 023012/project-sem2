@@ -7,13 +7,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="breadcrumb-title">About Us</h3>
+                        <h3 class="breadcrumb-title">VỀ CHÚNG TÔI</h3>
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="{{route('site.home')}}">Home</a></li>
-                                    <li><a href="#">Pages</a></li>
-                                    <li class="active" aria-current="page">About Us</li>
+                                    <li><a href="{{route('site.home')}}">Trang Chủ</a></li>
+                                    <li><a href="#">Thông Tin</a></li>
+                                    <li class="active" aria-current="page">Về Chúng Tôi</li>
                                 </ul>
                             </nav>
                         </div>
@@ -36,15 +36,15 @@
                 </div>
                 <div class="col-md-6">
                     <div class="content" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="title">ABOUT OUR HONO STORE</h3>
-                        <h5 class="semi-title">We believe that every project existing in digital world is a result of an
-                            idea and every idea has a cause.</h5>
-                        <p>For this reason, our each design serves an idea. Our strength in design is reflected by our
-                            name, our care for details. Our specialist won't be afraid to go extra miles just to
-                            approach near perfection. We don't require everything to be perfect, but we need them to be
-                            perfectly cared for. That's a reason why we are willing to give contributions at best. Not a
-                            single detail is missed out under Billey's professional eyes.The amount of dedication and
-                            effort equals to the level of passion and determination. Get better, together as one.</p>
+                        <h3 class="title">GIỚI THIỆU VỀ CỬA HÀNG HONO CỦA CHÚNG TÔI</h3>
+                        <h5 class="semi-title">Chúng tôi tin rằng mọi dự án tồn tại trong thế giới kỹ thuật số đều là kết quả của một quá trình
+                            ý tưởng và mọi ý tưởng đều có nguyên nhân.</h5>
+                        <p>Vì lý do này, mỗi thiết kế của chúng tôi đều phục vụ một ý tưởng. Sức mạnh của chúng tôi trong thiết kế được phản ánh bởi
+                            tên, sự quan tâm của chúng tôi để biết chi tiết. Chuyên gia của chúng tôi sẽ không ngại đi xa hơn chỉ để
+                            tiếp cận gần như hoàn hảo. Chúng ta không yêu cầu mọi thứ phải hoàn hảo nhưng chúng ta cần chúng phải hoàn hảo
+                            được chăm sóc hoàn hảo. Đó là lý do tại sao chúng tôi sẵn sàng đóng góp tốt nhất. Không phải một
+                            từng chi tiết nhỏ nhất bị bỏ sót dưới con mắt chuyên nghiệp của Billey. Sự cống hiến và
+                            nỗ lực tương đương với mức độ đam mê và quyết tâm. Trở nên tốt hơn, cùng nhau trở thành một.</p>
                     </div>
                 </div>
             </div>
@@ -58,25 +58,25 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="content" data-aos="fade-up" data-aos-delay="0">
-                        <h4 class="title">Functionality meets perfection</h4>
-                        <p>In today’s day and age, one cannot underestimate the importance of design, the art of
-                            creating striking visuals to move and captivate your audience. And as the world becomes more
-                            and more digitized with each passing second, the importance of graphic design has been
-                            rocketed to the top.</p>
+                        <h4 class="title">Chức năng đáp ứng sự hoàn hảo</h4>
+                        <p>Trong thời đại ngày nay, người ta không thể đánh giá thấp tầm quan trọng của thiết kế, nghệ thuật
+                            tạo ra hình ảnh nổi bật để lay động và thu hút khán giả của bạn. Và khi thế giới trở nên nhiều hơn
+                            và được số hóa nhiều hơn theo từng giây trôi qua, tầm quan trọng của thiết kế đồ họa ngày càng được nâng cao
+                            tăng vọt lên đỉnh.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="custom-progress m-t-40">
                         <div class="skill-progressbar" data-aos="fade-up" data-aos-delay="0">
-                            <h6 class="font--semi-bold m-b-15">UI/UX</h6>
+                            <h6 class="font--semi-bold m-b-15">Thiết Kế</h6>
                             <div class="line-progressbar" data-percentage="75" data-progress-color="#b19361"></div>
                         </div>
                         <div class="skill-progressbar" data-aos="fade-up" data-aos-delay="200">
-                            <h6 class="font--semi-bold m-b-15">Ideas</h6>
+                            <h6 class="font--semi-bold m-b-15">Ý Tưởng</h6>
                             <div class="line-progressbar" data-percentage="86" data-progress-color="#b19361"></div>
                         </div>
                         <div class="skill-progressbar" data-aos="fade-up" data-aos-delay="400">
-                            <h6 class="font--semi-bold m-b-15">Design</h6>
+                            <h6 class="font--semi-bold m-b-15">Sáng Tạo</h6>
                             <div class="line-progressbar" data-percentage="97" data-progress-color="#b19361"></div>
                         </div>
                     </div>
@@ -98,9 +98,9 @@
                                 <img src="{{asset('frontend/assets/images/icons/icon_about1.jpg')}}" alt="">
                             </div>
                             <div class="content">
-                                <h6 class="title">Creative Always</h6>
-                                <p>Stay creative with Billey and the huge collection of premade elements, layouts &
-                                    effects.</p>
+                                <h6 class="title">Luôn sáng tạo</h6>
+                                <p>Luôn sáng tạo với Billey và bộ sưu tập khổng lồ các phần tử, bố cục &
+                                    các hiệu ứng.</p>
                             </div>
                         </div>
                     </div>
@@ -112,8 +112,8 @@
                                 <img src="{{asset('frontend/assets/images/icons/icon_about2.jpg')}}" alt="">
                             </div>
                             <div class="content">
-                                <h6 class="title">Express Customization</h6>
-                                <p>Easy to install and configure the theme customization in a few clicks with Billey.
+                                <h6 class="title">Tùy chỉnh nhanh</h6>
+                                <p>Dễ dàng cài đặt và định cấu hình tùy chỉnh chủ đề chỉ bằng vài cú nhấp chuột với Billey.
                                 </p>
                             </div>
                         </div>
@@ -126,9 +126,9 @@
                                 <img src="{{asset('frontend/assets/images/icons/icon_about3.jpg')}}" alt="">
                             </div>
                             <div class="content">
-                                <h6 class="title">Premium Integrations</h6>
-                                <p>Integrated premium plugins in Billey is the secret weapon for your business to
-                                    thrive.</p>
+                                <h6 class="title">Tích hợp cao cấp</h6>
+                                <p>Các plugin cao cấp được tích hợp trong Billey là vũ khí bí mật để doanh nghiệp của bạn
+                                    phát triển.</p>
                             </div>
                         </div>
                     </div>
@@ -140,8 +140,8 @@
                                 <img src="{{asset('frontend/assets/images/icons/icon_about4.jpg')}}" alt="">
                             </div>
                             <div class="content">
-                                <h6 class="title">Real-time Editing</h6>
-                                <p>Edit your work and preview the changes on the screen live with advanced page builder.
+                                <h6 class="title">Chỉnh sửa thời gian thực</h6>
+                                <p>Chỉnh sửa tác phẩm của bạn và xem trước các thay đổi trực tiếp trên màn hình bằng trình tạo trang nâng cao.
                                 </p>
                             </div>
                         </div>
@@ -162,7 +162,7 @@
                     <div class="col-12">
                         <div class="section-content-gap">
                             <div class="secton-content text-center">
-                                <h3 class="section-title">Meet Our Team</h3>
+                                <h3 class="section-title">Đội của chúng tôi</h3>
                             </div>
                         </div>
                     </div>
@@ -179,8 +179,8 @@
                                 <img class="img-fluid" src="{{asset('frontend/assets/images/team/leader1.png')}}" alt="">
                             </div>
                             <div class="team-content">
-                                <h6 class="team-name font--bold mt-5">Ms. Veronica</h6>
-                                <span class="team-title">Web Designer</span>
+                                <h6 class="team-name font--bold mt-5">Giang Đẫm</h6>
+                                <span class="team-title">Nhà thiết kế web</span>
                                 <ul class="team-social pos-absolute">
                                     <li><a href="#"><i class="ion-social-facebook"></i></a></li>
                                     <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -198,8 +198,8 @@
                                 <img class="img-fluid" src="{{asset('frontend/assets/images/team/leader2.png')}}" alt="">
                             </div>
                             <div class="team-content">
-                                <h6 class="team-name font--bold mt-5">Missa Santos</h6>
-                                <span class="team-title">CEO Founder</span>
+                                <h6 class="team-name font--bold mt-5">Nguyễn Thành Đạt</h6>
+                                <span class="team-title">Người sáng lập</span>
                                 <ul class="team-social pos-absolute">
                                     <li><a href="#"><i class="ion-social-facebook"></i></a></li>
                                     <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -217,8 +217,8 @@
                                 <img class="img-fluid" src="{{asset('frontend/assets/images/team/leader3.png')}}" alt="">
                             </div>
                             <div class="team-content">
-                                <h6 class="team-name font--bold mt-5">Missa Santos</h6>
-                                <span class="team-title">Chief Officer</span>
+                                <h6 class="team-name font--bold mt-5">Đào Tuấn Anh</h6>
+                                <span class="team-title">Giám đốc điều hành</span>
                                 <ul class="team-social pos-absolute">
                                     <li><a href="#"><i class="ion-social-facebook"></i></a></li>
                                     <li><a href="#"><i class="ion-social-twitter"></i></a></li>
@@ -236,8 +236,8 @@
                                 <img class="img-fluid" src="{{asset('frontend/assets/images/team/leader4.png')}}" alt="">
                             </div>
                             <div class="team-content">
-                                <h6 class="team-name font--bold mt-5">Lisa Antonia</h6>
-                                <span class="team-title">CTO</span>
+                                <h6 class="team-name font--bold mt-5">Nguyễn Minh Tuấn</h6>
+                                <span class="team-title">Giám đốc công nghệ</span>
                                 <ul class="team-social pos-absolute">
                                     <li><a href="#"><i class="ion-social-facebook"></i></a></li>
                                     <li><a href="#"><i class="ion-social-twitter"></i></a></li>

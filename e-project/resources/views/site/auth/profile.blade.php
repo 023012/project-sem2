@@ -6,13 +6,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="breadcrumb-title">My Account</h3>
+                        <h3 class="breadcrumb-title">TÀI KHOẢN</h3>
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="{{ route('site.home') }}">Home</a></li>
-                                    <li><a href="{{ route('site.shop') }}">Shop</a></li>
-                                    <li class="active" aria-current="page">My Account</li>
+                                    <li><a href="{{ route('site.home') }}">Trang Chủ</a></li>
+                                    <li><a href="{{ route('site.shop') }}">Cửa Hàng</a></li>
+                                    <li class="active" aria-current="page">Tài Khoản</li>
                                 </ul>
                             </nav>
                         </div>
@@ -45,7 +45,7 @@
                     <div class="tab-content dashboard_content" data-aos="fade-up" data-aos-delay="200">
 
                         <div class="tab-pane fade show active" id="account-details">
-                            <h3>Account details </h3>
+                            <h3>Chi tiết tài khoản </h3>
                             <div class="login">
                                 <div class="login_form_container">
                                     <div class="account_login_form">
@@ -68,7 +68,7 @@
                                             </div>
                                             <div class="save_button mt-3">
                                                 <button class="btn btn-md btn-black-default-hover"
-                                                        type="submit">Save</button>
+                                                        type="submit">Lưu</button>
                                             </div>
                                         </form>
                                     </div>
@@ -76,16 +76,18 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="orders">
-                            <h4>Orders</h4>
+                            <h4>Đơn đặt hàng
+                            </h4>
                             <div class="table_page table-responsive">
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th>Order</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
-                                            <th>Total</th>
-                                            <th>Actions</th>
+                                            <th>Đơn đặt hàng
+                                            </th>
+                                            <th>Ngày</th>
+                                            <th>Trạng Thái</th>
+                                            <th>Giá Trị</th>
+                                            <th>Hành Động</th>
                                         </tr>
                                     </thead>
                                     <tbody>

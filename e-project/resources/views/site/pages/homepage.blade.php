@@ -19,10 +19,10 @@
                                 <div class="row">
                                     <div class="col-auto">
                                         <div class="hero-slider-content">
-                                            <h4 class="subtitle">New collection</h4>
-                                            <h2 class="title">Best Of NeoCon <br> Gold Award </h2>
+                                            <h4 class="subtitle">Bộ Sưu Tầm Mới</h4>
+                                            <h2 class="title">Bán Chạy Nhất <br> Ghế Gỗ Vàng </h2>
                                             <a href="#"
-                                                class="btn btn-lg btn-outline-golden">shop now </a>
+                                                class="btn btn-lg btn-outline-golden">Mua Ngay </a>
                                         </div>
                                     </div>
                                 </div>
@@ -41,10 +41,10 @@
                                 <div class="row">
                                     <div class="col-auto">
                                         <div class="hero-slider-content">
-                                            <h4 class="subtitle">New collection</h4>
-                                            <h2 class="title">Luxy Chairs <br> Design Award </h2>
+                                            <h4 class="subtitle">Bộ Sưu Tầm Mới</h4>
+                                            <h2 class="title">Ghế Sang Trọng <br> Thiết Kế Đẹp Nhất </h2>
                                             <a href="#"
-                                                class="btn btn-lg btn-outline-golden">shop now </a>
+                                                class="btn btn-lg btn-outline-golden">Mua Ngay </a>
                                         </div>
                                     </div>
                                 </div>
@@ -75,8 +75,8 @@
                                 <img src="{{ asset('frontend/assets/images/icons/service-promo-1.png')}}" alt="">
                             </div>
                             <div class="content">
-                                <h6 class="title">FREE SHIPPING</h6>
-                                <p>Get 10% cash back, free shipping, free returns, and more at 1000+ top retailers!</p>
+                                <h6 class="title">Miễn Phí Ship</h6>
+                                <p>Nhận lại 10% tiền mặt, giao hàng miễn phí, trả lại miễn phí và hơn thế nữa tại hơn 1000 nhà bán lẻ hàng đầu!</p>
                             </div>
                         </div>
                     </div>
@@ -88,8 +88,8 @@
                                 <img src="{{ asset('frontend/assets/images/icons/service-promo-2.png')}}" alt="">
                             </div>
                             <div class="content">
-                                <h6 class="title">30 DAYS MONEY BACK</h6>
-                                <p>100% satisfaction guaranteed, or get your money back within 30 days!</p>
+                                <h6 class="title">Đổi Trả Trong Vòng 30 Ngày</h6>
+                                <p>Đảm bảo sự hài lòng 100% hoặc nhận lại tiền trong vòng 30 ngày!</p>
                             </div>
                         </div>
                     </div>
@@ -101,8 +101,8 @@
                                 <img src="{{ asset('frontend/assets/images/icons/service-promo-3.png')}}" alt="">
                             </div>
                             <div class="content">
-                                <h6 class="title">SAFE PAYMENT</h6>
-                                <p>Pay with the world’s most popular and secure payment methods.</p>
+                                <h6 class="title">Thanh Toán An Toàn</h6>
+                                <p>Thanh toán bằng các phương thức thanh toán an toàn và phổ biến nhất thế giới.</p>
                             </div>
                         </div>
                     </div>
@@ -114,8 +114,8 @@
                                 <img src="{{ asset('frontend/assets/images/icons/service-promo-4.png')}}" alt="">
                             </div>
                             <div class="content">
-                                <h6 class="title">LOYALTY CUSTOMER</h6>
-                                <p>Card for the other 30% of their purchases at a rate of 1% cash back.</p>
+                                <h6 class="title">KHÁCH HÀNG THÂN THIẾT</h6>
+                                <p>Thẻ cho 30% giao dịch mua còn lại với tỷ lệ hoàn lại tiền là 1%.</p>
                             </div>
                         </div>
                     </div>
@@ -140,12 +140,12 @@
                                 <img src="{{asset('frontend/assets/images/banner/banner-style-1-img-1.jpg')}}" alt="">
                             </div>
                             <div class="content">
-                                <h4 class="title">Mini rechargeable
-                                    Table Lamp - E216</h4>
-                                <h5 class="sub-title">We design your home</h5>
+                                <h4 class="title">Đèn Công Suất Nhỏ
+                                    Đèn Bàn - E216</h4>
+                                <h5 class="sub-title">Chúng Tôi Thiết Kế Cho Bạn</h5>
                                 <a href="#"
                                     class="btn btn-lg btn-outline-golden icon-space-left"><span
-                                        class="d-flex align-items-center">discover now <i
+                                        class="d-flex align-items-center">Xem Ngay <i
                                             class="ion-ios-arrow-thin-right"></i></span></a>
                             </div>
                         </div>
@@ -162,10 +162,9 @@
                                         <img src="{{asset('frontend/assets/images/banner/banner-style-2-img-1.jpg')}}" alt="">
                                     </div>
                                     <div class="content">
-                                        <h4 class="title">Kitchen <br>
-                                            utensils</h4>
-                                        <a href="#" class="link-text"><span>Shop
-                                                now</span></a>
+                                        <h4 class="title">Dụng Cụ<br>
+                                            Phòng Bếp</h4>
+                                        <a href="#" class="link-text"><span>Xem Ngay</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -178,10 +177,9 @@
                                         <img src="{{asset('frontend/assets/images/banner/banner-style-2-img-2.jpg')}}" alt="">
                                     </div>
                                     <div class="content">
-                                        <h4 class="title">Sofas and <br>
-                                            Armchairs</h4>
-                                        <a href="#" class="link-text"><span>Shop
-                                                now</span></a>
+                                        <h4 class="title">Ghế Sofa <br>
+                                            Ghế Bành</h4>
+                                        <a href="#" class="link-text"><span>Xem Ngay</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -194,10 +192,9 @@
                                         <img src="{{asset('frontend/assets/images/banner/banner-style-2-img-3.jpg')}}" alt="">
                                     </div>
                                     <div class="content">
-                                        <h4 class="title">Chair & Bar<br>
-                                            stools</h4>
-                                        <a href="#" class="link-text"><span>Shop
-                                                now</span></a>
+                                        <h4 class="title">Ghế & <br>
+                                            Ghế Bar</h4>
+                                        <a href="#" class="link-text"><span>Xem Ngay</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -210,9 +207,9 @@
                                         <img src="{{asset('frontend/assets/images/banner/banner-style-2-img-4.jpg')}}" alt="">
                                     </div>
                                     <div class="content">
-                                        <h4>Interior <br>
-                                            lighting</h4>
-                                        <a href="#"><span>Shop now</span></a>
+                                        <h4>Đèn <br>
+                                            Nội địa</h4>
+                                        <a href="#"><span>Xem Ngay</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -235,8 +232,9 @@
                     <div class="col-12">
                         <div class="section-content-gap">
                             <div class="secton-content">
-                                <h3 class="section-title">THE NEW ARRIVALS</h3>
-                                <p>Preorder now to receive exclusive deals & gifts</p>
+                                <h3 class="section-title">
+                                    HÀNG MỚI VỀ</h3>
+                                <p>Đặt hàng ngay để nhận ưu đãi & quà tặng độc quyền</p>
                             </div>
                         </div>
                     </div>
@@ -261,12 +259,12 @@
                                                 <img src="{{asset('frontend/assets/images/product/default/home-1/default-2.jpg')}}" alt="">
                                             </a>
                                             <div class="tag">
-                                                <span>sale</span>
+                                                <span>Giảm Giá</span>
                                             </div>
                                             <div class="action-link">
                                                 <div class="action-link-left">
                                                     <a href="#" data-bs-toggle="modal"
-                                                        data-bs-target="#modalAddcart">Add to Cart</a>
+                                                        data-bs-target="#modalAddcart">Thêm Vào Giỏ Hàng</a>
                                                 </div>
                                                 <div class="action-link-right">
                                                     <a href="#" data-bs-toggle="modal"
@@ -770,12 +768,11 @@
                             <img class="img-fluid" src="{{asset('frontend/assets/images/banner/banner-style-3-img-1.jpg')}}" alt="">
                         </div>
                         <div class="content">
-                            <h3 class="title">Modern Furniture
-                                Basic Collection</h3>
-                            <h5 class="sub-title">We design your home more beautiful</h5>
+                            <h3 class="title">Bộ sưu tập cơ bản nội thất hiện đại</h3>
+                            <h5 class="sub-title">Chúng tôi thiết kế ngôi nhà của bạn đẹp hơn</h5>
                             <a href="#"
                                 class="btn btn-lg btn-outline-golden icon-space-left"><span
-                                    class="d-flex align-items-center">discover now <i
+                                    class="d-flex align-items-center">Xem Ngay <i
                                         class="ion-ios-arrow-thin-right"></i></span></a>
                         </div>
                     </div>
@@ -795,8 +792,8 @@
                     <div class="col-12">
                         <div class="section-content-gap">
                             <div class="secton-content">
-                                <h3 class="section-title">BEST SELLERS</h3>
-                                <p>Add our best sellers to your weekly lineup.</p>
+                                <h3 class="section-title">Sản Phẩm Bán Chạy Nhất</h3>
+                                <p>Hãy thêm sản phẩm bán chạy nhất của chúng tôi vào danh sách hàng tuần của bạn.</p>
                             </div>
                         </div>
                     </div>
@@ -1166,8 +1163,8 @@
                 </div>
                 <a href="#" class="content">
                     <div class="inner">
-                        <h4 class="title">Bar Stool</h4>
-                        <h6 class="sub-title">20 products</h6>
+                        <h4 class="title">Ghế Bar</h4>
+                        <h6 class="sub-title">9 sản phẩm</h6>
                     </div>
                     <span class="round-btn"><i class="ion-ios-arrow-thin-right"></i></span>
                 </a>
@@ -1181,8 +1178,8 @@
                 </div>
                 <a href="#" class="content">
                     <div class="inner">
-                        <h4 class="title">Armchairs</h4>
-                        <h6 class="sub-title">20 products</h6>
+                        <h4 class="title">Ghế Bành</h4>
+                        <h6 class="sub-title">14 sản phẩm</h6>
                     </div>
                     <span class="round-btn"><i class="ion-ios-arrow-thin-right"></i></span>
                 </a>
@@ -1196,8 +1193,8 @@
                 </div>
                 <a href="#" class="content">
                     <div class="inner">
-                        <h4 class="title">lighting</h4>
-                        <h6 class="sub-title">20 products</h6>
+                        <h4 class="title">Đèn</h4>
+                        <h6 class="sub-title">10 sản phẩm</h6>
                     </div>
                     <span class="round-btn"><i class="ion-ios-arrow-thin-right"></i></span>
                 </a>
@@ -1211,8 +1208,8 @@
                 </div>
                 <a href="#" class="content">
                     <div class="inner">
-                        <h4 class="title">Easy chairs</h4>
-                        <h6 class="sub-title">20 products</h6>
+                        <h4 class="title">Ghế Đơn Giản</h4>
+                        <h6 class="sub-title">13 sản phẩm</h6>
                     </div>
                     <span class="round-btn"><i class="ion-ios-arrow-thin-right"></i></span>
                 </a>
@@ -1231,8 +1228,8 @@
                     <div class="col-12">
                         <div class="section-content-gap">
                             <div class="secton-content">
-                                <h3 class="section-title">THE LATEST BLOGS</h3>
-                                <p>Present posts in a best way to highlight interesting moments of your blog.</p>
+                                <h3 class="section-title">BÀI VIẾT MỚI NHẤT</h3>
+                                <p>Trình bày bài viết theo cách tốt nhất để làm nổi bật những khoảnh khắc thú vị trên blog của bạn.</p>
                             </div>
                         </div>
                     </div>
@@ -1267,7 +1264,7 @@
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
-                                                    <a href="#" class="date">24 Apr</a>
+                                                    <a href="#" class="date">24 Tháng 4</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1290,7 +1287,7 @@
                                                 <a href="{{route('site.blog-single')}}" class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
-                                                    <a href="#" class="date">24 Apr</a>
+                                                    <a href="#" class="date">24 Tháng 4</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1314,7 +1311,7 @@
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
-                                                    <a href="#" class="date">24 Apr</a>
+                                                    <a href="#" class="date">24 Tháng 4</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1338,7 +1335,7 @@
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
-                                                    <a href="#" class="date">24 Apr</a>
+                                                    <a href="#" class="date">24 Tháng 4</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1362,7 +1359,7 @@
                                                     class="read-more-btn icon-space-left">Read More <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
-                                                    <a href="#" class="date">24 Apr</a>
+                                                    <a href="#" class="date">24 Tháng 4</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1381,12 +1378,12 @@
                                             </h6>
                                             <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.
                                                 Aenean posuere libero eu augue condimentum rhoncus. Praesent</p>
-                                            <div class="inner">
+                                            <div class="inner"> 
                                                 <a href="{{route('site.blog-single')}}"
-                                                    class="read-more-btn icon-space-left">Read More <span><i
+                                                    class="read-more-btn icon-space-left">Đọc Thêm <span><i
                                                             class="ion-ios-arrow-thin-right"></i></span></a>
                                                 <div class="post-meta">
-                                                    <a href="#" class="date">24 Apr</a>
+                                                    <a href="#" class="date">24 Tháng 4</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1434,7 +1431,7 @@
                             </div>
                             <div class="instagram-link">
                                 <h5><a href="https://www.instagram.com/myfurniturecom/" target="_blank"
-                                        rel="noopener noreferrer">HONOTEMPLATE</a></h5>
+                                        rel="noopener noreferrer">Thành Tựu</a></h5>
                             </div>
                         </div>
                     </div>
