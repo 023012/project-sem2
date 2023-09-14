@@ -16,10 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = DB::table('products as p')
-            ->select('p.id', 'p.thumbnail', 'p.name', 'p.material' ,'c.name as category', 'd.name as discount', 'p.price', 'p.quantity', 'p.status', 'p.featured', 'p.active')
-            ->join('categories as c', 'p.category_id', '=', 'c.id')
-            ->join('discounts as d', 'p.discount_id', '=', 'd.id')
+        $products = DB::table('products_list')
             ->orderBy('p.id', 'desc')
             ->get();
         return view('admin.pages.product.index', ['products' => $products]);

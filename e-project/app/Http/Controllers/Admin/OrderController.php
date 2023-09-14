@@ -15,9 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders=DB::table('orders as o')
-            ->select('o.*','u.name','u.email','u.phone','u.address')
-            ->join('users as u','u.id','=','o.user_id')
+        $orders=DB::table('orders_list')
             ->get();
         return view('admin.pages.order.index',[
             'orders'=>$orders
