@@ -78,7 +78,7 @@
                                       action="">
                                     @csrf
                                     @method('DELETE')
-                                    <a href=""
+                                    <a href="{{ route('admin.order.show', $order->id) }}"
                                        class="btn">
                                         <span class="fa-solid fa-circle-info"></span></a>
                                 </form>

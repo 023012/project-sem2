@@ -43,7 +43,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return view('admin.pages.order.details');
     }
 
     /**
