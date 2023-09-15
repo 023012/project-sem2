@@ -163,15 +163,8 @@
                             <td>{{$order->phone}}</td>
                             <td>{{$order->address}}</td>
                             <td>$3.64</td>
-                            @if($order->status==1)
-                                <td><span class="dot dot-lg bg-success mr-2"></span></td>
-                            @elseif($order->status==2)
-                                <td><span class="dot dot-lg bg-info mr-2"></span></td>
-                            @elseif($order->status==3)
-                                <td><span class="dot dot-lg bg-primary mr-2"></span></td>
-                            @elseif($order->status==4)
-                                <td><span class="dot dot-lg bg-danger mr-2"></span></td>
-                            @endif
+                            <td>{{$order->status}}</td>
+
                             <td>
                                 <div class="dropdown">
                                     <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

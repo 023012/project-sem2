@@ -27,7 +27,7 @@
             <div class="row flex-column-reverse flex-lg-row">
                 <div class="col-lg-3">
                     <!-- Start Sidebar Area -->
-                    @include('site.pages.shop.category')
+                    @include('site.partials.shop.category')
                 </div>
                 <div class="col-lg-9">
                     <!-- Start Shop Product Sorting Section -->
@@ -36,18 +36,19 @@
                             <div class="row">
                                 <!-- Start Sort Wrapper Box -->
                                 <div
-                                    class="sort-box d-flex justify-content-between align-items-md-center align-items-start flex-md-row flex-column"
-                                    data-aos="fade-up" data-aos-delay="0">
+                                        class="sort-box d-flex justify-content-between align-items-md-center align-items-start flex-md-row flex-column"
+                                        data-aos="fade-up" data-aos-delay="0">
                                     <!-- Start Sort tab Button -->
                                     <div class="sort-tablist d-flex align-items-center">
                                         <ul class="tablist nav sort-tab-btn">
                                             <li><a class="nav-link active" data-bs-toggle="tab"
                                                    href="#layout-3-grid"><img
-                                                        src="{{asset('frontend/assets/images/icons/bkg_grid.png')}}"
-                                                        alt=""></a></li>
+                                                            src="{{asset('frontend/assets/images/icons/bkg_grid.png')}}"
+                                                            alt=""></a></li>
                                             <li><a class="nav-link" data-bs-toggle="tab" href="#layout-list"><img
-                                                        src="{{asset('frontend/assets/images/icons/bkg_list.png')}}"
-                                                        alt=""></a></li>'
+                                                            src="{{asset('frontend/assets/images/icons/bkg_list.png')}}"
+                                                            alt=""></a></li>
+                                            '
                                         </ul>
 
                                         <!-- Start Page Amount -->
@@ -117,34 +118,34 @@
                                                                     <div class="action-link-right">
                                                                         <a href="#" data-bs-toggle="modal"
                                                                            data-bs-target="#modalQuickview"><i
-                                                                                class="icon-magnifier"></i></a>
+                                                                                    class="icon-magnifier"></i></a>
                                                                         <a href="{{route('site.wishlist')}}"><i
-                                                                                class="icon-heart"></i></a>
+                                                                                    class="icon-heart"></i></a>
                                                                         <a href="{{ route('site.compare') }}"><i
-                                                                                class="icon-shuffle"></i></a>
+                                                                                    class="icon-shuffle"></i></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="content">
                                                                 <div class="content-left">
                                                                     <h6 class="title"><a
-                                                                            href="{{ route('site.product', $product->id) }}">{{$product->name}}</a>
+                                                                                href="{{ route('site.product', $product->id) }}">{{$product->name}}</a>
                                                                     </h6>
                                                                     <ul class="review-star">
                                                                         <li class="fill"><i
-                                                                                class="ion-android-star"></i>
+                                                                                    class="ion-android-star"></i>
                                                                         </li>
                                                                         <li class="fill"><i
-                                                                                class="ion-android-star"></i>
+                                                                                    class="ion-android-star"></i>
                                                                         </li>
                                                                         <li class="fill"><i
-                                                                                class="ion-android-star"></i>
+                                                                                    class="ion-android-star"></i>
                                                                         </li>
                                                                         <li class="fill"><i
-                                                                                class="ion-android-star"></i>
+                                                                                    class="ion-android-star"></i>
                                                                         </li>
                                                                         <li class="empty"><i
-                                                                                class="ion-android-star"></i>
+                                                                                    class="ion-android-star"></i>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -163,64 +164,64 @@
                                             </div>
                                         </div> <!-- End Grid View Product -->
                                         <!-- Start List View Product -->
-{{--                                        <div class="tab-pane sort-layout-single" id="layout-list">--}}
-{{--                                            <div class="row">--}}
-{{--                                                <div class="col-12">--}}
-{{--                                                    <!-- Start Product Defautlt Single -->--}}
-{{--                                                    @foreach($productsList as $product)--}}
-{{--                                                        @php--}}
-{{--                                                            $price = $product->price;--}}
-{{--                                                            $discount_percent = $product->discount_percent;--}}
-{{--                                                            $price_sale = $price - (($price * $discount_percent) / 100 );--}}
-{{--                                                        @endphp--}}
-{{--                                                        <div class="product-list-single product-color--golden">--}}
-{{--                                                            <a href="{{ route('site.product', $product->id) }}"--}}
-{{--                                                               class="product-list-img-link">--}}
-{{--                                                                <img src="{{ asset('uploads/' . $product->thumbnail) }}"--}}
-{{--                                                                     alt="Product Thumbnail" class="img-fluid">--}}
-{{--                                                            </a>--}}
-{{--                                                            <div class="product-list-content">--}}
-{{--                                                                <h5 class="product-list-link"><a--}}
-{{--                                                                        href="{{ route('site.product', $product->id) }}">{{$product->name}}</a>--}}
-{{--                                                                </h5>--}}
-{{--                                                                <ul class="review-star">--}}
-{{--                                                                    <li class="fill"><i class="ion-android-star"></i>--}}
-{{--                                                                    </li>--}}
-{{--                                                                    <li class="fill"><i class="ion-android-star"></i>--}}
-{{--                                                                    </li>--}}
-{{--                                                                    <li class="fill"><i class="ion-android-star"></i>--}}
-{{--                                                                    </li>--}}
-{{--                                                                    <li class="fill"><i class="ion-android-star"></i>--}}
-{{--                                                                    </li>--}}
-{{--                                                                    <li class="empty"><i class="ion-android-star"></i>--}}
-{{--                                                                    </li>--}}
-{{--                                                                </ul>--}}
-{{--                                                                <span class="product-list-price"><del>{{$price}}₫</del>--}}
-{{--                                                                {{$price_sale}} ₫</span>--}}
-{{--                                                                <p>{{$product->description}}</p>--}}
-{{--                                                                <div class="product-action-icon-link-list">--}}
-{{--                                                                    <a href="#" data-bs-toggle="modal"--}}
-{{--                                                                       data-bs-target="#modalAddcart"--}}
-{{--                                                                       class="btn btn-lg btn-black-default-hover">Add to--}}
-{{--                                                                        cart</a>--}}
-{{--                                                                    <a href="#" data-bs-toggle="modal"--}}
-{{--                                                                       data-bs-target="#modalQuickview"--}}
-{{--                                                                       class="btn btn-lg btn-black-default-hover"><i--}}
-{{--                                                                            class="icon-magnifier"></i></a>--}}
-{{--                                                                    <a href="{{route('site.wishlist')}}"--}}
-{{--                                                                       class="btn btn-lg btn-black-default-hover"><i--}}
-{{--                                                                            class="icon-heart"></i></a>--}}
-{{--                                                                    <a href="{{ route('site.compare') }}"--}}
-{{--                                                                       class="btn btn-lg btn-black-default-hover"><i--}}
-{{--                                                                            class="icon-shuffle"></i></a>--}}
-{{--                                                                </div>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div> <!-- End Product Defautlt Single -->--}}
-{{--                                                    @endforeach--}}
+                                        {{--                                        <div class="tab-pane sort-layout-single" id="layout-list">--}}
+                                        {{--                                            <div class="row">--}}
+                                        {{--                                                <div class="col-12">--}}
+                                        {{--                                                    <!-- Start Product Defautlt Single -->--}}
+                                        {{--                                                    @foreach($productsList as $product)--}}
+                                        {{--                                                        @php--}}
+                                        {{--                                                            $price = $product->price;--}}
+                                        {{--                                                            $discount_percent = $product->discount_percent;--}}
+                                        {{--                                                            $price_sale = $price - (($price * $discount_percent) / 100 );--}}
+                                        {{--                                                        @endphp--}}
+                                        {{--                                                        <div class="product-list-single product-color--golden">--}}
+                                        {{--                                                            <a href="{{ route('site.product', $product->id) }}"--}}
+                                        {{--                                                               class="product-list-img-link">--}}
+                                        {{--                                                                <img src="{{ asset('uploads/' . $product->thumbnail) }}"--}}
+                                        {{--                                                                     alt="Product Thumbnail" class="img-fluid">--}}
+                                        {{--                                                            </a>--}}
+                                        {{--                                                            <div class="product-list-content">--}}
+                                        {{--                                                                <h5 class="product-list-link"><a--}}
+                                        {{--                                                                        href="{{ route('site.product', $product->id) }}">{{$product->name}}</a>--}}
+                                        {{--                                                                </h5>--}}
+                                        {{--                                                                <ul class="review-star">--}}
+                                        {{--                                                                    <li class="fill"><i class="ion-android-star"></i>--}}
+                                        {{--                                                                    </li>--}}
+                                        {{--                                                                    <li class="fill"><i class="ion-android-star"></i>--}}
+                                        {{--                                                                    </li>--}}
+                                        {{--                                                                    <li class="fill"><i class="ion-android-star"></i>--}}
+                                        {{--                                                                    </li>--}}
+                                        {{--                                                                    <li class="fill"><i class="ion-android-star"></i>--}}
+                                        {{--                                                                    </li>--}}
+                                        {{--                                                                    <li class="empty"><i class="ion-android-star"></i>--}}
+                                        {{--                                                                    </li>--}}
+                                        {{--                                                                </ul>--}}
+                                        {{--                                                                <span class="product-list-price"><del>{{$price}}₫</del>--}}
+                                        {{--                                                                {{$price_sale}} ₫</span>--}}
+                                        {{--                                                                <p>{{$product->description}}</p>--}}
+                                        {{--                                                                <div class="product-action-icon-link-list">--}}
+                                        {{--                                                                    <a href="#" data-bs-toggle="modal"--}}
+                                        {{--                                                                       data-bs-target="#modalAddcart"--}}
+                                        {{--                                                                       class="btn btn-lg btn-black-default-hover">Add to--}}
+                                        {{--                                                                        cart</a>--}}
+                                        {{--                                                                    <a href="#" data-bs-toggle="modal"--}}
+                                        {{--                                                                       data-bs-target="#modalQuickview"--}}
+                                        {{--                                                                       class="btn btn-lg btn-black-default-hover"><i--}}
+                                        {{--                                                                            class="icon-magnifier"></i></a>--}}
+                                        {{--                                                                    <a href="{{route('site.wishlist')}}"--}}
+                                        {{--                                                                       class="btn btn-lg btn-black-default-hover"><i--}}
+                                        {{--                                                                            class="icon-heart"></i></a>--}}
+                                        {{--                                                                    <a href="{{ route('site.compare') }}"--}}
+                                        {{--                                                                       class="btn btn-lg btn-black-default-hover"><i--}}
+                                        {{--                                                                            class="icon-shuffle"></i></a>--}}
+                                        {{--                                                                </div>--}}
+                                        {{--                                                            </div>--}}
+                                        {{--                                                        </div> <!-- End Product Defautlt Single -->--}}
+                                        {{--                                                    @endforeach--}}
 
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div> --}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                        </div> --}}
                                         <!-- End List View Product -->
                                     </div>
                                 </div>
@@ -230,15 +231,15 @@
                     <!-- End Tab Wrapper -->
 
                     <!-- Start Pagination -->
-{{--                    <div class="page-pagination text-center" data-aos="fade-up" data-aos-delay="0">--}}
-{{--                        --}}{{-- <ul>--}}
-{{--                            <li><a class="active" href="#">1</a></li>--}}
-{{--                            <li><a href="#">2</a></li>--}}
-{{--                            <li><a href="#">3</a></li>--}}
-{{--                            <li><a href="#"><i class="ion-ios-skipforward"></i></a></li>--}}
-{{--                        </ul> --}}
-{{--                        {{ $product->links() }}--}}
-{{--                    </div> --}}
+                    {{--                    <div class="page-pagination text-center" data-aos="fade-up" data-aos-delay="0">--}}
+                    {{--                        --}}{{-- <ul>--}}
+                    {{--                            <li><a class="active" href="#">1</a></li>--}}
+                    {{--                            <li><a href="#">2</a></li>--}}
+                    {{--                            <li><a href="#">3</a></li>--}}
+                    {{--                            <li><a href="#"><i class="ion-ios-skipforward"></i></a></li>--}}
+                    {{--                        </ul> --}}
+                    {{--                        {{ $product->links() }}--}}
+                    {{--                    </div> --}}
                     <!-- End Pagination -->
                 </div>
             </div>
