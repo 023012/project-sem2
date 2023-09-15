@@ -43,6 +43,13 @@ Route::get('/compare', [CompareController::class, 'index'])->name('site.compare'
 //Shop
 Route::get('/shop', [ShopController::class, 'index'])->name('site.shop');
 Route::get('/{product}/product', [ShopController::class, 'showProductDetail'])->name('site.product');
+
+//
+//Route::prefix('/sort')->group(function () {
+//    Route::get('/price-low-to-high', [ShopController::class, 'sortProduct'])->name('sort.price.asc');
+//});
+//Route::get('/sort', [ShopController::class, 'sortProduct'])->name('sort.product');
+
 //Contact
 Route::get('/contact', [ContactController::class, 'index'])->name('site.contact-us');
 Route::post('/contact', [ContactController::class, 'sendContact'])->name('site.contactUs.sendContact');

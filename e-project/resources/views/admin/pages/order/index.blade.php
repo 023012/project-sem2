@@ -59,6 +59,7 @@
                             <td>{{$order->name}}</td>
                             <td>{{$order->phone}}</td>
                             <td>{{$order->address}}</td>
+
                             <td>{{ number_format($order->total_price, 0, '', '.') }} đ</td>
                             <td>{{$order->payment_method}}</td>
                             <td>

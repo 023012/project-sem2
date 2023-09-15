@@ -74,13 +74,15 @@
                                 </div>
                                 @php
                                     $price = $product->price;
+                                    $formatPrice=number_format($price,0,'','.');
                                     $discount_percent = $product->discount_percent;
                                     $price_sale = $price - (($price * $discount_percent) / 100 );
+                                    $formatPriceSale=number_format($price_sale,0,'','.');
                                 @endphp
                                 <div class="tag">
                                     <span>{{ $product->discount }}</span>
                                 </div>
-                                <div class="price"><del>{{$price}}đ</del>  {{$price_sale}}đ
+                                <div class="price"><del>{{$formatPrice}}đ</del>  <p>{{$formatPriceSale}}đ</p>
                                 </div>
                             </div>
                             <!-- End  Product Details Text Area-->
