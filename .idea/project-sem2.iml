@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/e-project/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/e-project/tests/Feature" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/e-project/tests/Unit" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/doctrine/lexer" />
@@ -120,6 +122,7 @@
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/laravel/ui" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/darryldecode/cart" />
+      <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/psr/clock" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

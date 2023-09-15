@@ -86,7 +86,7 @@ Route::group(['prefix' => 'admin'], function () {
         //order
         Route::prefix('/order')->group(function (){
             Route::get('/', [OrderController::class, 'index'])->name('admin.order.index');
-
+            Route::get('/{order}/show', [OrderController::class, 'show'])->name('admin.order.show');
         });
 
     });

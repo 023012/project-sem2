@@ -7,13 +7,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="breadcrumb-title">Blog Grid - Left Sidebar</h3>
+                        <h3 class="breadcrumb-title">Tất Cả Bài Viết</h3>
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="blog-grid-sidebar-left.html">Blog</a></li>
-                                    <li class="active" aria-current="page">Blog Grid Left Sidebar</li>
+                                    <li><a href="{{route('site.home')}}">Trang Chủ</a></li>
+                                    <li><a href="{{route('site.blogs')}}">Bài Viết</a></li>
+                                    <li class="active" aria-current="page">Tất Cả Bài Viết</li>
                                 </ul>
                             </nav>
                         </div>

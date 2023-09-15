@@ -15,14 +15,30 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders=DB::table('orders as o')
-            ->select('o.*','u.name','u.email','u.phone','u.address')
-            ->join('users as u','u.id','=','o.user_id')
+        $orders=DB::table('orders_list')
             ->get();
         return view('admin.pages.order.index',[
             'orders'=>$orders
         ]);
     }
+
+    public function orderConfirmation(){
+//        login xác nhận đơn hàng
+
+    }
+
+    public function show(Order $order)
+    {
+//        viết login hiển thị chi tiết đơn hàng
+        return view('admin.pages.order.details');
+    }
+
+    public function UpdateStatus(Order $order)
+    {
+//        viết login cập nhật trạng thái đơn hàng(đang giao, đã giao, đã hủy,...)
+        return view('admin.pages.order.details');
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -43,10 +59,6 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Order $order)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.

@@ -101,7 +101,8 @@
                                 </div>
                             </div>
                         </div> <!-- simple table -->
-                    </div> <!-- end section -->
+                    </div>
+
                 </div> <!-- .col-12 -->
             </div> <!-- .row -->
         </div> <!-- .container-fluid -->
