@@ -120,6 +120,24 @@
                       </ul>
                   </li>
 
+                  {{--Quản lí blog--}}
+                  <li class="nav-item dropdown">
+                    <a href="#blogs" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                          <i class="fe fe-grid fe-16"></i>
+                        <span class="ml-3 item-text">Quản lý blogs</span>
+                    </a>
+                    <ul class="collapse list-unstyled pl-4 w-100" id="blogs">
+                        <li class="nav-item">
+                            <a class="nav-link pl-3"  href="{{ route('admin.blogs.index') }}"><span class="ml-1 item-text">Danh sách bài viết</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="{{ route('admin.blogs.create') }}"><span class="ml-1 item-text">Thêm bài viết</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                   {{-- Quản lý đơn hàng --}}
                   <li class="nav-item dropdown">
                       <a href="#tables" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
