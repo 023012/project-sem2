@@ -26,77 +26,47 @@
                       </a>
                   </li>
                   {{-- Quản lý account --}}
-{{--                  <li class="nav-item dropdown">--}}
-{{--                      <a href="#Admin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">--}}
-{{--                          <i class="fe fe-grid fe-16"></i>--}}
-{{--                          <span class="ml-3 item-text">Quản lý tài khoản</span>--}}
-{{--                      </a>--}}
-{{--                      <ul class="collapse list-unstyled pl-4 w-100" id="Admin">--}}
-{{--                          <li class="nav-item">--}}
-{{--                              <a class="nav-link pl-3"  href="{{ route('admin.admin-manage.index') }}"><span class="ml-1 item-text">Danh sách tài khoản</span>--}}
-{{--                              </a>--}}
-{{--                          </li>--}}
-{{--                          <li class="nav-item">--}}
-{{--                              <a class="nav-link pl-3" href="{{ route('admin.admin-manage.create') }}"><span class="ml-1 item-text">Thêm mới </span>--}}
-{{--                              </a>--}}
-{{--                          </li>--}}
-{{--                      </ul>--}}
-{{--                  </li>--}}
+                  {{--                  <li class="nav-item dropdown"> --}}
+                  {{--                      <a href="#Admin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link"> --}}
+                  {{--                          <i class="fe fe-grid fe-16"></i> --}}
+                  {{--                          <span class="ml-3 item-text">Quản lý tài khoản</span> --}}
+                  {{--                      </a> --}}
+                  {{--                      <ul class="collapse list-unstyled pl-4 w-100" id="Admin"> --}}
+                  {{--                          <li class="nav-item"> --}}
+                  {{--                              <a class="nav-link pl-3"  href="{{ route('admin.admin-manage.index') }}"><span class="ml-1 item-text">Danh sách tài khoản</span> --}}
+                  {{--                              </a> --}}
+                  {{--                          </li> --}}
+                  {{--                          <li class="nav-item"> --}}
+                  {{--                              <a class="nav-link pl-3" href="{{ route('admin.admin-manage.create') }}"><span class="ml-1 item-text">Thêm mới </span> --}}
+                  {{--                              </a> --}}
+                  {{--                          </li> --}}
+                  {{--                      </ul> --}}
+                  {{--                  </li> --}}
 
                   {{-- Quản lý Khách hàng --}}
-                  <li class="nav-item dropdown">
-                      <a href="#Customer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                          <i class="fe fe-grid fe-16"></i>
-                          <span class="ml-3 item-text">Quản lý khách hàng</span>
-                      </a>
-                      <ul class="collapse list-unstyled pl-4 w-100" id="Customer">
-                        <li class="nav-item">
-                            <a class="nav-link pl-3"  href="{{ route('admin.user.index') }}"><span class="ml-1 item-text">Danh sách khách hàng</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link pl-3" href="{{ route('admin.user.create') }}"><span class="ml-1 item-text">Thêm mới khách hàng</span>
-                          </a>
-                      </li>
-                    </ul>
-                  </li>
+                  <li class="nav-item ">
+                    <a href="{{ route('admin.user.index') }}" class="nav-link">
+                        <i class="fe fe-grid fe-16"></i>
+                        <span class="ml-3 item-text">Quản lý khách hàng</span>
+                    </a>
+                </li>
 
                   {{-- Quản lý danh mục --}}
                   <li class="nav-item ">
-                      <a href="#Category" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                          <i class="fe fe-grid fe-16"></i>
-                          <span class="ml-3 item-text">Quản lý danh mục</span>
-                      </a>
-                      <ul class="collapse list-unstyled pl-4 w-100" id="Category">
-                        <li class="nav-item">
-                            <a class="nav-link pl-3"  href="{{ route('admin.category.index') }}"><span class="ml-1 item-text">Danh sách danh mục</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link pl-3" href="{{ route('admin.category.create') }}"><span class="ml-1 item-text">Thêm mới danh mục</span>
-                          </a>
-                      </li>
-                    </ul>
-                  </li>
+                    <a href="{{ route('admin.category.index') }}" class="nav-link">
+                        <i class="fe fe-grid fe-16"></i>
+                        <span class="ml-3 item-text">Quản lý danh mục</span>
+                    </a>
+                </li>
 
 
                   {{-- Quản lý contac --}}
-                  <li class="nav-item dropdown">
-                      <a href="#Contac" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                          <i class="fe fe-grid fe-16"></i>
-                          <span class="ml-3 item-text">Quản lý liên hệ</span>
-                      </a>
-                      <ul class="collapse list-unstyled pl-4 w-100" id="Contac">
-                        <li class="nav-item">
-                            <a class="nav-link pl-3"  href="{{ route('admin.contact.index') }}"><span class="ml-1 item-text">Danh sách liên hệ</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link pl-3" href="{{ route('admin.contact.create') }}"><span class="ml-1 item-text">Thêm mới liên hệ</span>
-                          </a>
-                      </li>
-                    </ul>
-                  </li>
+                  <li class="nav-item ">
+                    <a href="{{ route('admin.contact.index') }}" class="nav-link">
+                        <i class="fe fe-grid fe-16"></i>
+                        <span class="ml-3 item-text">Quản lý liên hệ</span>
+                    </a>
+                </li>
 
                   {{-- Quản lý sản phẩm --}}
                   <li class="nav-item dropdown">
@@ -106,62 +76,47 @@
                       </a>
                       <ul class="collapse list-unstyled pl-4 w-100" id="Products">
                           <li class="nav-item">
-                              <a class="nav-link pl-3"  href="{{ route('admin.products.index') }}"><span class="ml-1 item-text">Danh sách sản phẩm</span>
+                              <a class="nav-link pl-3" href="{{ route('admin.products.index') }}"><span
+                                      class="ml-1 item-text">Danh sách sản phẩm</span>
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link pl-3" href="{{ route('admin.product-comments.index') }}"><span class="ml-1 item-text">nhận xét sản phẩm</span>
+                              <a class="nav-link pl-3" href="{{ route('admin.product-comments.index') }}"><span
+                                      class="ml-1 item-text">nhận xét sản phẩm</span>
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link pl-3"  href="{{ route('admin.discount.index') }}"><span class="ml-1 item-text">giảm giá</span>
+                              <a class="nav-link pl-3" href="{{ route('admin.discount.index') }}"><span
+                                      class="ml-1 item-text">giảm giá</span>
                               </a>
                           </li>
                       </ul>
                   </li>
 
-                  {{--Quản lí blog--}}
-                  <li class="nav-item dropdown">
-                    <a href="#blogs" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                  {{-- Quản lí blog --}}
+                  <li class="nav-item ">
+                      <a href="{{ route('admin.blogs.index') }}" class="nav-link">
                           <i class="fe fe-grid fe-16"></i>
-                        <span class="ml-3 item-text">Quản lý blogs</span>
-                    </a>
-                    <ul class="collapse list-unstyled pl-4 w-100" id="blogs">
-                        <li class="nav-item">
-                            <a class="nav-link pl-3"  href="{{ route('admin.blogs.index') }}"><span class="ml-1 item-text">Danh sách bài viết</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link pl-3" href="{{ route('admin.blogs.create') }}"><span class="ml-1 item-text">Thêm bài viết</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                          <span class="ml-3 item-text">Quản lý blogs</span>
+                      </a>
+                  </li>
 
                   {{-- Quản lý đơn hàng --}}
-                  <li class="nav-item dropdown">
-                      <a href="#tables" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                  <li class="nav-item ">
+                      <a href="#tables" data-toggle="collapse" aria-expanded="false"
+                          class="nav-link">
                           <i class="fe fe-grid fe-16"></i>
                           <span class="ml-3 item-text">Quản lý đơn hàng</span>
                       </a>
                   </li>
 
                   {{-- Bảng báo cáo thống kê --}}
-                  <li class="nav-item dropdown">
-                      <a href="#Report" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                  <li class="nav-item ">
+                      <a href="#Report" data-toggle="collapse" aria-expanded="false"
+                          class="nav-link">
                           <i class="fe fe-grid fe-16"></i>
                           <span class="ml-3 item-text">Báo cáo thống kê</span>
                       </a>
-                      <ul class="collapse list-unstyled pl-4 w-100" id="Report">
-                          <li class="nav-item">
-                              <a class="nav-link pl-3" href="./ui-color.html"><span class="ml-1 item-text">Báo xuất nhập hàng</span>
-                              </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link pl-3" href="./ui-color.html"><span class="ml-1 item-text">Báo xuất lãi suất</span>
-                            </a>
-                        </li>
-                      </ul>
                   </li>
               </ul>
           </nav>

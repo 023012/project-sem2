@@ -22,7 +22,6 @@
                                         <th style="  width: 250px;">Tác giả</th>
                                         <th style="  width: 250px;">Image</th>
                                         <th style="  width: 100px;">Title</th>
-                                        <th style="  width: 100px;">content</th>
                                         <th style="  width: 100px;">Tags</th>
                                         <th style="  width: 50px;">Action</th>
                                     </tr>
@@ -38,17 +37,16 @@
                                                      alt="Anh Bai Viet" width="100" height="100">
                                             </td>
                                             <td style=" width: 100px">{{ $blog->title }}</td>
-                                            <td style="  width: 100px;">{{ $blog->content }}</td>
                                             <td style="  width: 300px;">{{ $blog->tag }}</td>
                                             <td style="  width: 50px;">
                                                 <form method="POST"
                                                       action="{{ route('admin.blogs.destroy', $blog->id) }}">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <a href="{{ route('admin.products.show', $blog->id) }}"
+                                                    <a href="{{ route('admin.blogs.show', $blog->id) }}"
                                                        class="btn">
                                                         <span class="fa-solid fa-circle-info"></span></a>
-                                                    <a href="{{ route('admin.products.edit', $blog->id) }}"
+                                                    <a href="{{ route('admin.blogs.edit', $blog->id) }}"
                                                        class="btn"><span
                                                             class="fa-solid fa-pen-to-square"></span></a>
                                                     <button type="submit" class="btn"><span
@@ -65,7 +63,6 @@
                                         <th style="  width: 250px;">Tác giả</th>
                                         <th style="  width: 250px;">Image</th>
                                         <th style="  width: 100px;">Title</th>
-                                        <th style="  width: 100px;">content</th>
                                         <th style="  width: 100px;">Tags</th>
                                         <th style="  width: 50px;">Action</th>
                                     </tr>

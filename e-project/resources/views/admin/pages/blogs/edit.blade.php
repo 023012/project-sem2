@@ -10,41 +10,42 @@
                     <h2 class="mb-2 page-title">Danh sách bài viết</h2>
                     <div class="card shadow mb-4">
                         <div class="card-header">
-                            <strong class="card-title">Thêm mới bài viết</strong>
+                            <strong class="card-title">Chỉnh sửa bài viết</strong>
                         </div>
 
                         <div class="card-body">
-                            <form action="{{ route('admin.blogs.store') }}" method="POST" enctype="multipart/form-data"
+                            <form action="{{ route('admin.blogs.update', $blogs->id) }}" method="POST" enctype="multipart/form-data"
                                 class="needs-validation" novalidate>
                                 @csrf
+                                @method('PUT')
                                 <div class="">
                                     <div class="form-row">
                                         <div class="col-md-6 mb-3 p-3">
                                             <div class="form-group mb-3">
                                                 <label><strong>Tác Giả</strong></label>
                                                 <input name="write_by" type="text" class="form-control"
-                                                    placeholder="Tác Giả" required>
+                                                    value="{{$blogs->write_by}}" required>
                                             </div>
                                             <div class="form-group mb-3">
                                                 <label><strong>Chủ đề</strong></label>
                                                 <input name="title" type="text" class="form-control"
-                                                    placeholder="Chủ Đề" required>
+                                                    value="{{$blogs->title}}" required>
                                             </div>
                                             <div class="form-group mb-3">
                                                 <label><strong>Tags</strong></label>
-                                                <input name="tag" type="text" class="form-control" placeholder="Tags"
+                                                <input name="tag" type="text" class="form-control" value="{{$blogs->tags}}"
                                                     required>
                                             </div>
                                             <div class="form-group mb-3">
                                                 <label><strong>Ảnh sản phẩm</strong></label>
-                                                <input name="file_upload" class="form-control-file" type="file"
+                                                <input name="image" class="form-control-file" type="file"
                                                     id="upload">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3 p-3">
                                             <div class="form-group mb-3">
                                                 <label><strong>Nội dung</strong></label>
-                                                <textarea name="content" class="form-control" id="content" required="" rows="3"></textarea>
+                                                <textarea name="content" class="form-control" id="content" required="" value="{{$blogs->content}}" rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>

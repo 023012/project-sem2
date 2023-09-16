@@ -10,7 +10,7 @@ class Blogs extends Model
     use HasFactory;
 
     protected $table = 'blogs';
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $fillable = [
         'write_by',
