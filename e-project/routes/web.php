@@ -34,14 +34,18 @@ Route::get('/register', [RegisterController::class, 'registerForm'])->name('site
 Route::post('/register', [RegisterController::class, 'register'])->name('site.register.post');
 
 Route::get('/', [HomeController::class, 'index'])->name('site.home');
-Route::get('/blogs', [BlogController::class, 'index'])->name('site.blogs');
-Route::get('/blog-single', [BlogController::class, 'blog_single'])->name('site.blog-single');
 Route::get('/about', [AboutController::class, 'index'])->name('site.about-us');
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('site.wishlist');
 Route::get('/compare', [CompareController::class, 'index'])->name('site.compare');
 
+//blog
+Route::get('/blogs', [BlogController::class, 'index'])->name('site.blogs');
+Route::get('/{blog}/blog-single', [BlogController::class, 'showBlogDetail'])->name('site.blog-single');
+
+
 //Shop
-Route::get('/shop', [ShopController::class, 'index'])->name('site.shop');
+//Route::get('/shop', [ShopController::class, 'shop'])->name('site.shop');
+Route::get('/shop/sort', [ShopController::class, 'sortProducts'])->name('site.shop');
 Route::get('/{product}/product', [ShopController::class, 'showProductDetail'])->name('site.product');
 
 //
@@ -70,7 +74,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 //Search
-Route::get('/search', [HomeController::class, 'search'])->name('site.search');
+Route::get('/search', [ShopController::class, 'search'])->name('site.search');
 
 require 'admin.php';
 

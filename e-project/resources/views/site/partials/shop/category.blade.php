@@ -5,36 +5,39 @@
         <h6 class="sidebar-title">Danh mục</h6>
         <div class="sidebar-content">
             <ul class="sidebar-menu">
-                <li>
-                    <ul class="sidebar-menu-collapse">
-                        <!-- Start Single Menu Collapse List -->
-                        <li class="sidebar-menu-collapse-list">
-                            <div class="accordion">
-                                <a href="#" class="accordion-title collapsed"
-                                   data-bs-toggle="collapse" data-bs-target="#men-fashion"
-                                   aria-expanded="false">Men <i
-                                        class="ion-ios-arrow-right"></i></a>
-                                <div id="men-fashion" class="collapse">
-                                    <ul class="accordion-category-list">
-                                        <li><a href="#">Dresses</a></li>
-                                        <li><a href="#">Jackets &amp; Coats</a></li>
-                                        <li><a href="#">Sweaters</a></li>
-                                        <li><a href="#">Jeans</a></li>
-                                        <li><a href="#">Blouses &amp; Shirts</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li> <!-- End Single Menu Collapse List -->
-                    </ul>
-                </li>
-                <li><a href="#">Football</a></li>
-                <li><a href="#"> Men's</a></li>
-                <li><a href="#"> Portable Audio</a></li>
-                <li><a href="#"> Smart Watches</a></li>
-                <li><a href="#">Tennis</a></li>
-                <li><a href="#"> Uncategorized</a></li>
-                <li><a href="#"> Video Games</a></li>
-                <li><a href="#">Women's</a></li>
+                @foreach($categories as $category)
+                    <li><a href="">{{ $category->name }}</a></li>
+                @endforeach
+{{--                <li>--}}
+{{--                    <ul class="sidebar-menu-collapse">--}}
+{{--                        <!-- Start Single Menu Collapse List -->--}}
+{{--                        <li class="sidebar-menu-collapse-list">--}}
+{{--                            <div class="accordion">--}}
+{{--                                <a href="#" class="accordion-title collapsed"--}}
+{{--                                   data-bs-toggle="collapse" data-bs-target="#men-fashion"--}}
+{{--                                   aria-expanded="false">Men <i--}}
+{{--                                        class="ion-ios-arrow-right"></i></a>--}}
+{{--                                <div id="men-fashion" class="collapse">--}}
+{{--                                    <ul class="accordion-category-list">--}}
+{{--                                        <li><a href="#">Dresses</a></li>--}}
+{{--                                        <li><a href="#">Jackets &amp; Coats</a></li>--}}
+{{--                                        <li><a href="#">Sweaters</a></li>--}}
+{{--                                        <li><a href="#">Jeans</a></li>--}}
+{{--                                        <li><a href="#">Blouses &amp; Shirts</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </li> <!-- End Single Menu Collapse List -->--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--                <li><a href="#">Football</a></li>--}}
+{{--                <li><a href="#"> Men's</a></li>--}}
+{{--                <li><a href="#"> Portable Audio</a></li>--}}
+{{--                <li><a href="#"> Smart Watches</a></li>--}}
+{{--                <li><a href="#">Tennis</a></li>--}}
+{{--                <li><a href="#"> Uncategorized</a></li>--}}
+{{--                <li><a href="#"> Video Games</a></li>--}}
+{{--                <li><a href="#">Women's</a></li>--}}
             </ul>
         </div>
     </div> <!-- End Single Sidebar Widget -->
