@@ -20,9 +20,9 @@ class BlogsController extends Controller
         ]);
     }
 
-    public function showBlogDetail(Blogs $blog){
-        $blogDetails = DB::table('blogs')->where('id', $blog->id)->first();
-        return view('site.pages.blog-single',[
+    public function show(Blogs $blog){
+        $blogDetails = DB::table('blogs')->where('id', $blog->id)->get();
+        return view('admin.pages.blogs.details',[
             'blogDetails' => $blogDetails
         ]);
     }

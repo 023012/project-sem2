@@ -97,23 +97,16 @@
                   <li class="nav-item ">
                       <a href="{{ route('admin.blogs.index') }}" class="nav-link">
                           <i class="fe fe-grid fe-16"></i>
-                          <span class="ml-3 item-text">Quản lý blogs</span>
+                          <span class="ml-3 item-text">Quản lý bài viết</span>
                       </a>
                   </li>
 
                   {{-- Quản lý đơn hàng --}}
                   <li class="nav-item ">
-                      <a href="#tables" data-toggle="collapse" aria-expanded="false"
-                          class="nav-link">
+                      <a href="{{route('admin.order.index')}}" class="nav-link">
                           <i class="fe fe-grid fe-16"></i>
                           <span class="ml-3 item-text">Quản lý đơn hàng</span>
                       </a>
-                      <ul class="collapse list-unstyled pl-4 w-100" id="Order">
-                          <li class="nav-item">
-                              <a class="nav-link pl-3"  href="{{route('admin.order.index')}}"><span class="ml-1 item-text">Danh sách đơn hàng</span>
-                              </a>
-                          </li>
-                      </ul>
                   </li>
 
                   {{-- Bảng báo cáo thống kê --}}
