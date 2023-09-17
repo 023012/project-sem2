@@ -12,6 +12,4 @@ class HomeController extends Controller
 //        $productsFeatured = DB::table('')
         return view('site.pages.homepage');
     }
-
-
 }

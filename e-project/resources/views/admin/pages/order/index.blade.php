@@ -25,7 +25,19 @@
 
                     </div>
                     <!-- Slide Modal -->
+                    @if (session('success'))
+                        <div class="alert alert-success" id="success-message">
+                            {{ session('success') }}
+                        </div>
+                        <script>
+                            setTimeout(function() {
+                                document.getElementById('success-message').style.display = 'none';
+                            }, 2000); // Thời gian hiển thị thông báo (đơn vị là mili giây), ở đây là 5 giây
+                        </script>
+                    @endif
+
                     <table class="table border table-hover bg-white">
+
                         <thead>
                         <tr role="row">
                             <th>
@@ -34,7 +46,8 @@
                                     <label class="custom-control-label" for="all"></label>
                                 </div>
                             </th>
-                            <th>Order Number</th>
+                            <th>STT</th>
+                            <th>Mã đơn hàng</th>
                             <th>Ngày mua</th>
                             <th>Khách hàng</th>
                             <th>Sđt</th>
@@ -46,7 +59,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($orders as $order)
+                        @foreach($orders as $index => $order)
                         <tr>
                             <td class="align-center">
                                 <div class="custom-control custom-checkbox">
@@ -54,6 +67,7 @@
                                     <label class="custom-control-label"></label>
                                 </div>
                             </td>
+                            <td>{{ $index + 1 }}</td>
                             <td>{{$order->order_number}}</td>
                             <td>{{$order->created_at}}</td>
                             <td>{{$order->name}}</td>
@@ -63,15 +77,28 @@
                             <td>{{ number_format($order->total_price, 0, '', '.') }} đ</td>
                             <td>{{$order->payment_method}}</td>
                             <td>
-                                @if($order->status == 'pending')
-                                    <span class="dot dot-lg bg-success mr-2"></span>
-                                @elseif($order->status == 'processing')
-                                    <span class="dot dot-lg bg-info mr-2"></span>
-                                @elseif($order->status == 'completed')
-                                    <span class="dot dot-lg bg-primary mr-2"></span>
-                                @elseif($order->status == 'decline')
-                                    <span class="dot dot-lg bg-danger mr-2"></span>
-                                @endif
+{{--                                @if($order->status == 'pending')--}}
+{{--                                    <span class="dot dot-lg bg-success mr-2"></span>--}}
+{{--                                @elseif($order->status == 'processing')--}}
+{{--                                    <span class="dot dot-lg bg-info mr-2"></span>--}}
+{{--                                @elseif($order->status == 'completed')--}}
+{{--                                    <span class="dot dot-lg bg-primary mr-2"></span>--}}
+{{--                                @elseif($order->status == 'decline')--}}
+{{--                                    <span class="dot dot-lg bg-danger mr-2"></span>--}}
+{{--                                @endif--}}
+                                <form action="{{route('admin.order.update',$order->id)}}" method="post">
+                                    @csrf
+                                    @method('PUT')
+                                    <select name="status" id="validationSelect2" class="form-control select2" onchange="this.form.submit()">
+                                        @foreach ($statusOptions as $key => $value)
+                                            <option value="{{ $key }}"
+                                                    @if ($key == old('status', $order->status))
+                                                        selected="selected"
+                                                    @endif
+                                            >{{ $value }}</option>
+                                        @endforeach
+                                    </select>
+                                </form>
                             </td>
 
                             <td>
@@ -89,13 +116,14 @@
                         </tbody>
                     </table>
                     <nav aria-label="Table Paging" class="my-3">
-                        <ul class="pagination justify-content-end mb-0">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
+{{--                        <ul class="pagination justify-content-end mb-0">--}}
+{{--                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>--}}
+{{--                            <li class="page-item"><a class="page-link" href="#">1</a></li>--}}
+{{--                            <li class="page-item active"><a class="page-link" href="#">2</a></li>--}}
+{{--                            <li class="page-item"><a class="page-link" href="#">3</a></li>--}}
+{{--                            <li class="page-item"><a class="page-link" href="#">Next</a></li>--}}
+{{--                        </ul>--}}
+                        {{$orders->links()}}
                     </nav>
                 </div>
             </div> <!-- .row -->
@@ -224,4 +252,12 @@
             </div>
         </div>
     </main>
+
+        <script>
+            $('[name="status"]').change(function() {
+            $(this).closest('form').submit();
+        })
+    </script>
+
 @endsection
+

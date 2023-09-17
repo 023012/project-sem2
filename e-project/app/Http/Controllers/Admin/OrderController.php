@@ -15,10 +15,17 @@ class OrderController extends Controller
      */
     public function index()
     {
+        $statusOptions = [
+            'pending' => 'pending',
+            'processing' => 'processing',
+            'completed' => 'completed',
+            'decline' => 'decline',
+        ];
         $orders=DB::table('orders_list')
-            ->get();
+            ->simplePaginate(10);
         return view('admin.pages.order.index',[
-            'orders'=>$orders
+            'orders'=>$orders,
+            'statusOptions'=>$statusOptions
         ]);
     }
 
@@ -27,16 +34,30 @@ class OrderController extends Controller
 
     }
 
-    public function show(Order $order)
+    public function show($id)
     {
+        $statusOptions = [
+            'pending' => 'pending',
+            'processing' => 'processing',
+            'completed' => 'completed',
+            'decline' => 'decline',
+        ];
+        $users=DB::table('project_sem2.users_orders')->where('id',$id)->get();
+        $orderDetail=DB::table('project_sem2.chi_tiet_don_hang')->where('id',$id)->get();
 //        viết login hiển thị chi tiết đơn hàng
-        return view('admin.pages.order.details');
+        return view('admin.pages.order.details',['orderDetail'=>$orderDetail,
+            'users'=>$users,
+            'statusOptions'=>$statusOptions
+            ]);
     }
 
-    public function UpdateStatus(Order $order)
+    public function UpdateStatus(Request $request,Order $order)
     {
 //        viết login cập nhật trạng thái đơn hàng(đang giao, đã giao, đã hủy,...)
-        return view('admin.pages.order.details');
+        $order->status=$request->status;
+        $order->save();
+//        return view('admin.pages.order.details',['order',$order]);
+        return redirect()->route('admin.order.index', ['orderId' => $order->id])->with('success','Cập nhật thành công trạng thái!');
     }
 
 
