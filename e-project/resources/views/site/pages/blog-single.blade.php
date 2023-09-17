@@ -126,12 +126,12 @@
 
                     </div> <!-- End Sidebar Area -->
                 </div>
-                
+
                 <div class="col-lg-9">
                     <!-- Start Blog Single Content Area -->
                     <div class="blog-single-wrapper">
                         <div class="blog-single-img" data-aos="fade-up" data-aos-delay="0">
-                            <img class="img-fluid" src="{{$blogDetails->image}}" alt="">
+{{--                            <img class="img-fluid" src="{{$blogDetails->image}}" alt="">--}}
                         </div>
                         <ul class="post-meta" data-aos="fade-up" data-aos-delay="200">
                             <li>POSTED BY : <a href="#" class="author">{{$blogDetails->write_by}}</a></li>

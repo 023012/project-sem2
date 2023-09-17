@@ -26,25 +26,27 @@
                                                     placeholder="Tác Giả" required>
                                             </div>
                                             <div class="form-group mb-3">
-                                                <label><strong>Chủ đề</strong></label>
+                                                <label><strong>Tiêu đề</strong></label>
                                                 <input name="title" type="text" class="form-control"
                                                     placeholder="Chủ Đề" required>
-                                            </div>
-                                            <div class="form-group mb-3">
-                                                <label><strong>Tags</strong></label>
-                                                <input name="tag" type="text" class="form-control" placeholder="Tags"
-                                                    required>
-                                            </div>
-                                            <div class="form-group mb-3">
-                                                <label><strong>Ảnh sản phẩm</strong></label>
-                                                <input name="file_upload" class="form-control-file" type="file"
-                                                    id="upload">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3 p-3">
                                             <div class="form-group mb-3">
+                                                <label><strong>Tags</strong></label>
+                                                <input name="tag" type="text" class="form-control" placeholder="Tags"
+                                                       required>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label><strong>Ảnh sản phẩm</strong></label>
+                                                <input name="file_upload" class="form-control-file" type="file"
+                                                       id="upload">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-3 p-3">
+                                            <div class="form-group mb-3">
                                                 <label><strong>Nội dung</strong></label>
-                                                <textarea name="content" class="form-control" id="content" required="" rows="3"></textarea>
+                                                <textarea name="content" class="form-control" id="content" required="" rows="5"></textarea>
                                             </div>
                                         </div>
                                     </div>

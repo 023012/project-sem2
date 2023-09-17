@@ -70,7 +70,7 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/', [BlogsController::class, 'index'])->name('admin.blogs.index');
             Route::get('/create', [BlogsController::class, 'create'])->name('admin.blogs.create');
             Route::post('/store', [BlogsController::class, 'store'])->name('admin.blogs.store');
-            Route::get('/{blogs}/show', [BlogsController::class, 'showBlogDetail'])->name('admin.blogs.show');
+            Route::get('/{blogs}/show', [BlogsController::class, 'show'])->name('admin.blogs.show');
             Route::get('/{blogs}/edit', [BlogsController::class, 'edit'])->name('admin.blogs.edit');
             Route::put('/{blogs}/edit', [BlogsController::class, 'update'])->name('admin.blogs.update');
             Route::delete('/{blogs}/delete', [BlogsController::class, 'destroy'])->name('admin.blogs.destroy');
