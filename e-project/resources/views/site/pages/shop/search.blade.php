@@ -53,26 +53,26 @@
 
                                         <!-- Start Page Amount -->
                                         <div class="page-amount ml-2">
-                                            <span>Số sản phẩm tìm kiếm được: {{ $productCount }}</span>
+                                            <h5><span>Số sản phẩm tìm kiếm được: {{ $productCount }}</span></h5>
                                         </div> <!-- End Page Amount -->
                                     </div> <!-- End Sort tab Button -->
 
                                     <!-- Start Sort Select Option -->
-                                    <div class="sort-select-list d-flex align-items-center">
-                                        <label class="mr-2">Sort By:</label>
-                                        <form action="#">
-                                            <fieldset>
-                                                <select name="speed" id="speed">
-                                                    <option>Sort by average rating</option>
-                                                    <option>Sort by popularity</option>
-                                                    <option selected="selected">Sort by newness</option>
-                                                    <option>Sort by price: low to high</option>
-                                                    <option>Sort by price: high to low</option>
-                                                    <option>Product Name: Z</option>
-                                                </select>
-                                            </fieldset>
-                                        </form>
-                                    </div> <!-- End Sort Select Option -->
+{{--                                    <div class="sort-select-list d-flex align-items-center">--}}
+{{--                                        <label class="mr-2">Sort By:</label>--}}
+{{--                                        <form action="#">--}}
+{{--                                            <fieldset>--}}
+{{--                                                <select name="speed" id="speed">--}}
+{{--                                                    <option>Sort by average rating</option>--}}
+{{--                                                    <option>Sort by popularity</option>--}}
+{{--                                                    <option selected="selected">Sort by newness</option>--}}
+{{--                                                    <option>Sort by price: low to high</option>--}}
+{{--                                                    <option>Sort by price: high to low</option>--}}
+{{--                                                    <option>Product Name: Z</option>--}}
+{{--                                                </select>--}}
+{{--                                            </fieldset>--}}
+{{--                                        </form>--}}
+{{--                                    </div> <!-- End Sort Select Option -->--}}
 
 
                                 </div> <!-- Start Sort Wrapper Box -->

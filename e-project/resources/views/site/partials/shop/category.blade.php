@@ -6,51 +6,27 @@
         <div class="sidebar-content">
             <ul class="sidebar-menu">
                 @foreach($categories as $category)
-                    <li><a href="">{{ $category->name }}</a></li>
+                    <li><a href="{{ route('site.category', $category->id) }}">{{ $category->name }}</a></li>
                 @endforeach
-{{--                <li>--}}
-{{--                    <ul class="sidebar-menu-collapse">--}}
-{{--                        <!-- Start Single Menu Collapse List -->--}}
-{{--                        <li class="sidebar-menu-collapse-list">--}}
-{{--                            <div class="accordion">--}}
-{{--                                <a href="#" class="accordion-title collapsed"--}}
-{{--                                   data-bs-toggle="collapse" data-bs-target="#men-fashion"--}}
-{{--                                   aria-expanded="false">Men <i--}}
-{{--                                        class="ion-ios-arrow-right"></i></a>--}}
-{{--                                <div id="men-fashion" class="collapse">--}}
-{{--                                    <ul class="accordion-category-list">--}}
-{{--                                        <li><a href="#">Dresses</a></li>--}}
-{{--                                        <li><a href="#">Jackets &amp; Coats</a></li>--}}
-{{--                                        <li><a href="#">Sweaters</a></li>--}}
-{{--                                        <li><a href="#">Jeans</a></li>--}}
-{{--                                        <li><a href="#">Blouses &amp; Shirts</a></li>--}}
-{{--                                    </ul>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </li> <!-- End Single Menu Collapse List -->--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li><a href="#">Football</a></li>--}}
-{{--                <li><a href="#"> Men's</a></li>--}}
-{{--                <li><a href="#"> Portable Audio</a></li>--}}
-{{--                <li><a href="#"> Smart Watches</a></li>--}}
-{{--                <li><a href="#">Tennis</a></li>--}}
-{{--                <li><a href="#"> Uncategorized</a></li>--}}
-{{--                <li><a href="#"> Video Games</a></li>--}}
-{{--                <li><a href="#">Women's</a></li>--}}
             </ul>
         </div>
     </div> <!-- End Single Sidebar Widget -->
 
     <!-- Start Single Sidebar Widget -->
     <div class="sidebar-single-widget">
-        <h6 class="sidebar-title">FILTER BY PRICE</h6>
+        <h6 class="sidebar-title">Lọc theo khoảng giá</h6>
         <div class="sidebar-content">
-            <div id="slider-range"></div>
-            <div class="filter-type-price">
-                <label for="amount">Price range:</label>
-                <input type="text" id="amount">
-            </div>
+            <form>
+                <div class="default-form-box">
+                    <label for="min_price">Giá tối thiểu: <span>0 ₫</span></label>
+                    <input type="text" id="min_price" >
+                </div>
+                <div class="default-form-box">
+                    <label for="max_price">Giá tối đa: <span>50.000.000 ₫</span></label>
+                    <input type="text" id="max_price">
+                </div>
+                <button class="btn btn-golden">Áp dụng</button>
+            </form>
         </div>
     </div> <!-- End Single Sidebar Widget -->
 

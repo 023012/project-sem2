@@ -26,7 +26,7 @@
 
                 <!-- Start Sort Select Option -->
                 <div class="sort-select-list d-flex align-items-center">
-                    <label class="mr-2">Sort By:</label>
+                    <label class="mr-2">Sort By: </label>
                     <form action="{{route('site.shop')}}" method="get">
                         @csrf
                         <fieldset>
@@ -48,5 +48,6 @@
 <script>
     $('[name="sort_option"]').change(function() {
         $(this).closest('form').submit();
+
     })
 </script>

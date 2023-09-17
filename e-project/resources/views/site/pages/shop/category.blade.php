@@ -32,10 +32,12 @@
                 <div class="col-lg-9">
                     <!-- Start Shop Product Sorting Section -->
 
-                    @include('site.partials.shop.sort-product')
+{{--                    @include('site.partials.shop.sort-product')--}}
 
                     <!-- End Section Content -->
-
+                    <div class="page-amount ml-2">
+                        <h5><span>{{$CategoryProduct}}: có <strong>{{ $productCount }}</strong> sản phẩm. </span></h5>
+                    </div> <!-- End Page Amount -->
                     <!-- Start Tab Wrapper -->
                     <div class="sort-product-tab-wrapper">
                         <div class="container">
@@ -45,7 +47,7 @@
                                         <!-- Start Grid View Product -->
                                         <div class="tab-pane active show sort-layout-single" id="layout-3-grid">
                                             <div class="row">
-                                                @foreach ($products as $product)
+                                                @foreach ($productsList as $product)
                                                     @php
                                                         $price = $product->price;
                                                         $formatPrice=number_format($price,0,'','.');
@@ -125,7 +127,7 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <!-- Start Product Defautlt Single -->
-                                                    @foreach($products as $product)
+                                                    @foreach($productsList as $product)
                                                         @php
                                                             $price = $product->price;
                                                             $discount_percent = $product->discount_percent;
@@ -193,7 +195,7 @@
                             <li><a href="#">3</a></li>
                             <li><a href="#"><i class="ion-ios-skipforward"></i></a></li>
                         </ul> --}}
-                        {{ $products->links() }}
+{{--                        {{ $productsList->links() }}--}}
                     </div> <!-- End Pagination -->
                 </div>
             </div>

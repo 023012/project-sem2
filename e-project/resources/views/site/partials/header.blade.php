@@ -184,7 +184,7 @@
                 </ul>
 
                 <ul class="user-link">
-                    <li><a href="{{ route('site.wishlist') }}">Yêu Thích</a></li>
+                    <li><a>Yêu Thích</a></li>
                     <li><a href="{{route('cart.list')}}">Giỏ Hàng</a></li>
                 </ul>
             </div>
@@ -221,7 +221,7 @@
             </ul>
 
             <ul class="user-link">
-                <li><a href="{{ route('site.wishlist') }}">Sản Phẩm Yêu Thích</a></li>
+                <li><a href="">Sản Phẩm Yêu Thích</a></li>
                 <li><a href="{{route('cart.list')}}">Giỏ Hàng</a></li>
             </ul>
         </div>
@@ -372,7 +372,7 @@
                 </li>
             </ul>
             <ul class="offcanvas-wishlist-action-button">
-                <li><a href="{{ route('site.wishlist') }}" class="btn btn-block btn-golden">Tất Cả Sản Phẩm Yêu Thích</a></li>
+                <li><a  class="btn btn-block btn-golden">Tất Cả Sản Phẩm Yêu Thích</a></li>
             </ul>
         </div> <!-- End Offcanvas Mobile Menu Wrapper -->
 
