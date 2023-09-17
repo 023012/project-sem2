@@ -21,4 +21,5 @@ class HomeController extends Controller
 
         return view('site.pages.shop.search', compact('results', 'keyword','productCount'));
     }
+
 }
