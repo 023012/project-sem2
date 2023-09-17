@@ -9,29 +9,74 @@ use Illuminate\Support\Facades\DB;
 
 class ShopController extends Controller
 {
-    public function index(){
-        $products = DB::table('products')
-        ->select( 'categories.id as category_id', 'discounts.id as discount_id',
-                   'categories.name as category', 'discounts.name as discount',
-                  'discounts.discount_percent as discount_percent', 'products.*')
-        ->join('categories', 'products.category_id', '=', 'categories.id')
-        ->join('discounts', 'products.discount_id', '=', 'discounts.id')
-        ->orderBy('id','asc')
-        ->simplePaginate(18);
 
-        return view('site.pages.shop.index', [
-            'products' => $products,
-        ]);
-    }
     public function showProductDetail(Product $product){
         $productDetails= DB::select('CALL ShowProductDetails(?)', [$product->id]);
-        return view('site.pages.shop.product',[
-            'productDetails'=>$productDetails
-        ]);
-
+        return view('site.pages.shop.product',compact( 'productDetails'));
     }
-    public function sortPriceLowToHight(Request $request){
 
+    public function shop(Request $request) {
+        $categories =  DB::table('categories')->get();
+        $products=DB::table('project_sem2.products_list as p')
+            ->orderBy('p.created_at', 'desc')
+            ->simplePaginate(18);
+        return view('site.pages.shop.index', compact('categories', 'products'));
+    }
+
+    public function search(Request $request)
+    {
+        $categories =  DB::table('categories')->get();
+        $keyword = $request->input('keyword');
+
+        $results = DB::select('CALL GetProductsByKeyword(?)', [$keyword]);
+        $productCount = count($results);
+
+        return view('site.pages.shop.search', compact('results', 'keyword','productCount','categories'));
+    }
+
+    public function sortProducts(Request $request){
+        $categories =  DB::table('categories')->get();
+
+        $sortOptions = [
+            'price-asc' => 'Giá từ thấp đến cao',
+            'price-desc' => 'Giá từ cao đến thấp',
+            'name-asc' => 'Tên tăng dần A-Z',
+            'name-desc' => 'Tên giảm dần Z-A',
+        ];
+        $sortOption = $request->input('sort_option');
+
+        switch ($sortOption) {
+            case 'price-asc':
+                $products = DB::table('project_sem2.products_list as p')
+                    ->orderBy('p.price', 'asc')
+                    ->simplePaginate(18);
+                break;
+            case 'price-desc':
+                $products = DB::table('project_sem2.products_list as p')
+                    ->orderBy('p.price', 'desc')
+                    ->simplePaginate(18);
+
+                break;
+            // Thêm các tùy chọn sắp xếp khác ở đây
+            case 'name-asc':
+                $products=DB::table('project_sem2.products_list as p')
+                    ->orderBy('p.name', 'asc')
+                    ->simplePaginate(18);
+                break;
+            case 'name-desc':
+                $products=DB::table('project_sem2.products_list as p')
+                    ->orderBy('p.name', 'desc')
+                    ->simplePaginate(18);
+                break;
+
+            default:
+                $products=DB::table('project_sem2.products_list as p')
+                    ->orderBy('p.created_at', 'desc')
+                    ->simplePaginate(18);
+                break;
+        }
+
+        return view('site.pages.shop.index', compact('products','sortOptions','categories'));
     }
 
 }

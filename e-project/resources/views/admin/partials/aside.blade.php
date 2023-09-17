@@ -108,6 +108,12 @@
                           <i class="fe fe-grid fe-16"></i>
                           <span class="ml-3 item-text">Quản lý đơn hàng</span>
                       </a>
+                      <ul class="collapse list-unstyled pl-4 w-100" id="Order">
+                          <li class="nav-item">
+                              <a class="nav-link pl-3"  href="{{route('admin.order.index')}}"><span class="ml-1 item-text">Danh sách đơn hàng</span>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
 
                   {{-- Bảng báo cáo thống kê --}}

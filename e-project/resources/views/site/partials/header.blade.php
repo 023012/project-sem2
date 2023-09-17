@@ -381,10 +381,11 @@
     <!-- Start Offcanvas Search Bar Section -->
     <div id="search" class="search-modal">
         <button type="button" class="close">×</button>
-        <form>
-            <input type="search" placeholder="Tìm kiếm ..."/>
-            <button type="submit" class="btn btn-lg btn-golden">Tìm Kiếm</button>
-        </form>
+        <form method="GET" action="{{ route('site.search') }}">
+            @csrf
+            <input type="search" name="keyword" value="{{ request('keyword') }}" placeholder="Nhập tên sản phẩm..."/>
+            <button type="submit" class="btn btn-lg btn-golden">Tìm kiếm</button>
+    </form>
     </div>
     <!-- End Offcanvas Search Bar Section -->
 

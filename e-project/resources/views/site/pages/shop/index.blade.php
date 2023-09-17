@@ -27,57 +27,14 @@
             <div class="row flex-column-reverse flex-lg-row">
                 <div class="col-lg-3">
                     <!-- Start Sidebar Area -->
-                    @include('site.pages.shop.category')
+                    @include('site.partials.shop.category')
                 </div>
                 <div class="col-lg-9">
                     <!-- Start Shop Product Sorting Section -->
-                    <div class="shop-sort-section">
-                        <div class="container">
-                            <div class="row">
-                                <!-- Start Sort Wrapper Box -->
-                                <div
-                                    class="sort-box d-flex justify-content-between align-items-md-center align-items-start flex-md-row flex-column"
-                                    data-aos="fade-up" data-aos-delay="0">
-                                    <!-- Start Sort tab Button -->
-                                    <div class="sort-tablist d-flex align-items-center">
-                                        <ul class="tablist nav sort-tab-btn">
-                                            <li><a class="nav-link active" data-bs-toggle="tab"
-                                                   href="#layout-3-grid"><img
-                                                        src="{{asset('frontend/assets/images/icons/bkg_grid.png')}}"
-                                                        alt=""></a></li>
-                                            <li><a class="nav-link" data-bs-toggle="tab" href="#layout-list"><img
-                                                        src="{{asset('frontend/assets/images/icons/bkg_list.png')}}"
-                                                        alt=""></a></li>'
-                                        </ul>
 
-                                        <!-- Start Page Amount -->
-                                        <div class="page-amount ml-2">
-                                            <span>Showing 1–9 of 21 results</span>
-                                        </div> <!-- End Page Amount -->
-                                    </div> <!-- End Sort tab Button -->
+                    @include('site.partials.shop.sort-product')
 
-                                    <!-- Start Sort Select Option -->
-                                    <div class="sort-select-list d-flex align-items-center">
-                                        <label class="mr-2">Sort By:</label>
-                                        <form action="#">
-                                            <fieldset>
-                                                <select name="speed" id="speed">
-                                                    <option>Sort by average rating</option>
-                                                    <option>Sort by popularity</option>
-                                                    <option selected="selected">Sort by newness</option>
-                                                    <option>Sort by price: low to high</option>
-                                                    <option>Sort by price: high to low</option>
-                                                    <option>Product Name: Z</option>
-                                                </select>
-                                            </fieldset>
-                                        </form>
-                                    </div> <!-- End Sort Select Option -->
-
-
-                                </div> <!-- Start Sort Wrapper Box -->
-                            </div>
-                        </div>
-                    </div> <!-- End Section Content -->
+                    <!-- End Section Content -->
 
                     <!-- Start Tab Wrapper -->
                     <div class="sort-product-tab-wrapper">
@@ -91,8 +48,10 @@
                                                 @foreach ($products as $product)
                                                     @php
                                                         $price = $product->price;
+                                                        $formatPrice=number_format($price,0,'','.');
                                                         $discount_percent = $product->discount_percent;
                                                         $price_sale = $price - (($price * $discount_percent) / 100 );
+                                                        $formatPriceSale=number_format($price_sale,0,'','.');
                                                     @endphp
                                                     <div class="col-xl-4 col-sm-6 col-12">
                                                         <!-- Start Product Default Single Item -->
@@ -102,8 +61,9 @@
                                                             <div class="image-box">
                                                                 <a href="{{ route('site.product',$product->id) }}"
                                                                    class="image-link">
-                                                                    <img src="{{ asset('uploads/' . $product->thumbnail) }}"
-                                                                         alt="Product Thumbnail" class="img-fluid">
+                                                                    <img
+                                                                        src="{{ asset('uploads/' . $product->thumbnail) }}"
+                                                                        alt="Product Thumbnail" class="img-fluid">
                                                                 </a>
                                                                 <div class="tag">
                                                                     <span>{{ $product->discount }}</span>
@@ -150,7 +110,7 @@
                                                                 </div>
                                                                 <div class="content-right">
                                                                     <span class="price">
-                                                                        <del>{{$price}}₫</del> {{$price_sale}}₫</span>
+                                                                        <del>{{$formatPrice}}₫</del> {{$formatPriceSale}}₫</span>
                                                                 </div>
 
                                                             </div>

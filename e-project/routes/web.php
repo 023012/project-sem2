@@ -44,8 +44,16 @@ Route::get('/{blog}/blog-single', [BlogController::class, 'showBlogDetail'])->na
 
 
 //Shop
-Route::get('/shop', [ShopController::class, 'index'])->name('site.shop');
+//Route::get('/shop', [ShopController::class, 'shop'])->name('site.shop');
+Route::get('/shop/sort', [ShopController::class, 'sortProducts'])->name('site.shop');
 Route::get('/{product}/product', [ShopController::class, 'showProductDetail'])->name('site.product');
+
+//
+//Route::prefix('/sort')->group(function () {
+//    Route::get('/price-low-to-high', [ShopController::class, 'sortProduct'])->name('sort.price.asc');
+//});
+//Route::get('/sort', [ShopController::class, 'sortProduct'])->name('sort.product');
+
 //Contact
 Route::get('/contact', [ContactController::class, 'index'])->name('site.contact-us');
 Route::post('/contact', [ContactController::class, 'sendContact'])->name('site.contactUs.sendContact');
@@ -65,6 +73,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('logout',[LoginController::class, 'logout'] )->name('site.logout');
 });
 
+//Search
+Route::get('/search', [ShopController::class, 'search'])->name('site.search');
 
 require 'admin.php';
 

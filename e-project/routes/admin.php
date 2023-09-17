@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCommentsController;
 use App\Http\Controllers\Admin\DiscountController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\BlogsController;
 
 // Admin
@@ -93,6 +94,11 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/{discount}/edit', [DiscountController::class, 'edit'])->name('admin.discount.edit');
             Route::put('/{discount}/edit', [DiscountController::class, 'update'])->name('admin.discount.update');
             Route::delete('/{discount}/delete', [DiscountController::class, 'destroy'])->name('admin.discount.destroy');
+        });
+        //order
+        Route::prefix('/order')->group(function (){
+            Route::get('/', [OrderController::class, 'index'])->name('admin.order.index');
+            Route::get('/{order}/show', [OrderController::class, 'show'])->name('admin.order.show');
         });
 
     });
