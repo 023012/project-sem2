@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCommentsController;
 use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\BlogsController;
 
 // Admin
 Route::group(['prefix' => 'admin'], function () {
@@ -62,6 +63,17 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/{product}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
             Route::put('/{product}/edit', [ProductController::class, 'update'])->name('admin.products.update');
             Route::delete('/{product}/delete', [ProductController::class, 'destroy'])->name('admin.products.destroy');
+        });
+
+        //blogs
+        Route::prefix('/blogs')->group(function () {
+            Route::get('/', [BlogsController::class, 'index'])->name('admin.blogs.index');
+            Route::get('/create', [BlogsController::class, 'create'])->name('admin.blogs.create');
+            Route::post('/store', [BlogsController::class, 'store'])->name('admin.blogs.store');
+            Route::get('/{blogs}/show', [BlogsController::class, 'showBlogDetail'])->name('admin.blogs.show');
+            Route::get('/{blogs}/edit', [BlogsController::class, 'edit'])->name('admin.blogs.edit');
+            Route::put('/{blogs}/edit', [BlogsController::class, 'update'])->name('admin.blogs.update');
+            Route::delete('/{blogs}/delete', [BlogsController::class, 'destroy'])->name('admin.blogs.destroy');
         });
 
         //contact

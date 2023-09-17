@@ -68,7 +68,7 @@
                                                 <form action="{{ route('cart.update') }}" method="POST">
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{ $item->id }}">
-                                                    <input min="1" max="100" value="{{ $item->quantity }}" type="number"
+                                                    <input min="1" max="{{ $item->attributes->stock_quantity }}" value="{{ $item->quantity }}" type="number"
                                                            name="quantity">
                                                     <button type="submit"><i class="fa-regular fa-pen-to-square"></i>
                                                     </button>
