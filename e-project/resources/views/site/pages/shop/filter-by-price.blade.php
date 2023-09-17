@@ -54,9 +54,11 @@
 
                                         <!-- Start Page Amount -->
                                         <div class="page-amount ml-2">
-                                            <h5><span>{{$CategoryProduct}}: có <strong>{{ $productCount }}</strong> sản phẩm. </span>
+                                            <h5><span>Có <strong>{{ $productCount }}</strong> sản phẩm với mức giá từ
+                                                    {{ number_format($priceMin,0,'','.') }} ₫
+                                                    đến {{ number_format($priceMax,0,'','.') }} ₫. </span>
                                             </h5>
-                                        </div>  <!-- End Page Amount -->
+                                        </div> <!-- End Page Amount -->
                                     </div> <!-- End Sort tab Button -->
 
                                     <!-- Start Sort Select Option -->
@@ -68,6 +70,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- End Section Content -->
+
+
                     <!-- Start Tab Wrapper -->
                     <div class="sort-product-tab-wrapper">
                         <div class="container">
@@ -77,7 +83,7 @@
                                         <!-- Start Grid View Product -->
                                         <div class="tab-pane active show sort-layout-single" id="layout-3-grid">
                                             <div class="row">
-                                                @foreach ($productsList as $product)
+                                                @foreach ($products as $product)
                                                     @php
                                                         $price = $product->price;
                                                         $formatPrice=number_format($price,0,'','.');
@@ -158,7 +164,7 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <!-- Start Product Defautlt Single -->
-                                                    @foreach($productsList as $product)
+                                                    @foreach($products as $product)
                                                         @php
                                                             $price = $product->price;
                                                             $discount_percent = $product->discount_percent;
@@ -220,13 +226,15 @@
 
                     <!-- Start Pagination -->
                     <div class="page-pagination text-center" data-aos="fade-up" data-aos-delay="0">
-                        {{-- <ul>
-                            <li><a class="active" href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="ion-ios-skipforward"></i></a></li>
-                        </ul> --}}
-                        {{--                        {{ $productsList->links() }}--}}
+                        {{--                         <ul>--}}
+                        {{--                            <li><a class="active" href="#">1</a></li>--}}
+                        {{--                            <li><a href="#">2</a></li>--}}
+                        {{--                            <li><a href="#">3</a></li>--}}
+                        {{--                            <li><a href="#"><i class="ion-ios-skipforward"></i></a></li>--}}
+                        {{--                        </ul>--}}
+                        {{--                        <form method="get">--}}
+                        {{--                            {{ $products->links() }}--}}
+                        {{--                        </form>--}}
                     </div> <!-- End Pagination -->
                 </div>
             </div>

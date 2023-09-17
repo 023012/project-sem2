@@ -46,6 +46,7 @@ Route::get('/{blog}/blog-single', [BlogController::class, 'showBlogDetail'])->na
 //Shop
 //Route::get('/shop', [ShopController::class, 'shop'])->name('site.shop');
 Route::get('/shop/sort', [ShopController::class, 'sortProducts'])->name('site.shop');
+Route::get('/shop/product/filter-by-price', [ShopController::class, 'filterByPrice'])->name('site.product.filterByPrice');
 Route::get('/shop/category/{category}', [ShopController::class, 'showProductByCategory'])->name('site.category');
 Route::get('/{product}/product', [ShopController::class, 'showProductDetail'])->name('site.product');
 

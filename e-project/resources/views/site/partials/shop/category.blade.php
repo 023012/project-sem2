@@ -16,119 +16,119 @@
     <div class="sidebar-single-widget">
         <h6 class="sidebar-title">Lọc theo khoảng giá</h6>
         <div class="sidebar-content">
-            <form>
+            <form action="{{ route('site.product.filterByPrice') }}" method="GET">
                 <div class="default-form-box">
                     <label for="min_price">Giá tối thiểu: <span>0 ₫</span></label>
-                    <input type="text" id="min_price" >
+                    <input type="text" name="price_min" id="min_price" value="{{ old('price_min') }}">
                 </div>
                 <div class="default-form-box">
                     <label for="max_price">Giá tối đa: <span>50.000.000 ₫</span></label>
-                    <input type="text" id="max_price">
+                    <input type="text" name="price_max" id="max_price" value="{{ old('price_max') }}">
                 </div>
-                <button class="btn btn-golden">Áp dụng</button>
+                <button type="submit" class="btn btn-golden">Áp dụng</button>
             </form>
         </div>
     </div> <!-- End Single Sidebar Widget -->
 
-    <!-- Start Single Sidebar Widget -->
-    <div class="sidebar-single-widget">
-        <h6 class="sidebar-title">MANUFACTURER</h6>
-        <div class="sidebar-content">
-            <div class="filter-type-select">
-                <ul>
-                    <li>
-                        <label class="checkbox-default" for="brakeParts">
-                            <input type="checkbox" id="brakeParts">
-                            <span>Brake Parts(6)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="checkbox-default" for="accessories">
-                            <input type="checkbox" id="accessories">
-                            <span>Accessories (10)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="checkbox-default" for="EngineParts">
-                            <input type="checkbox" id="EngineParts">
-                            <span>Engine Parts (4)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="checkbox-default" for="hermes">
-                            <input type="checkbox" id="hermes">
-                            <span>hermes (10)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="checkbox-default" for="tommyHilfiger">
-                            <input type="checkbox" id="tommyHilfiger">
-                            <span>Tommy Hilfiger(7)</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div> <!-- End Single Sidebar Widget -->
+{{--    <!-- Start Single Sidebar Widget -->--}}
+{{--    <div class="sidebar-single-widget">--}}
+{{--        <h6 class="sidebar-title">MANUFACTURER</h6>--}}
+{{--        <div class="sidebar-content">--}}
+{{--            <div class="filter-type-select">--}}
+{{--                <ul>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="brakeParts">--}}
+{{--                            <input type="checkbox" id="brakeParts">--}}
+{{--                            <span>Brake Parts(6)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="accessories">--}}
+{{--                            <input type="checkbox" id="accessories">--}}
+{{--                            <span>Accessories (10)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="EngineParts">--}}
+{{--                            <input type="checkbox" id="EngineParts">--}}
+{{--                            <span>Engine Parts (4)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="hermes">--}}
+{{--                            <input type="checkbox" id="hermes">--}}
+{{--                            <span>hermes (10)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="tommyHilfiger">--}}
+{{--                            <input type="checkbox" id="tommyHilfiger">--}}
+{{--                            <span>Tommy Hilfiger(7)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div> <!-- End Single Sidebar Widget -->--}}
 
-    <!-- Start Single Sidebar Widget -->
-    <div class="sidebar-single-widget">
-        <h6 class="sidebar-title">SELECT BY COLOR</h6>
-        <div class="sidebar-content">
-            <div class="filter-type-select">
-                <ul>
-                    <li>
-                        <label class="checkbox-default" for="black">
-                            <input type="checkbox" id="black">
-                            <span>Black (6)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="checkbox-default" for="blue">
-                            <input type="checkbox" id="blue">
-                            <span>Blue (8)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="checkbox-default" for="brown">
-                            <input type="checkbox" id="brown">
-                            <span>Brown (10)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="checkbox-default" for="Green">
-                            <input type="checkbox" id="Green">
-                            <span>Green (6)</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="checkbox-default" for="pink">
-                            <input type="checkbox" id="pink">
-                            <span>Pink (4)</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div> <!-- End Single Sidebar Widget -->
+{{--    <!-- Start Single Sidebar Widget -->--}}
+{{--    <div class="sidebar-single-widget">--}}
+{{--        <h6 class="sidebar-title">SELECT BY COLOR</h6>--}}
+{{--        <div class="sidebar-content">--}}
+{{--            <div class="filter-type-select">--}}
+{{--                <ul>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="black">--}}
+{{--                            <input type="checkbox" id="black">--}}
+{{--                            <span>Black (6)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="blue">--}}
+{{--                            <input type="checkbox" id="blue">--}}
+{{--                            <span>Blue (8)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="brown">--}}
+{{--                            <input type="checkbox" id="brown">--}}
+{{--                            <span>Brown (10)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="Green">--}}
+{{--                            <input type="checkbox" id="Green">--}}
+{{--                            <span>Green (6)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <label class="checkbox-default" for="pink">--}}
+{{--                            <input type="checkbox" id="pink">--}}
+{{--                            <span>Pink (4)</span>--}}
+{{--                        </label>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div> <!-- End Single Sidebar Widget -->--}}
 
-    <!-- Start Single Sidebar Widget -->
-    <div class="sidebar-single-widget">
-        <h6 class="sidebar-title">Tag products</h6>
-        <div class="sidebar-content">
-            <div class="tag-link">
-                <a href="#">asian</a>
-                <a href="#">brown</a>
-                <a href="#">euro</a>
-                <a href="#">fashion</a>
-                <a href="#">hat</a>
-                <a href="#">t-shirt</a>
-                <a href="#">teen</a>
-                <a href="#">travel</a>
-                <a href="#">white</a>
-            </div>
-        </div>
-    </div> <!-- End Single Sidebar Widget -->
+{{--    <!-- Start Single Sidebar Widget -->--}}
+{{--    <div class="sidebar-single-widget">--}}
+{{--        <h6 class="sidebar-title">Tag products</h6>--}}
+{{--        <div class="sidebar-content">--}}
+{{--            <div class="tag-link">--}}
+{{--                <a href="#">asian</a>--}}
+{{--                <a href="#">brown</a>--}}
+{{--                <a href="#">euro</a>--}}
+{{--                <a href="#">fashion</a>--}}
+{{--                <a href="#">hat</a>--}}
+{{--                <a href="#">t-shirt</a>--}}
+{{--                <a href="#">teen</a>--}}
+{{--                <a href="#">travel</a>--}}
+{{--                <a href="#">white</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div> <!-- End Single Sidebar Widget -->--}}
 
     <!-- Start Single Sidebar Widget -->
     <div class="sidebar-single-widget">
