@@ -6,10 +6,11 @@
       <sourceFolder url="file://$MODULE_DIR$/e-project/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/e-project/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
       <sourceFolder url="file://$MODULE_DIR$/e-project/tests" isTestSource="true" packagePrefix="Tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/e-project/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/e-project/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/e-project/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/e-project/vendor/doctrine/lexer" />

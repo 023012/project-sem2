@@ -12,21 +12,36 @@ class ShopController extends Controller
 
     public function showProductDetail(Product $product){
         $productDetails= DB::select('CALL ShowProductDetails(?)', [$product->id]);
-        return view('site.pages.shop.product',[
-            'productDetails'=>$productDetails
-        ]);
-
+        return view('site.pages.shop.product',compact( 'productDetails'));
     }
 
+    public function shop(Request $request) {
+        $categories =  DB::table('categories')->get();
+        $products=DB::table('project_sem2.products_list as p')
+            ->orderBy('p.created_at', 'desc')
+            ->simplePaginate(18);
+        return view('site.pages.shop.index', compact('categories', 'products'));
+    }
 
-    public function index(Request $request){
+    public function search(Request $request)
+    {
+        $categories =  DB::table('categories')->get();
+        $keyword = $request->input('keyword');
+
+        $results = DB::select('CALL GetProductsByKeyword(?)', [$keyword]);
+        $productCount = count($results);
+
+        return view('site.pages.shop.search', compact('results', 'keyword','productCount','categories'));
+    }
+
+    public function sortProducts(Request $request){
+        $categories =  DB::table('categories')->get();
 
         $sortOptions = [
             'price-asc' => 'Giá từ thấp đến cao',
-            'price-desc' => 'Giá từ cao xuống',
+            'price-desc' => 'Giá từ cao đến thấp',
             'name-asc' => 'Tên tăng dần A-Z',
             'name-desc' => 'Tên giảm dần Z-A',
-            'created-at-asc' => 'Ngày gần nhất',
         ];
         $sortOption = $request->input('sort_option');
 
@@ -53,20 +68,15 @@ class ShopController extends Controller
                     ->orderBy('p.name', 'desc')
                     ->simplePaginate(18);
                 break;
-            case 'created-at-asc':
-                $products=DB::table('project_sem2.products_list as p')
-                    ->orderBy('p.created_at', 'asc')
-                    ->simplePaginate(18);
-                break;
 
             default:
                 $products=DB::table('project_sem2.products_list as p')
-                    ->orderBy('p.created_at', 'asc')
+                    ->orderBy('p.created_at', 'desc')
                     ->simplePaginate(18);
                 break;
         }
 
-        return view('site.pages.shop.index', compact('products','sortOptions'));
+        return view('site.pages.shop.index', compact('products','sortOptions','categories'));
     }
 
 }

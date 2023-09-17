@@ -41,7 +41,8 @@ Route::get('/wishlist', [WishlistController::class, 'index'])->name('site.wishli
 Route::get('/compare', [CompareController::class, 'index'])->name('site.compare');
 
 //Shop
-Route::get('/shop', [ShopController::class, 'index'])->name('site.shop');
+//Route::get('/shop', [ShopController::class, 'shop'])->name('site.shop');
+Route::get('/shop/sort', [ShopController::class, 'sortProducts'])->name('site.shop');
 Route::get('/{product}/product', [ShopController::class, 'showProductDetail'])->name('site.product');
 
 //
@@ -70,7 +71,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 //Search
-Route::get('/search', [HomeController::class, 'search'])->name('site.search');
+Route::get('/search', [ShopController::class, 'search'])->name('site.search');
 
 require 'admin.php';
 
