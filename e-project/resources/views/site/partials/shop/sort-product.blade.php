@@ -10,7 +10,6 @@
                     <option value="{{ $key }}">{{ $value }}</option>
                 @endforeach
             </select>
-            {{--                            <button type="submit">Sắp xếp</button>--}}
         </fieldset>
     </form>
 </div> <!-- End Sort Select Option -->
