@@ -69,8 +69,17 @@
                                                                     <span>{{ $product->discount }}</span>
                                                                 </div>
                                                                 <div class="action-link">
-                                                                    <div class="action-link-left">
-                                                                        <a href="{{ route('cart.store') }}" >Add to Cart</a>
+                                                                    <div class="action-link-left ">
+                                                                        <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                                                            @csrf
+                                                                            <input type="hidden" value="{{ $product->id }}" name="id">
+                                                                            <input type="hidden" value="{{ $product->name }}" name="name">
+                                                                            <input type="hidden" value="{{ $product->price }}" name="price">
+                                                                            <input type="hidden" value="{{ $product->thumbnail }}"  name="thumbnail">
+                                                                            <input type="hidden" value="{{ $product->quantity }}" name="stock_quantity">
+                                                                            <input type="hidden" value="1" name="quantity">
+                                                                            <button type="submit" class="btn btn-sm btn-golden">Mua ngay</button>
+                                                                        </form>
                                                                     </div>
                                                                     <div class="action-link-right">
                                                                         <a href="#" data-bs-toggle="modal"

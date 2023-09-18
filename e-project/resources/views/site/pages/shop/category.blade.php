@@ -102,8 +102,16 @@
                                                                 </div>
                                                                 <div class="action-link">
                                                                     <div class="action-link-left">
-                                                                        <a href="{{ route('cart.store') }}">Add to
-                                                                            Cart</a>
+                                                                        <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                                                            @csrf
+                                                                            <input type="hidden" value="{{ $product->id }}" name="id">
+                                                                            <input type="hidden" value="{{ $product->name }}" name="name">
+                                                                            <input type="hidden" value="{{ $product->price }}" name="price">
+                                                                            <input type="hidden" value="{{ $product->thumbnail }}"  name="thumbnail">
+                                                                            <input type="hidden" value="{{ $product->quantity }}" name="stock_quantity">
+                                                                            <input type="hidden" value="1" name="quantity">
+                                                                            <button type="submit" class="btn btn-sm btn-golden">Mua ngay</button>
+                                                                        </form>
                                                                     </div>
                                                                     <div class="action-link-right">
                                                                         <a href="#" data-bs-toggle="modal"
@@ -163,12 +171,15 @@
                                                             $price = $product->price;
                                                             $discount_percent = $product->discount_percent;
                                                             $price_sale = $price - (($price * $discount_percent) / 100 );
+//                                                            $description=str_split($product->description,100);
                                                         @endphp
                                                         <div class="product-list-single product-color--golden">
                                                             <a href="{{ route('site.product', $product->id) }}"
                                                                class="product-list-img-link">
                                                                 <img src="{{ asset('uploads/' . $product->thumbnail) }}"
-                                                                     alt="Product Thumbnail" class="img-fluid">
+                                                                     alt="Product Thumbnail" class="img-fluid" >
+                                                                <img src="{{ asset('uploads/' . $product->thumbnail) }}"
+                                                                     alt="Product Thumbnail" class="img-fluid" >
                                                             </a>
                                                             <div class="product-list-content">
                                                                 <h5 class="product-list-link"><a
@@ -186,14 +197,22 @@
                                                                     <li class="empty"><i class="ion-android-star"></i>
                                                                     </li>
                                                                 </ul>
-                                                                <span class="product-list-price"><del>{{$price}}₫</del>
-                                                                {{$price_sale}} ₫</span>
-                                                                <p>{{$product->description}}</p>
+                                                                <span class="product-list-price"><del>{{number_format($price,0,'','.')}}₫</del>
+                                                                {{number_format($price_sale,0,'','.')}} ₫</span>
+                                                                <p>{!! htmlspecialchars_decode($product->description)!!}</p>
                                                                 <div class="product-action-icon-link-list">
-                                                                    <a href="#" data-bs-toggle="modal"
-                                                                       data-bs-target="#modalAddcart"
-                                                                       class="btn btn-lg btn-black-default-hover">Add to
-                                                                        cart</a>
+                                                                    <div class="action-link-left ">
+                                                                        <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                                                                            @csrf
+                                                                            <input type="hidden" value="{{ $product->id }}" name="id">
+                                                                            <input type="hidden" value="{{ $product->name }}" name="name">
+                                                                            <input type="hidden" value="{{ $product->price }}" name="price">
+                                                                            <input type="hidden" value="{{ $product->thumbnail }}"  name="thumbnail">
+                                                                            <input type="hidden" value="{{ $product->quantity }}" name="stock_quantity">
+                                                                            <input type="hidden" value="1" name="quantity">
+                                                                            <button type="submit" class="btn btn-sm btn-golden">Mua ngay</button>
+                                                                        </form>
+                                                                    </div>
                                                                     <a href="#" data-bs-toggle="modal"
                                                                        data-bs-target="#modalQuickview"
                                                                        class="btn btn-lg btn-black-default-hover"><i

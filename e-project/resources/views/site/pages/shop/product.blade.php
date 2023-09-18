@@ -1,4 +1,7 @@
 @extends('site.app')
+@push('style')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+@endpush
 @section('content')
     <!-- ...:::: Start Breadcrumb Section:::... -->
     <div class="breadcrumb-section breadcrumb-bg-color--golden">
@@ -185,7 +188,7 @@
                                     <!-- Start Product Details Tab Content Singel -->
                                     <div class="tab-pane active show" id="description">
                                         <div class="single-tab-content-item">
-                                            <p>{{$product->description}}</p>
+                                            <p>{!! htmlspecialchars_decode($product->description) !!}</p>
                                         </div>
                                     </div> <!-- End Product Details Tab Content Singel -->
                                     <!-- Start Product Details Tab Content Singel -->
@@ -798,3 +801,15 @@
     <button class="material-scrolltop" type="button"></button>
 
 @endsection
+@push('script')
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
+    <script>
+        $('#description').summernote({
+            placeholder: 'Tên sản phẩm ' +
+                ' Mô tả sản chi tiết của sản phẩm',
+            tabsize: 2,
+            height: 250
+        });
+    </script>
+@endpush
