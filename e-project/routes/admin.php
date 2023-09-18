@@ -99,7 +99,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::prefix('/order')->group(function (){
             Route::get('/', [OrderController::class, 'index'])->name('admin.order.index');
             Route::get('/{order}/show', [OrderController::class, 'show'])->name('admin.order.show');
+//            Route::put('/{order}/access', [OrderController::class, 'orderConfirmation'])->name('admin.order.access');
             Route::put('/{order}/update', [OrderController::class, 'UpdateStatus'])->name('admin.order.update');
+
         });
 
     });

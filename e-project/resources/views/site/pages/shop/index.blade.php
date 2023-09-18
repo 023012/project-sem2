@@ -32,7 +32,41 @@
                 <div class="col-lg-9">
                     <!-- Start Shop Product Sorting Section -->
 
-                    @include('site.partials.shop.sort-product')
+                    <div class="shop-sort-section">
+                        <div class="container">
+                            <div class="row">
+                                <!-- Start Sort Wrapper Box -->
+                                <div
+                                    class="sort-box d-flex justify-content-between align-items-md-center align-items-start flex-md-row flex-column"
+                                    data-aos="fade-up" data-aos-delay="0">
+                                    <!-- Start Sort tab Button -->
+                                    <div class="sort-tablist d-flex align-items-center">
+                                        <ul class="tablist nav sort-tab-btn">
+                                            <li><a class="nav-link active" data-bs-toggle="tab"
+                                                   href="#layout-3-grid"><img
+                                                        src="{{asset('frontend/assets/images/icons/bkg_grid.png')}}"
+                                                        alt=""></a></li>
+                                            <li><a class="nav-link" data-bs-toggle="tab" href="#layout-list"><img
+                                                        src="{{asset('frontend/assets/images/icons/bkg_list.png')}}"
+                                                        alt=""></a></li>
+                                            '
+                                        </ul>
+
+                                        <!-- Start Page Amount -->
+                                        <div class="page-amount ml-2">
+
+                                        </div> <!-- End Page Amount -->
+                                    </div> <!-- End Sort tab Button -->
+
+                                    <!-- Start Sort Select Option -->
+                                                                    @include('site.partials.shop.sort-product')
+                                <!-- End Sort Select Option -->
+
+
+                                </div> <!-- Start Sort Wrapper Box -->
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- End Section Content -->
 

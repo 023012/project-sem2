@@ -85,12 +85,14 @@
                                       class="ml-1 item-text">nhận xét sản phẩm</span>
                               </a>
                           </li>
-                          <li class="nav-item">
-                              <a class="nav-link pl-3" href="{{ route('admin.discount.index') }}"><span
-                                      class="ml-1 item-text">giảm giá</span>
-                              </a>
-                          </li>
                       </ul>
+                  </li>
+
+                  <li class="nav-item ">
+                      <a href="{{ route('admin.discount.index') }}" class="nav-link">
+                          <i class="fe fe-grid fe-16"></i>
+                          <span class="ml-3 item-text">Quản lý mã giảm giá</span>
+                      </a>
                   </li>
 
                   {{-- Quản lí blog --}}
