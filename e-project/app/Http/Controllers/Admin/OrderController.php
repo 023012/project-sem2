@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
 
 use App\Models\Order;
@@ -21,20 +22,24 @@ class OrderController extends Controller
             'completed' => 'completed',
             'decline' => 'decline',
         ];
-        $orders=DB::table('orders_list')
-            ->simplePaginate(10);
-        return view('admin.pages.order.index',[
-            'orders'=>$orders,
-            'statusOptions'=>$statusOptions
+        $orders = DB::table('orders_list')->orderBy('created_at', 'desc')->get();
+        return view('admin.pages.order.index', [
+            'orders' => $orders,
+            'statusOptions' => $statusOptions
         ]);
     }
 
-    public function orderConfirmation(){
-//        login xác nhận đơn hàng
+//    public function orderConfirmation(Order $order)
+//    {
+////        viết login cập nhật trạng thái đơn hàng(đang giao, đã giao, đã hủy,...)
+//        $order->status = 'processing';
+//        $order->save();
+////        return view('admin.pages.order.details',['order',$order]);
+//        return redirect()->route('admin.order.details', ['orderId' => $order->id])
+//            ->with('success', 'Cập nhật ' + $order->order_number + ' thành công trạng thái!');
+//    }
 
-    }
-
-    public function show($id)
+    public function show(Order $order)
     {
         $statusOptions = [
             'pending' => 'pending',
@@ -42,22 +47,27 @@ class OrderController extends Controller
             'completed' => 'completed',
             'decline' => 'decline',
         ];
-        $users=DB::table('project_sem2.users_orders')->where('id',$id)->get();
-        $orderDetail=DB::table('project_sem2.chi_tiet_don_hang')->where('id',$id)->get();
+        $totalPrice = DB::table('project_sem2.orders_list')->where('id', $order->id)->value('total_price');
+        $users = DB::table('project_sem2.users_orders')->where('id', $order->id)->get();
+        $orderDetail = DB::table('project_sem2.chi_tiet_don_hang')->where('id', $order->id)->get();
 //        viết login hiển thị chi tiết đơn hàng
-        return view('admin.pages.order.details',['orderDetail'=>$orderDetail,
-            'users'=>$users,
-            'statusOptions'=>$statusOptions
-            ]);
+        return view('admin.pages.order.details', [
+            'order' => $order,
+            'orderDetail' => $orderDetail,
+            'users' => $users,
+            'statusOptions' => $statusOptions,
+            'totalPrice' => $totalPrice
+        ]);
     }
 
-    public function UpdateStatus(Request $request,Order $order)
+    public function UpdateStatus(Request $request, Order $order)
     {
 //        viết login cập nhật trạng thái đơn hàng(đang giao, đã giao, đã hủy,...)
-        $order->status=$request->status;
+        $order->status = $request->status;
         $order->save();
 //        return view('admin.pages.order.details',['order',$order]);
-        return redirect()->route('admin.order.index', ['orderId' => $order->id])->with('success','Cập nhật thành công trạng thái!');
+        return redirect()->route('admin.order.index', ['orderId' => $order->id])
+            ->with('success', 'Cập nhật thành công trạng thái!');
     }
 
 
